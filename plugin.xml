@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated hyldesigner -->
+      <package
+            uri="http://mdse.hylstudio.cn/hyldesigner"
+            class="cn.hylstudio.mdse.hyldesigner.HyldesignerPackage"
+            genModel="model/hyldesigner.genmodel"/>
+   </extension>
+
+</plugin>
