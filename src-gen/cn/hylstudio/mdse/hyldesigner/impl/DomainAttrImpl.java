@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl#isIsBizKey <em>Is Biz Key</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl#isOptional <em>Optional</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl#isPersistent <em>Persistent</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,6 +62,25 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 	 * @ordered
 	 */
 	protected boolean optional = OPTIONAL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isPersistent() <em>Persistent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPersistent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean PERSISTENT_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isPersistent() <em>Persistent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isPersistent()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean persistent = PERSISTENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,12 +155,38 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 	 * @generated
 	 */
 	@Override
+	public boolean isPersistent() {
+		return persistent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPersistent(boolean newPersistent) {
+		boolean oldPersistent = persistent;
+		persistent = newPersistent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.DOMAIN_ATTR__PERSISTENT,
+					oldPersistent, persistent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case HyldesignerPackage.DOMAIN_ATTR__IS_BIZ_KEY:
 			return isIsBizKey();
 		case HyldesignerPackage.DOMAIN_ATTR__OPTIONAL:
 			return isOptional();
+		case HyldesignerPackage.DOMAIN_ATTR__PERSISTENT:
+			return isPersistent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +204,9 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 			return;
 		case HyldesignerPackage.DOMAIN_ATTR__OPTIONAL:
 			setOptional((Boolean) newValue);
+			return;
+		case HyldesignerPackage.DOMAIN_ATTR__PERSISTENT:
+			setPersistent((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,6 +226,9 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 		case HyldesignerPackage.DOMAIN_ATTR__OPTIONAL:
 			setOptional(OPTIONAL_EDEFAULT);
 			return;
+		case HyldesignerPackage.DOMAIN_ATTR__PERSISTENT:
+			setPersistent(PERSISTENT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,6 +245,8 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 			return isBizKey != IS_BIZ_KEY_EDEFAULT;
 		case HyldesignerPackage.DOMAIN_ATTR__OPTIONAL:
 			return optional != OPTIONAL_EDEFAULT;
+		case HyldesignerPackage.DOMAIN_ATTR__PERSISTENT:
+			return persistent != PERSISTENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,6 +266,8 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 		result.append(isBizKey);
 		result.append(", optional: ");
 		result.append(optional);
+		result.append(", persistent: ");
+		result.append(persistent);
 		result.append(')');
 		return result.toString();
 	}

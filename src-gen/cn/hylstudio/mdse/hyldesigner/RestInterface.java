@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getName <em>Name</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getApiDesc <em>Api Desc</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getBizservice <em>Bizservice</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getAccess <em>Access</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface()
@@ -149,5 +150,17 @@ public interface RestInterface extends EObject {
 	 * @generated
 	 */
 	EList<BizService> getBizservice();
+
+	/**
+	 * Returns the value of the '<em><b>Access</b></em>' reference list.
+	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.DomainEntity}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Access</em>' reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_Access()
+	 * @model
+	 * @generated
+	 */
+	EList<DomainEntity> getAccess();
 
 } // RestInterface

@@ -67,6 +67,11 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected HyldesignerSwitch<Adapter> modelSwitch = new HyldesignerSwitch<Adapter>() {
 		@Override
+		public Adapter caseProject(Project object) {
+			return createProjectAdapter();
+		}
+
+		@Override
 		public Adapter caseDomainAttr(DomainAttr object) {
 			return createDomainAttrAdapter();
 		}
@@ -102,38 +107,18 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseRequestPayload(RequestPayload object) {
-			return createRequestPayloadAdapter();
-		}
-
-		@Override
-		public Adapter caseProject(Project object) {
-			return createProjectAdapter();
-		}
-
-		@Override
-		public Adapter caseDbEntity(DbEntity object) {
-			return createDbEntityAdapter();
-		}
-
-		@Override
-		public Adapter caseResponseResult(ResponseResult object) {
-			return createResponseResultAdapter();
-		}
-
-		@Override
 		public Adapter caseController(Controller object) {
 			return createControllerAdapter();
 		}
 
 		@Override
-		public Adapter caseDto(Dto object) {
-			return createDtoAdapter();
+		public Adapter caseRestInterface(RestInterface object) {
+			return createRestInterfaceAdapter();
 		}
 
 		@Override
-		public Adapter caseRestInterface(RestInterface object) {
-			return createRestInterfaceAdapter();
+		public Adapter caseDto(Dto object) {
+			return createDtoAdapter();
 		}
 
 		@Override
@@ -149,6 +134,21 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseBaseService(BaseService object) {
 			return createBaseServiceAdapter();
+		}
+
+		@Override
+		public Adapter caseRequestPayload(RequestPayload object) {
+			return createRequestPayloadAdapter();
+		}
+
+		@Override
+		public Adapter caseDbEntity(DbEntity object) {
+			return createDbEntityAdapter();
+		}
+
+		@Override
+		public Adapter caseResponseResult(ResponseResult object) {
+			return createResponseResultAdapter();
 		}
 
 		@Override

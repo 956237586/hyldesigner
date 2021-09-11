@@ -56,6 +56,8 @@ public class HyldesignerFactoryImpl extends EFactoryImpl implements HyldesignerF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+		case HyldesignerPackage.PROJECT:
+			return createProject();
 		case HyldesignerPackage.DOMAIN_ATTR:
 			return createDomainAttr();
 		case HyldesignerPackage.DB_ATTR:
@@ -68,26 +70,24 @@ public class HyldesignerFactoryImpl extends EFactoryImpl implements HyldesignerF
 			return createDtoAttr();
 		case HyldesignerPackage.DOMAIN_ENTITY:
 			return createDomainEntity();
-		case HyldesignerPackage.REQUEST_PAYLOAD:
-			return createRequestPayload();
-		case HyldesignerPackage.PROJECT:
-			return createProject();
-		case HyldesignerPackage.DB_ENTITY:
-			return createDbEntity();
-		case HyldesignerPackage.RESPONSE_RESULT:
-			return createResponseResult();
 		case HyldesignerPackage.CONTROLLER:
 			return createController();
-		case HyldesignerPackage.DTO:
-			return createDto();
 		case HyldesignerPackage.REST_INTERFACE:
 			return createRestInterface();
+		case HyldesignerPackage.DTO:
+			return createDto();
 		case HyldesignerPackage.SERVICE:
 			return createService();
 		case HyldesignerPackage.BIZ_SERVICE:
 			return createBizService();
 		case HyldesignerPackage.BASE_SERVICE:
 			return createBaseService();
+		case HyldesignerPackage.REQUEST_PAYLOAD:
+			return createRequestPayload();
+		case HyldesignerPackage.DB_ENTITY:
+			return createDbEntity();
+		case HyldesignerPackage.RESPONSE_RESULT:
+			return createResponseResult();
 		case HyldesignerPackage.REPO:
 			return createRepo();
 		default:

@@ -66,6 +66,13 @@ public class HyldesignerSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+		case HyldesignerPackage.PROJECT: {
+			Project project = (Project) theEObject;
+			T result = caseProject(project);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case HyldesignerPackage.DOMAIN_ATTR: {
 			DomainAttr domainAttr = (DomainAttr) theEObject;
 			T result = caseDomainAttr(domainAttr);
@@ -125,34 +132,6 @@ public class HyldesignerSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case HyldesignerPackage.REQUEST_PAYLOAD: {
-			RequestPayload requestPayload = (RequestPayload) theEObject;
-			T result = caseRequestPayload(requestPayload);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case HyldesignerPackage.PROJECT: {
-			Project project = (Project) theEObject;
-			T result = caseProject(project);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case HyldesignerPackage.DB_ENTITY: {
-			DbEntity dbEntity = (DbEntity) theEObject;
-			T result = caseDbEntity(dbEntity);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case HyldesignerPackage.RESPONSE_RESULT: {
-			ResponseResult responseResult = (ResponseResult) theEObject;
-			T result = caseResponseResult(responseResult);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case HyldesignerPackage.CONTROLLER: {
 			Controller controller = (Controller) theEObject;
 			T result = caseController(controller);
@@ -160,16 +139,16 @@ public class HyldesignerSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case HyldesignerPackage.DTO: {
-			Dto dto = (Dto) theEObject;
-			T result = caseDto(dto);
+		case HyldesignerPackage.REST_INTERFACE: {
+			RestInterface restInterface = (RestInterface) theEObject;
+			T result = caseRestInterface(restInterface);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case HyldesignerPackage.REST_INTERFACE: {
-			RestInterface restInterface = (RestInterface) theEObject;
-			T result = caseRestInterface(restInterface);
+		case HyldesignerPackage.DTO: {
+			Dto dto = (Dto) theEObject;
+			T result = caseDto(dto);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -195,6 +174,27 @@ public class HyldesignerSwitch<T> extends Switch<T> {
 			T result = caseBaseService(baseService);
 			if (result == null)
 				result = caseService(baseService);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case HyldesignerPackage.REQUEST_PAYLOAD: {
+			RequestPayload requestPayload = (RequestPayload) theEObject;
+			T result = caseRequestPayload(requestPayload);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case HyldesignerPackage.DB_ENTITY: {
+			DbEntity dbEntity = (DbEntity) theEObject;
+			T result = caseDbEntity(dbEntity);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case HyldesignerPackage.RESPONSE_RESULT: {
+			ResponseResult responseResult = (ResponseResult) theEObject;
+			T result = caseResponseResult(responseResult);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;

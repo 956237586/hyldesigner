@@ -3,6 +3,7 @@
 package cn.hylstudio.mdse.hyldesigner.impl;
 
 import cn.hylstudio.mdse.hyldesigner.BizService;
+import cn.hylstudio.mdse.hyldesigner.DomainEntity;
 import cn.hylstudio.mdse.hyldesigner.HyldesignerPackage;
 import cn.hylstudio.mdse.hyldesigner.RequestPayload;
 import cn.hylstudio.mdse.hyldesigner.ResponseResult;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -38,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getName <em>Name</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getApiDesc <em>Api Desc</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getBizservice <em>Bizservice</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getAccess <em>Access</em>}</li>
  * </ul>
  *
  * @generated
@@ -132,6 +135,16 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @ordered
 	 */
 	protected EList<BizService> bizservice;
+
+	/**
+	 * The cached value of the '{@link #getAccess() <em>Access</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccess()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DomainEntity> access;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -328,6 +341,20 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
+	public EList<DomainEntity> getAccess() {
+		if (access == null) {
+			access = new EObjectResolvingEList<DomainEntity>(DomainEntity.class, this,
+					HyldesignerPackage.REST_INTERFACE__ACCESS);
+		}
+		return access;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
@@ -360,6 +387,8 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 			return getApiDesc();
 		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
 			return getBizservice();
+		case HyldesignerPackage.REST_INTERFACE__ACCESS:
+			return getAccess();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -392,6 +421,10 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 			getBizservice().clear();
 			getBizservice().addAll((Collection<? extends BizService>) newValue);
 			return;
+		case HyldesignerPackage.REST_INTERFACE__ACCESS:
+			getAccess().clear();
+			getAccess().addAll((Collection<? extends DomainEntity>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -422,6 +455,9 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
 			getBizservice().clear();
 			return;
+		case HyldesignerPackage.REST_INTERFACE__ACCESS:
+			getAccess().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -446,6 +482,8 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 			return API_DESC_EDEFAULT == null ? apiDesc != null : !API_DESC_EDEFAULT.equals(apiDesc);
 		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
 			return bizservice != null && !bizservice.isEmpty();
+		case HyldesignerPackage.REST_INTERFACE__ACCESS:
+			return access != null && !access.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

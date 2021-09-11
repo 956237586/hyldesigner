@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getName <em>Name</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getBasePackage <em>Base Package</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getContainsDomain <em>Contains Domain</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getContainsPayload <em>Contains Payload</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getDbentity <em>Dbentity</em>}</li>
@@ -49,6 +50,28 @@ public interface Project extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Base Package</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base Package</em>' attribute.
+	 * @see #setBasePackage(String)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_BasePackage()
+	 * @model
+	 * @generated
+	 */
+	String getBasePackage();
+
+	/**
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.Project#getBasePackage <em>Base Package</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Base Package</em>' attribute.
+	 * @see #getBasePackage()
+	 * @generated
+	 */
+	void setBasePackage(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Contains Domain</b></em>' containment reference list.

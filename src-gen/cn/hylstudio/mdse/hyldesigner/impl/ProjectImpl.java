@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getBasePackage <em>Base Package</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getContainsDomain <em>Contains Domain</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getContainsPayload <em>Contains Payload</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getDbentity <em>Dbentity</em>}</li>
@@ -64,6 +65,26 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBasePackage() <em>Base Package</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBasePackage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BASE_PACKAGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getBasePackage() <em>Base Package</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBasePackage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String basePackage = BASE_PACKAGE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getContainsDomain() <em>Contains Domain</em>}' containment reference list.
@@ -155,6 +176,30 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.PROJECT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getBasePackage() {
+		return basePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBasePackage(String newBasePackage) {
+		String oldBasePackage = basePackage;
+		basePackage = newBasePackage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.PROJECT__BASE_PACKAGE,
+					oldBasePackage, basePackage));
 	}
 
 	/**
@@ -259,6 +304,8 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		switch (featureID) {
 		case HyldesignerPackage.PROJECT__NAME:
 			return getName();
+		case HyldesignerPackage.PROJECT__BASE_PACKAGE:
+			return getBasePackage();
 		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
 			return getContainsDomain();
 		case HyldesignerPackage.PROJECT__CONTAINS_PAYLOAD:
@@ -284,6 +331,9 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		switch (featureID) {
 		case HyldesignerPackage.PROJECT__NAME:
 			setName((String) newValue);
+			return;
+		case HyldesignerPackage.PROJECT__BASE_PACKAGE:
+			setBasePackage((String) newValue);
 			return;
 		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
 			getContainsDomain().clear();
@@ -320,6 +370,9 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		case HyldesignerPackage.PROJECT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case HyldesignerPackage.PROJECT__BASE_PACKAGE:
+			setBasePackage(BASE_PACKAGE_EDEFAULT);
+			return;
 		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
 			getContainsDomain().clear();
 			return;
@@ -349,6 +402,8 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		switch (featureID) {
 		case HyldesignerPackage.PROJECT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case HyldesignerPackage.PROJECT__BASE_PACKAGE:
+			return BASE_PACKAGE_EDEFAULT == null ? basePackage != null : !BASE_PACKAGE_EDEFAULT.equals(basePackage);
 		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
 			return containsDomain != null && !containsDomain.isEmpty();
 		case HyldesignerPackage.PROJECT__CONTAINS_PAYLOAD:
@@ -376,6 +431,8 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", basePackage: ");
+		result.append(basePackage);
 		result.append(')');
 		return result.toString();
 	}

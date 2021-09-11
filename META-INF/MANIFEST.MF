@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: hyldesigner
+Bundle-Name: %pluginName
 Bundle-SymbolicName: hyldesigner;singleton:=true
 Automatic-Module-Name: hyldesigner
 Bundle-Version: 0.1.0
 Bundle-ClassPath: .
-Bundle-Vendor: hylstudio
+Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: cn.hylstudio.mdse.hyldesigner,

@@ -343,8 +343,8 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_ContainsDomain() {
-		return (EReference) projectEClass.getEStructuralFeatures().get(1);
+	public EAttribute getProject_BasePackage() {
+		return (EAttribute) projectEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -353,7 +353,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_ContainsPayload() {
+	public EReference getProject_ContainsDomain() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -363,7 +363,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_Dbentity() {
+	public EReference getProject_ContainsPayload() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -373,7 +373,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_Responseresult() {
+	public EReference getProject_Dbentity() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -383,8 +383,18 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_Controller() {
+	public EReference getProject_Responseresult() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getProject_Controller() {
+		return (EReference) projectEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -445,6 +455,16 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	@Override
 	public EAttribute getDomainAttr_Optional() {
 		return (EAttribute) domainAttrEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDomainAttr_Persistent() {
+		return (EAttribute) domainAttrEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -653,6 +673,16 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
+	public EReference getRestInterface_Access() {
+		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRequestAttr() {
 		return requestAttrEClass;
 	}
@@ -817,9 +847,19 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		isCreated = true;
 
 		// Create classes and their features
+		projectEClass = createEClass(PROJECT);
+		createEAttribute(projectEClass, PROJECT__NAME);
+		createEAttribute(projectEClass, PROJECT__BASE_PACKAGE);
+		createEReference(projectEClass, PROJECT__CONTAINS_DOMAIN);
+		createEReference(projectEClass, PROJECT__CONTAINS_PAYLOAD);
+		createEReference(projectEClass, PROJECT__DBENTITY);
+		createEReference(projectEClass, PROJECT__RESPONSERESULT);
+		createEReference(projectEClass, PROJECT__CONTROLLER);
+
 		domainAttrEClass = createEClass(DOMAIN_ATTR);
 		createEAttribute(domainAttrEClass, DOMAIN_ATTR__IS_BIZ_KEY);
 		createEAttribute(domainAttrEClass, DOMAIN_ATTR__OPTIONAL);
+		createEAttribute(domainAttrEClass, DOMAIN_ATTR__PERSISTENT);
 
 		dbAttrEClass = createEClass(DB_ATTR);
 
@@ -843,32 +883,9 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		createEReference(domainEntityEClass, DOMAIN_ENTITY__DTO);
 		createEReference(domainEntityEClass, DOMAIN_ENTITY__DBENTITY);
 
-		requestPayloadEClass = createEClass(REQUEST_PAYLOAD);
-		createEReference(requestPayloadEClass, REQUEST_PAYLOAD__GENERATED_BY);
-		createEReference(requestPayloadEClass, REQUEST_PAYLOAD__REQUESTATTR);
-
-		projectEClass = createEClass(PROJECT);
-		createEAttribute(projectEClass, PROJECT__NAME);
-		createEReference(projectEClass, PROJECT__CONTAINS_DOMAIN);
-		createEReference(projectEClass, PROJECT__CONTAINS_PAYLOAD);
-		createEReference(projectEClass, PROJECT__DBENTITY);
-		createEReference(projectEClass, PROJECT__RESPONSERESULT);
-		createEReference(projectEClass, PROJECT__CONTROLLER);
-
-		dbEntityEClass = createEClass(DB_ENTITY);
-		createEReference(dbEntityEClass, DB_ENTITY__DBATTR);
-		createEReference(dbEntityEClass, DB_ENTITY__DOMAINENTITY);
-
-		responseResultEClass = createEClass(RESPONSE_RESULT);
-		createEReference(responseResultEClass, RESPONSE_RESULT__RESPONSEATTR);
-
 		controllerEClass = createEClass(CONTROLLER);
 		createEAttribute(controllerEClass, CONTROLLER__NAME);
 		createEReference(controllerEClass, CONTROLLER__RESTINTERFACE);
-
-		dtoEClass = createEClass(DTO);
-		createEReference(dtoEClass, DTO__DTO);
-		createEReference(dtoEClass, DTO__DTOATTR);
 
 		restInterfaceEClass = createEClass(REST_INTERFACE);
 		createEReference(restInterfaceEClass, REST_INTERFACE__REQUESTPAYLOAD);
@@ -877,6 +894,11 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		createEAttribute(restInterfaceEClass, REST_INTERFACE__NAME);
 		createEAttribute(restInterfaceEClass, REST_INTERFACE__API_DESC);
 		createEReference(restInterfaceEClass, REST_INTERFACE__BIZSERVICE);
+		createEReference(restInterfaceEClass, REST_INTERFACE__ACCESS);
+
+		dtoEClass = createEClass(DTO);
+		createEReference(dtoEClass, DTO__DTO);
+		createEReference(dtoEClass, DTO__DTOATTR);
 
 		serviceEClass = createEClass(SERVICE);
 		createEAttribute(serviceEClass, SERVICE__NAME);
@@ -886,6 +908,17 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 
 		baseServiceEClass = createEClass(BASE_SERVICE);
 		createEReference(baseServiceEClass, BASE_SERVICE__REPO);
+
+		requestPayloadEClass = createEClass(REQUEST_PAYLOAD);
+		createEReference(requestPayloadEClass, REQUEST_PAYLOAD__GENERATED_BY);
+		createEReference(requestPayloadEClass, REQUEST_PAYLOAD__REQUESTATTR);
+
+		dbEntityEClass = createEClass(DB_ENTITY);
+		createEReference(dbEntityEClass, DB_ENTITY__DBATTR);
+		createEReference(dbEntityEClass, DB_ENTITY__DOMAINENTITY);
+
+		responseResultEClass = createEClass(RESPONSE_RESULT);
+		createEReference(responseResultEClass, RESPONSE_RESULT__RESPONSEATTR);
 
 		repoEClass = createEClass(REPO);
 		createEAttribute(repoEClass, REPO__NAME);
@@ -930,11 +963,35 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		baseServiceEClass.getESuperTypes().add(this.getService());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProject_Name(), ecorePackage.getEString(), "name", null, 0, 1, Project.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProject_BasePackage(), ecorePackage.getEString(), "basePackage", null, 0, 1, Project.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_ContainsDomain(), this.getDomainEntity(), null, "containsDomain", null, 0, -1,
+				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_ContainsPayload(), this.getRequestPayload(), null, "containsPayload", null, 0, -1,
+				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_Dbentity(), this.getDbEntity(), null, "dbentity", null, 0, -1, Project.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_Responseresult(), this.getResponseResult(), null, "responseresult", null, 0, -1,
+				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_Controller(), this.getController(), null, "controller", null, 0, -1, Project.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(domainAttrEClass, DomainAttr.class, "DomainAttr", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainAttr_IsBizKey(), ecorePackage.getEBoolean(), "isBizKey", null, 0, 1, DomainAttr.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainAttr_Optional(), ecorePackage.getEBoolean(), "optional", "false", 0, 1,
+				DomainAttr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomainAttr_Persistent(), ecorePackage.getEBoolean(), "persistent", null, 0, 1,
 				DomainAttr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -979,49 +1036,6 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 				DomainEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(requestPayloadEClass, RequestPayload.class, "RequestPayload", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRequestPayload_GeneratedBy(), this.getDomainEntity(), null, "generatedBy", null, 1, 1,
-				RequestPayload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequestPayload_Requestattr(), this.getRequestAttr(), null, "requestattr", null, 0, -1,
-				RequestPayload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProject_Name(), ecorePackage.getEString(), "name", null, 0, 1, Project.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_ContainsDomain(), this.getDomainEntity(), null, "containsDomain", null, 0, -1,
-				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_ContainsPayload(), this.getRequestPayload(), null, "containsPayload", null, 0, -1,
-				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Dbentity(), this.getDbEntity(), null, "dbentity", null, 0, -1, Project.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Responseresult(), this.getResponseResult(), null, "responseresult", null, 0, -1,
-				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Controller(), this.getController(), null, "controller", null, 0, -1, Project.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dbEntityEClass, DbEntity.class, "DbEntity", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDbEntity_Dbattr(), this.getDbAttr(), null, "dbattr", null, 1, -1, DbEntity.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDbEntity_Domainentity(), this.getDomainEntity(), null, "domainentity", null, 0, -1,
-				DbEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(responseResultEClass, ResponseResult.class, "ResponseResult", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResponseResult_Responseattr(), this.getResponseAttr(), null, "responseattr", null, 0, -1,
-				ResponseResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(controllerEClass, Controller.class, "Controller", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getController_Name(), ecorePackage.getEString(), "name", null, 0, 1, Controller.class,
@@ -1029,13 +1043,6 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		initEReference(getController_Restinterface(), this.getRestInterface(), null, "restinterface", null, 0, -1,
 				Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(dtoEClass, Dto.class, "Dto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDto_Dto(), this.getDto(), null, "dto", null, 0, -1, Dto.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDto_Dtoattr(), this.getDtoAttr(), null, "dtoattr", null, 0, -1, Dto.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 
 		initEClass(restInterfaceEClass, RestInterface.class, "RestInterface", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1056,6 +1063,16 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		initEReference(getRestInterface_Bizservice(), this.getBizService(), null, "bizservice", null, 0, -1,
 				RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRestInterface_Access(), this.getDomainEntity(), null, "access", null, 0, -1,
+				RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dtoEClass, Dto.class, "Dto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDto_Dto(), this.getDto(), null, "dto", null, 0, -1, Dto.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDto_Dtoattr(), this.getDtoAttr(), null, "dtoattr", null, 0, -1, Dto.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getService_Name(), ecorePackage.getEString(), "name", null, 0, 1, Service.class, !IS_TRANSIENT,
@@ -1072,6 +1089,30 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		initEReference(getBaseService_Repo(), this.getRepo(), null, "repo", null, 0, -1, BaseService.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(requestPayloadEClass, RequestPayload.class, "RequestPayload", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRequestPayload_GeneratedBy(), this.getDomainEntity(), null, "generatedBy", null, 1, 1,
+				RequestPayload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRequestPayload_Requestattr(), this.getRequestAttr(), null, "requestattr", null, 0, -1,
+				RequestPayload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dbEntityEClass, DbEntity.class, "DbEntity", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDbEntity_Dbattr(), this.getDbAttr(), null, "dbattr", null, 1, -1, DbEntity.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDbEntity_Domainentity(), this.getDomainEntity(), null, "domainentity", null, 0, -1,
+				DbEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(responseResultEClass, ResponseResult.class, "ResponseResult", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResponseResult_Responseattr(), this.getResponseAttr(), null, "responseattr", null, 0, -1,
+				ResponseResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(repoEClass, Repo.class, "Repo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRepo_Name(), ecorePackage.getEString(), "name", null, 0, 1, Repo.class, !IS_TRANSIENT,
