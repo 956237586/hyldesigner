@@ -26,21 +26,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.BizServiceImpl#getBaseservice <em>Baseservice</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.BizServiceImpl#getInvokeBase <em>Invoke Base</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BizServiceImpl extends ServiceImpl implements BizService {
 	/**
-	 * The cached value of the '{@link #getBaseservice() <em>Baseservice</em>}' containment reference list.
+	 * The cached value of the '{@link #getInvokeBase() <em>Invoke Base</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBaseservice()
+	 * @see #getInvokeBase()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<BaseService> baseservice;
+	protected EList<BaseService> invokeBase;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,12 +67,12 @@ public class BizServiceImpl extends ServiceImpl implements BizService {
 	 * @generated
 	 */
 	@Override
-	public EList<BaseService> getBaseservice() {
-		if (baseservice == null) {
-			baseservice = new EObjectContainmentEList<BaseService>(BaseService.class, this,
-					HyldesignerPackage.BIZ_SERVICE__BASESERVICE);
+	public EList<BaseService> getInvokeBase() {
+		if (invokeBase == null) {
+			invokeBase = new EObjectContainmentEList<BaseService>(BaseService.class, this,
+					HyldesignerPackage.BIZ_SERVICE__INVOKE_BASE);
 		}
-		return baseservice;
+		return invokeBase;
 	}
 
 	/**
@@ -83,8 +83,8 @@ public class BizServiceImpl extends ServiceImpl implements BizService {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case HyldesignerPackage.BIZ_SERVICE__BASESERVICE:
-			return ((InternalEList<?>) getBaseservice()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.BIZ_SERVICE__INVOKE_BASE:
+			return ((InternalEList<?>) getInvokeBase()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -97,8 +97,8 @@ public class BizServiceImpl extends ServiceImpl implements BizService {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case HyldesignerPackage.BIZ_SERVICE__BASESERVICE:
-			return getBaseservice();
+		case HyldesignerPackage.BIZ_SERVICE__INVOKE_BASE:
+			return getInvokeBase();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,9 +112,9 @@ public class BizServiceImpl extends ServiceImpl implements BizService {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case HyldesignerPackage.BIZ_SERVICE__BASESERVICE:
-			getBaseservice().clear();
-			getBaseservice().addAll((Collection<? extends BaseService>) newValue);
+		case HyldesignerPackage.BIZ_SERVICE__INVOKE_BASE:
+			getInvokeBase().clear();
+			getInvokeBase().addAll((Collection<? extends BaseService>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,8 +128,8 @@ public class BizServiceImpl extends ServiceImpl implements BizService {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case HyldesignerPackage.BIZ_SERVICE__BASESERVICE:
-			getBaseservice().clear();
+		case HyldesignerPackage.BIZ_SERVICE__INVOKE_BASE:
+			getInvokeBase().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -143,8 +143,8 @@ public class BizServiceImpl extends ServiceImpl implements BizService {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case HyldesignerPackage.BIZ_SERVICE__BASESERVICE:
-			return baseservice != null && !baseservice.isEmpty();
+		case HyldesignerPackage.BIZ_SERVICE__INVOKE_BASE:
+			return invokeBase != null && !invokeBase.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -26,21 +26,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.BaseServiceImpl#getRepo <em>Repo</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.BaseServiceImpl#getAccessRepo <em>Access Repo</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class BaseServiceImpl extends ServiceImpl implements BaseService {
 	/**
-	 * The cached value of the '{@link #getRepo() <em>Repo</em>}' containment reference list.
+	 * The cached value of the '{@link #getAccessRepo() <em>Access Repo</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRepo()
+	 * @see #getAccessRepo()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Repo> repo;
+	protected EList<Repo> accessRepo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,11 +67,12 @@ public class BaseServiceImpl extends ServiceImpl implements BaseService {
 	 * @generated
 	 */
 	@Override
-	public EList<Repo> getRepo() {
-		if (repo == null) {
-			repo = new EObjectContainmentEList<Repo>(Repo.class, this, HyldesignerPackage.BASE_SERVICE__REPO);
+	public EList<Repo> getAccessRepo() {
+		if (accessRepo == null) {
+			accessRepo = new EObjectContainmentEList<Repo>(Repo.class, this,
+					HyldesignerPackage.BASE_SERVICE__ACCESS_REPO);
 		}
-		return repo;
+		return accessRepo;
 	}
 
 	/**
@@ -82,8 +83,8 @@ public class BaseServiceImpl extends ServiceImpl implements BaseService {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case HyldesignerPackage.BASE_SERVICE__REPO:
-			return ((InternalEList<?>) getRepo()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.BASE_SERVICE__ACCESS_REPO:
+			return ((InternalEList<?>) getAccessRepo()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +97,8 @@ public class BaseServiceImpl extends ServiceImpl implements BaseService {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case HyldesignerPackage.BASE_SERVICE__REPO:
-			return getRepo();
+		case HyldesignerPackage.BASE_SERVICE__ACCESS_REPO:
+			return getAccessRepo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +112,9 @@ public class BaseServiceImpl extends ServiceImpl implements BaseService {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case HyldesignerPackage.BASE_SERVICE__REPO:
-			getRepo().clear();
-			getRepo().addAll((Collection<? extends Repo>) newValue);
+		case HyldesignerPackage.BASE_SERVICE__ACCESS_REPO:
+			getAccessRepo().clear();
+			getAccessRepo().addAll((Collection<? extends Repo>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +128,8 @@ public class BaseServiceImpl extends ServiceImpl implements BaseService {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case HyldesignerPackage.BASE_SERVICE__REPO:
-			getRepo().clear();
+		case HyldesignerPackage.BASE_SERVICE__ACCESS_REPO:
+			getAccessRepo().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,8 +143,8 @@ public class BaseServiceImpl extends ServiceImpl implements BaseService {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case HyldesignerPackage.BASE_SERVICE__REPO:
-			return repo != null && !repo.isEmpty();
+		case HyldesignerPackage.BASE_SERVICE__ACCESS_REPO:
+			return accessRepo != null && !accessRepo.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

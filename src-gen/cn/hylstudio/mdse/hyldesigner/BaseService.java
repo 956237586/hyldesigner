@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.BaseService#getRepo <em>Repo</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.BaseService#getAccessRepo <em>Access Repo</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getBaseService()
@@ -22,15 +22,15 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface BaseService extends Service {
 	/**
-	 * Returns the value of the '<em><b>Repo</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Access Repo</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.Repo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Repo</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getBaseService_Repo()
+	 * @return the value of the '<em>Access Repo</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getBaseService_AccessRepo()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Repo> getRepo();
+	EList<Repo> getAccessRepo();
 
 } // BaseService

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.BizService#getBaseservice <em>Baseservice</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.BizService#getInvokeBase <em>Invoke Base</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getBizService()
@@ -22,15 +22,15 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface BizService extends Service {
 	/**
-	 * Returns the value of the '<em><b>Baseservice</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Invoke Base</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.BaseService}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Baseservice</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getBizService_Baseservice()
+	 * @return the value of the '<em>Invoke Base</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getBizService_InvokeBase()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<BaseService> getBaseservice();
+	EList<BaseService> getInvokeBase();
 
 } // BizService

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.Repo#getName <em>Name</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.Repo#getDbentity <em>Dbentity</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Repo#getStoreEntity <em>Store Entity</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRepo()
@@ -45,25 +45,25 @@ public interface Repo extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Dbentity</b></em>' reference.
+	 * Returns the value of the '<em><b>Store Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dbentity</em>' reference.
-	 * @see #setDbentity(DbEntity)
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRepo_Dbentity()
+	 * @return the value of the '<em>Store Entity</em>' reference.
+	 * @see #setStoreEntity(DbEntity)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRepo_StoreEntity()
 	 * @model required="true"
 	 * @generated
 	 */
-	DbEntity getDbentity();
+	DbEntity getStoreEntity();
 
 	/**
-	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.Repo#getDbentity <em>Dbentity</em>}' reference.
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.Repo#getStoreEntity <em>Store Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dbentity</em>' reference.
-	 * @see #getDbentity()
+	 * @param value the new value of the '<em>Store Entity</em>' reference.
+	 * @see #getStoreEntity()
 	 * @generated
 	 */
-	void setDbentity(DbEntity value);
+	void setStoreEntity(DbEntity value);
 
 } // Repo

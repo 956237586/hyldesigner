@@ -22,24 +22,6 @@ public interface HyldesignerFactory extends EFactory {
 	HyldesignerFactory eINSTANCE = cn.hylstudio.mdse.hyldesigner.impl.HyldesignerFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Domain Entity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Domain Entity</em>'.
-	 * @generated
-	 */
-	DomainEntity createDomainEntity();
-
-	/**
-	 * Returns a new object of class '<em>Request Payload</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Request Payload</em>'.
-	 * @generated
-	 */
-	RequestPayload createRequestPayload();
-
-	/**
 	 * Returns a new object of class '<em>Project</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,13 +31,13 @@ public interface HyldesignerFactory extends EFactory {
 	Project createProject();
 
 	/**
-	 * Returns a new object of class '<em>Db Entity</em>'.
+	 * Returns a new object of class '<em>Package Define</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Db Entity</em>'.
+	 * @return a new object of class '<em>Package Define</em>'.
 	 * @generated
 	 */
-	DbEntity createDbEntity();
+	PackageDefine createPackageDefine();
 
 	/**
 	 * Returns a new object of class '<em>Domain Attr</em>'.
@@ -74,42 +56,6 @@ public interface HyldesignerFactory extends EFactory {
 	 * @generated
 	 */
 	DbAttr createDbAttr();
-
-	/**
-	 * Returns a new object of class '<em>Response Result</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Response Result</em>'.
-	 * @generated
-	 */
-	ResponseResult createResponseResult();
-
-	/**
-	 * Returns a new object of class '<em>Controller</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Controller</em>'.
-	 * @generated
-	 */
-	Controller createController();
-
-	/**
-	 * Returns a new object of class '<em>Dto</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dto</em>'.
-	 * @generated
-	 */
-	Dto createDto();
-
-	/**
-	 * Returns a new object of class '<em>Rest Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Rest Interface</em>'.
-	 * @generated
-	 */
-	RestInterface createRestInterface();
 
 	/**
 	 * Returns a new object of class '<em>Request Attr</em>'.
@@ -139,6 +85,42 @@ public interface HyldesignerFactory extends EFactory {
 	DtoAttr createDtoAttr();
 
 	/**
+	 * Returns a new object of class '<em>Domain Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Domain Entity</em>'.
+	 * @generated
+	 */
+	DomainEntity createDomainEntity();
+
+	/**
+	 * Returns a new object of class '<em>Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Controller</em>'.
+	 * @generated
+	 */
+	Controller createController();
+
+	/**
+	 * Returns a new object of class '<em>Rest Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rest Interface</em>'.
+	 * @generated
+	 */
+	RestInterface createRestInterface();
+
+	/**
+	 * Returns a new object of class '<em>Dto</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dto</em>'.
+	 * @generated
+	 */
+	Dto createDto();
+
+	/**
 	 * Returns a new object of class '<em>Service</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,6 +146,33 @@ public interface HyldesignerFactory extends EFactory {
 	 * @generated
 	 */
 	BaseService createBaseService();
+
+	/**
+	 * Returns a new object of class '<em>Request Payload</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Request Payload</em>'.
+	 * @generated
+	 */
+	RequestPayload createRequestPayload();
+
+	/**
+	 * Returns a new object of class '<em>Db Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Db Entity</em>'.
+	 * @generated
+	 */
+	DbEntity createDbEntity();
+
+	/**
+	 * Returns a new object of class '<em>Response Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Response Result</em>'.
+	 * @generated
+	 */
+	ResponseResult createResponseResult();
 
 	/**
 	 * Returns a new object of class '<em>Repo</em>'.

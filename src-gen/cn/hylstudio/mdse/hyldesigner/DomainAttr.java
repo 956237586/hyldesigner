@@ -12,8 +12,8 @@ package cn.hylstudio.mdse.hyldesigner;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isIsBizKey <em>Is Biz Key</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isOptional <em>Optional</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isPersistent <em>Persistent</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isIsOptional <em>Is Optional</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isNeedPersistent <em>Need Persistent</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainAttr()
@@ -21,7 +21,6 @@ package cn.hylstudio.mdse.hyldesigner;
  * @generated
  */
 public interface DomainAttr extends Attr {
-
 	/**
 	 * Returns the value of the '<em><b>Is Biz Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -29,7 +28,7 @@ public interface DomainAttr extends Attr {
 	 * @return the value of the '<em>Is Biz Key</em>' attribute.
 	 * @see #setIsBizKey(boolean)
 	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainAttr_IsBizKey()
-	 * @model extendedMetaData="desc='\u662f\u5426\u4e1a\u52a1\u4e3b\u952e'"
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isIsBizKey();
@@ -45,48 +44,48 @@ public interface DomainAttr extends Attr {
 	void setIsBizKey(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Optional</b></em>' attribute.
+	 * Returns the value of the '<em><b>Is Optional</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Optional</em>' attribute.
-	 * @see #setOptional(boolean)
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainAttr_Optional()
-	 * @model default="false"
-	 *        extendedMetaData="desc='\u662f\u5426\u4e1a\u52a1\u4e3b\u952e'"
+	 * @return the value of the '<em>Is Optional</em>' attribute.
+	 * @see #setIsOptional(boolean)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainAttr_IsOptional()
+	 * @model default="false" required="true"
 	 * @generated
 	 */
-	boolean isOptional();
+	boolean isIsOptional();
 
 	/**
-	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isOptional <em>Optional</em>}' attribute.
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isIsOptional <em>Is Optional</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Optional</em>' attribute.
-	 * @see #isOptional()
+	 * @param value the new value of the '<em>Is Optional</em>' attribute.
+	 * @see #isIsOptional()
 	 * @generated
 	 */
-	void setOptional(boolean value);
+	void setIsOptional(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Persistent</b></em>' attribute.
+	 * Returns the value of the '<em><b>Need Persistent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Persistent</em>' attribute.
-	 * @see #setPersistent(boolean)
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainAttr_Persistent()
-	 * @model
+	 * @return the value of the '<em>Need Persistent</em>' attribute.
+	 * @see #setNeedPersistent(boolean)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainAttr_NeedPersistent()
+	 * @model required="true"
 	 * @generated
 	 */
-	boolean isPersistent();
+	boolean isNeedPersistent();
 
 	/**
-	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isPersistent <em>Persistent</em>}' attribute.
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isNeedPersistent <em>Need Persistent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Persistent</em>' attribute.
-	 * @see #isPersistent()
+	 * @param value the new value of the '<em>Need Persistent</em>' attribute.
+	 * @see #isNeedPersistent()
 	 * @generated
 	 */
-	void setPersistent(boolean value);
+	void setNeedPersistent(boolean value);
+
 } // DomainAttr

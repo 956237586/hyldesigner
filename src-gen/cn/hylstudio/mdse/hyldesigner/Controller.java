@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.Controller#getName <em>Name</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.Controller#getRestinterface <em>Restinterface</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Controller#getRestInterface <em>Rest Interface</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getController()
@@ -47,15 +47,15 @@ public interface Controller extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Restinterface</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Rest Interface</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.RestInterface}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Restinterface</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getController_Restinterface()
+	 * @return the value of the '<em>Rest Interface</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getController_RestInterface()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<RestInterface> getRestinterface();
+	EList<RestInterface> getRestInterface();
 
 } // Controller

@@ -7,6 +7,7 @@ import cn.hylstudio.mdse.hyldesigner.DomainAttr;
 import cn.hylstudio.mdse.hyldesigner.DomainEntity;
 import cn.hylstudio.mdse.hyldesigner.Dto;
 import cn.hylstudio.mdse.hyldesigner.HyldesignerPackage;
+import cn.hylstudio.mdse.hyldesigner.PackageDefine;
 import cn.hylstudio.mdse.hyldesigner.RequestPayload;
 
 import java.util.Collection;
@@ -35,10 +36,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getId <em>Id</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getDomainattr <em>Domainattr</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getGenerate <em>Generate</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getDto <em>Dto</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getDbentity <em>Dbentity</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getAttr <em>Attr</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getGeneratedPayload <em>Generated Payload</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getGeneratedDto <em>Generated Dto</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getGeneratedDbEntity <em>Generated Db Entity</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl#getBelongTo <em>Belong To</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,44 +67,54 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 	protected String id = ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDomainattr() <em>Domainattr</em>}' containment reference list.
+	 * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDomainattr()
+	 * @see #getAttr()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DomainAttr> domainattr;
+	protected EList<DomainAttr> attr;
 
 	/**
-	 * The cached value of the '{@link #getGenerate() <em>Generate</em>}' containment reference list.
+	 * The cached value of the '{@link #getGeneratedPayload() <em>Generated Payload</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGenerate()
+	 * @see #getGeneratedPayload()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RequestPayload> generate;
+	protected EList<RequestPayload> generatedPayload;
 
 	/**
-	 * The cached value of the '{@link #getDto() <em>Dto</em>}' containment reference list.
+	 * The cached value of the '{@link #getGeneratedDto() <em>Generated Dto</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDto()
+	 * @see #getGeneratedDto()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Dto> dto;
+	protected EList<Dto> generatedDto;
 
 	/**
-	 * The cached value of the '{@link #getDbentity() <em>Dbentity</em>}' reference list.
+	 * The cached value of the '{@link #getGeneratedDbEntity() <em>Generated Db Entity</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDbentity()
+	 * @see #getGeneratedDbEntity()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DbEntity> dbentity;
+	protected EList<DbEntity> generatedDbEntity;
+
+	/**
+	 * The cached value of the '{@link #getBelongTo() <em>Belong To</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBelongTo()
+	 * @generated
+	 * @ordered
+	 */
+	protected PackageDefine belongTo;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,12 +164,12 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	@Override
-	public EList<RequestPayload> getGenerate() {
-		if (generate == null) {
-			generate = new EObjectContainmentEList<RequestPayload>(RequestPayload.class, this,
-					HyldesignerPackage.DOMAIN_ENTITY__GENERATE);
+	public EList<DomainAttr> getAttr() {
+		if (attr == null) {
+			attr = new EObjectContainmentEList<DomainAttr>(DomainAttr.class, this,
+					HyldesignerPackage.DOMAIN_ENTITY__ATTR);
 		}
-		return generate;
+		return attr;
 	}
 
 	/**
@@ -166,12 +178,12 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	@Override
-	public EList<DomainAttr> getDomainattr() {
-		if (domainattr == null) {
-			domainattr = new EObjectContainmentEList<DomainAttr>(DomainAttr.class, this,
-					HyldesignerPackage.DOMAIN_ENTITY__DOMAINATTR);
+	public EList<RequestPayload> getGeneratedPayload() {
+		if (generatedPayload == null) {
+			generatedPayload = new EObjectContainmentEList<RequestPayload>(RequestPayload.class, this,
+					HyldesignerPackage.DOMAIN_ENTITY__GENERATED_PAYLOAD);
 		}
-		return domainattr;
+		return generatedPayload;
 	}
 
 	/**
@@ -180,11 +192,12 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	@Override
-	public EList<Dto> getDto() {
-		if (dto == null) {
-			dto = new EObjectContainmentEList<Dto>(Dto.class, this, HyldesignerPackage.DOMAIN_ENTITY__DTO);
+	public EList<Dto> getGeneratedDto() {
+		if (generatedDto == null) {
+			generatedDto = new EObjectContainmentEList<Dto>(Dto.class, this,
+					HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DTO);
 		}
-		return dto;
+		return generatedDto;
 	}
 
 	/**
@@ -193,12 +206,54 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	@Override
-	public EList<DbEntity> getDbentity() {
-		if (dbentity == null) {
-			dbentity = new EObjectResolvingEList<DbEntity>(DbEntity.class, this,
-					HyldesignerPackage.DOMAIN_ENTITY__DBENTITY);
+	public EList<DbEntity> getGeneratedDbEntity() {
+		if (generatedDbEntity == null) {
+			generatedDbEntity = new EObjectResolvingEList<DbEntity>(DbEntity.class, this,
+					HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DB_ENTITY);
 		}
-		return dbentity;
+		return generatedDbEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PackageDefine getBelongTo() {
+		if (belongTo != null && belongTo.eIsProxy()) {
+			InternalEObject oldBelongTo = (InternalEObject) belongTo;
+			belongTo = (PackageDefine) eResolveProxy(oldBelongTo);
+			if (belongTo != oldBelongTo) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							HyldesignerPackage.DOMAIN_ENTITY__BELONG_TO, oldBelongTo, belongTo));
+			}
+		}
+		return belongTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PackageDefine basicGetBelongTo() {
+		return belongTo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setBelongTo(PackageDefine newBelongTo) {
+		PackageDefine oldBelongTo = belongTo;
+		belongTo = newBelongTo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.DOMAIN_ENTITY__BELONG_TO,
+					oldBelongTo, belongTo));
 	}
 
 	/**
@@ -209,12 +264,12 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case HyldesignerPackage.DOMAIN_ENTITY__DOMAINATTR:
-			return ((InternalEList<?>) getDomainattr()).basicRemove(otherEnd, msgs);
-		case HyldesignerPackage.DOMAIN_ENTITY__GENERATE:
-			return ((InternalEList<?>) getGenerate()).basicRemove(otherEnd, msgs);
-		case HyldesignerPackage.DOMAIN_ENTITY__DTO:
-			return ((InternalEList<?>) getDto()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.DOMAIN_ENTITY__ATTR:
+			return ((InternalEList<?>) getAttr()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_PAYLOAD:
+			return ((InternalEList<?>) getGeneratedPayload()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DTO:
+			return ((InternalEList<?>) getGeneratedDto()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -229,14 +284,18 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 		switch (featureID) {
 		case HyldesignerPackage.DOMAIN_ENTITY__ID:
 			return getId();
-		case HyldesignerPackage.DOMAIN_ENTITY__DOMAINATTR:
-			return getDomainattr();
-		case HyldesignerPackage.DOMAIN_ENTITY__GENERATE:
-			return getGenerate();
-		case HyldesignerPackage.DOMAIN_ENTITY__DTO:
-			return getDto();
-		case HyldesignerPackage.DOMAIN_ENTITY__DBENTITY:
-			return getDbentity();
+		case HyldesignerPackage.DOMAIN_ENTITY__ATTR:
+			return getAttr();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_PAYLOAD:
+			return getGeneratedPayload();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DTO:
+			return getGeneratedDto();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DB_ENTITY:
+			return getGeneratedDbEntity();
+		case HyldesignerPackage.DOMAIN_ENTITY__BELONG_TO:
+			if (resolve)
+				return getBelongTo();
+			return basicGetBelongTo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,21 +312,24 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 		case HyldesignerPackage.DOMAIN_ENTITY__ID:
 			setId((String) newValue);
 			return;
-		case HyldesignerPackage.DOMAIN_ENTITY__DOMAINATTR:
-			getDomainattr().clear();
-			getDomainattr().addAll((Collection<? extends DomainAttr>) newValue);
+		case HyldesignerPackage.DOMAIN_ENTITY__ATTR:
+			getAttr().clear();
+			getAttr().addAll((Collection<? extends DomainAttr>) newValue);
 			return;
-		case HyldesignerPackage.DOMAIN_ENTITY__GENERATE:
-			getGenerate().clear();
-			getGenerate().addAll((Collection<? extends RequestPayload>) newValue);
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_PAYLOAD:
+			getGeneratedPayload().clear();
+			getGeneratedPayload().addAll((Collection<? extends RequestPayload>) newValue);
 			return;
-		case HyldesignerPackage.DOMAIN_ENTITY__DTO:
-			getDto().clear();
-			getDto().addAll((Collection<? extends Dto>) newValue);
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DTO:
+			getGeneratedDto().clear();
+			getGeneratedDto().addAll((Collection<? extends Dto>) newValue);
 			return;
-		case HyldesignerPackage.DOMAIN_ENTITY__DBENTITY:
-			getDbentity().clear();
-			getDbentity().addAll((Collection<? extends DbEntity>) newValue);
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DB_ENTITY:
+			getGeneratedDbEntity().clear();
+			getGeneratedDbEntity().addAll((Collection<? extends DbEntity>) newValue);
+			return;
+		case HyldesignerPackage.DOMAIN_ENTITY__BELONG_TO:
+			setBelongTo((PackageDefine) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -284,17 +346,20 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 		case HyldesignerPackage.DOMAIN_ENTITY__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case HyldesignerPackage.DOMAIN_ENTITY__DOMAINATTR:
-			getDomainattr().clear();
+		case HyldesignerPackage.DOMAIN_ENTITY__ATTR:
+			getAttr().clear();
 			return;
-		case HyldesignerPackage.DOMAIN_ENTITY__GENERATE:
-			getGenerate().clear();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_PAYLOAD:
+			getGeneratedPayload().clear();
 			return;
-		case HyldesignerPackage.DOMAIN_ENTITY__DTO:
-			getDto().clear();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DTO:
+			getGeneratedDto().clear();
 			return;
-		case HyldesignerPackage.DOMAIN_ENTITY__DBENTITY:
-			getDbentity().clear();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DB_ENTITY:
+			getGeneratedDbEntity().clear();
+			return;
+		case HyldesignerPackage.DOMAIN_ENTITY__BELONG_TO:
+			setBelongTo((PackageDefine) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -310,14 +375,16 @@ public class DomainEntityImpl extends MinimalEObjectImpl.Container implements Do
 		switch (featureID) {
 		case HyldesignerPackage.DOMAIN_ENTITY__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-		case HyldesignerPackage.DOMAIN_ENTITY__DOMAINATTR:
-			return domainattr != null && !domainattr.isEmpty();
-		case HyldesignerPackage.DOMAIN_ENTITY__GENERATE:
-			return generate != null && !generate.isEmpty();
-		case HyldesignerPackage.DOMAIN_ENTITY__DTO:
-			return dto != null && !dto.isEmpty();
-		case HyldesignerPackage.DOMAIN_ENTITY__DBENTITY:
-			return dbentity != null && !dbentity.isEmpty();
+		case HyldesignerPackage.DOMAIN_ENTITY__ATTR:
+			return attr != null && !attr.isEmpty();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_PAYLOAD:
+			return generatedPayload != null && !generatedPayload.isEmpty();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DTO:
+			return generatedDto != null && !generatedDto.isEmpty();
+		case HyldesignerPackage.DOMAIN_ENTITY__GENERATED_DB_ENTITY:
+			return generatedDbEntity != null && !generatedDbEntity.isEmpty();
+		case HyldesignerPackage.DOMAIN_ENTITY__BELONG_TO:
+			return belongTo != null;
 		}
 		return super.eIsSet(featureID);
 	}

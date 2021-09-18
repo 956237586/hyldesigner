@@ -28,21 +28,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl#getResponseattr <em>Responseattr</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl#getAttr <em>Attr</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ResponseResultImpl extends MinimalEObjectImpl.Container implements ResponseResult {
 	/**
-	 * The cached value of the '{@link #getResponseattr() <em>Responseattr</em>}' containment reference list.
+	 * The cached value of the '{@link #getAttr() <em>Attr</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResponseattr()
+	 * @see #getAttr()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ResponseAttr> responseattr;
+	protected EList<ResponseAttr> attr;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,12 +69,12 @@ public class ResponseResultImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public EList<ResponseAttr> getResponseattr() {
-		if (responseattr == null) {
-			responseattr = new EObjectContainmentEList<ResponseAttr>(ResponseAttr.class, this,
-					HyldesignerPackage.RESPONSE_RESULT__RESPONSEATTR);
+	public EList<ResponseAttr> getAttr() {
+		if (attr == null) {
+			attr = new EObjectContainmentEList<ResponseAttr>(ResponseAttr.class, this,
+					HyldesignerPackage.RESPONSE_RESULT__ATTR);
 		}
-		return responseattr;
+		return attr;
 	}
 
 	/**
@@ -85,8 +85,8 @@ public class ResponseResultImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case HyldesignerPackage.RESPONSE_RESULT__RESPONSEATTR:
-			return ((InternalEList<?>) getResponseattr()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.RESPONSE_RESULT__ATTR:
+			return ((InternalEList<?>) getAttr()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -99,8 +99,8 @@ public class ResponseResultImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case HyldesignerPackage.RESPONSE_RESULT__RESPONSEATTR:
-			return getResponseattr();
+		case HyldesignerPackage.RESPONSE_RESULT__ATTR:
+			return getAttr();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,9 +114,9 @@ public class ResponseResultImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case HyldesignerPackage.RESPONSE_RESULT__RESPONSEATTR:
-			getResponseattr().clear();
-			getResponseattr().addAll((Collection<? extends ResponseAttr>) newValue);
+		case HyldesignerPackage.RESPONSE_RESULT__ATTR:
+			getAttr().clear();
+			getAttr().addAll((Collection<? extends ResponseAttr>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -130,8 +130,8 @@ public class ResponseResultImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case HyldesignerPackage.RESPONSE_RESULT__RESPONSEATTR:
-			getResponseattr().clear();
+		case HyldesignerPackage.RESPONSE_RESULT__ATTR:
+			getAttr().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -145,8 +145,8 @@ public class ResponseResultImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case HyldesignerPackage.RESPONSE_RESULT__RESPONSEATTR:
-			return responseattr != null && !responseattr.isEmpty();
+		case HyldesignerPackage.RESPONSE_RESULT__ATTR:
+			return attr != null && !attr.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

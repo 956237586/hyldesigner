@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getRequestpayload <em>Requestpayload</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getResponseresult <em>Responseresult</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getRestApiUri <em>Rest Api Uri</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getPayload <em>Payload</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getResult <em>Result</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getMapping <em>Mapping</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getName <em>Name</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getApiDesc <em>Api Desc</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getBizservice <em>Bizservice</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getDesc <em>Desc</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getInvokeBizServices <em>Invoke Biz Services</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getAccess <em>Access</em>}</li>
  * </ul>
  *
@@ -30,70 +30,70 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface RestInterface extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Requestpayload</b></em>' reference.
+	 * Returns the value of the '<em><b>Payload</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Requestpayload</em>' reference.
-	 * @see #setRequestpayload(RequestPayload)
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_Requestpayload()
+	 * @return the value of the '<em>Payload</em>' reference.
+	 * @see #setPayload(RequestPayload)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_Payload()
 	 * @model
 	 * @generated
 	 */
-	RequestPayload getRequestpayload();
+	RequestPayload getPayload();
 
 	/**
-	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getRequestpayload <em>Requestpayload</em>}' reference.
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getPayload <em>Payload</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Requestpayload</em>' reference.
-	 * @see #getRequestpayload()
+	 * @param value the new value of the '<em>Payload</em>' reference.
+	 * @see #getPayload()
 	 * @generated
 	 */
-	void setRequestpayload(RequestPayload value);
+	void setPayload(RequestPayload value);
 
 	/**
-	 * Returns the value of the '<em><b>Responseresult</b></em>' reference.
+	 * Returns the value of the '<em><b>Result</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Responseresult</em>' reference.
-	 * @see #setResponseresult(ResponseResult)
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_Responseresult()
+	 * @return the value of the '<em>Result</em>' reference.
+	 * @see #setResult(ResponseResult)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_Result()
 	 * @model
 	 * @generated
 	 */
-	ResponseResult getResponseresult();
+	ResponseResult getResult();
 
 	/**
-	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getResponseresult <em>Responseresult</em>}' reference.
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getResult <em>Result</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Responseresult</em>' reference.
-	 * @see #getResponseresult()
+	 * @param value the new value of the '<em>Result</em>' reference.
+	 * @see #getResult()
 	 * @generated
 	 */
-	void setResponseresult(ResponseResult value);
+	void setResult(ResponseResult value);
 
 	/**
-	 * Returns the value of the '<em><b>Rest Api Uri</b></em>' attribute.
+	 * Returns the value of the '<em><b>Mapping</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Rest Api Uri</em>' attribute.
-	 * @see #setRestApiUri(String)
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_RestApiUri()
+	 * @return the value of the '<em>Mapping</em>' attribute.
+	 * @see #setMapping(String)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_Mapping()
 	 * @model
 	 * @generated
 	 */
-	String getRestApiUri();
+	String getMapping();
 
 	/**
-	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getRestApiUri <em>Rest Api Uri</em>}' attribute.
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getMapping <em>Mapping</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Rest Api Uri</em>' attribute.
-	 * @see #getRestApiUri()
+	 * @param value the new value of the '<em>Mapping</em>' attribute.
+	 * @see #getMapping()
 	 * @generated
 	 */
-	void setRestApiUri(String value);
+	void setMapping(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -118,38 +118,38 @@ public interface RestInterface extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Api Desc</b></em>' attribute.
+	 * Returns the value of the '<em><b>Desc</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Api Desc</em>' attribute.
-	 * @see #setApiDesc(String)
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_ApiDesc()
+	 * @return the value of the '<em>Desc</em>' attribute.
+	 * @see #setDesc(String)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_Desc()
 	 * @model
 	 * @generated
 	 */
-	String getApiDesc();
+	String getDesc();
 
 	/**
-	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getApiDesc <em>Api Desc</em>}' attribute.
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getDesc <em>Desc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Api Desc</em>' attribute.
-	 * @see #getApiDesc()
+	 * @param value the new value of the '<em>Desc</em>' attribute.
+	 * @see #getDesc()
 	 * @generated
 	 */
-	void setApiDesc(String value);
+	void setDesc(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Bizservice</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Invoke Biz Services</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.BizService}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bizservice</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_Bizservice()
+	 * @return the value of the '<em>Invoke Biz Services</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getRestInterface_InvokeBizServices()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<BizService> getBizservice();
+	EList<BizService> getInvokeBizServices();
 
 	/**
 	 * Returns the value of the '<em><b>Access</b></em>' reference list.

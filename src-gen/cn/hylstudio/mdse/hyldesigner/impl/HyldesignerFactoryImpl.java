@@ -58,6 +58,8 @@ public class HyldesignerFactoryImpl extends EFactoryImpl implements HyldesignerF
 		switch (eClass.getClassifierID()) {
 		case HyldesignerPackage.PROJECT:
 			return createProject();
+		case HyldesignerPackage.PACKAGE_DEFINE:
+			return createPackageDefine();
 		case HyldesignerPackage.DOMAIN_ATTR:
 			return createDomainAttr();
 		case HyldesignerPackage.DB_ATTR:
@@ -101,28 +103,6 @@ public class HyldesignerFactoryImpl extends EFactoryImpl implements HyldesignerF
 	 * @generated
 	 */
 	@Override
-	public DomainEntity createDomainEntity() {
-		DomainEntityImpl domainEntity = new DomainEntityImpl();
-		return domainEntity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public RequestPayload createRequestPayload() {
-		RequestPayloadImpl requestPayload = new RequestPayloadImpl();
-		return requestPayload;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Project createProject() {
 		ProjectImpl project = new ProjectImpl();
 		return project;
@@ -134,9 +114,9 @@ public class HyldesignerFactoryImpl extends EFactoryImpl implements HyldesignerF
 	 * @generated
 	 */
 	@Override
-	public DbEntity createDbEntity() {
-		DbEntityImpl dbEntity = new DbEntityImpl();
-		return dbEntity;
+	public PackageDefine createPackageDefine() {
+		PackageDefineImpl packageDefine = new PackageDefineImpl();
+		return packageDefine;
 	}
 
 	/**
@@ -159,50 +139,6 @@ public class HyldesignerFactoryImpl extends EFactoryImpl implements HyldesignerF
 	public DbAttr createDbAttr() {
 		DbAttrImpl dbAttr = new DbAttrImpl();
 		return dbAttr;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResponseResult createResponseResult() {
-		ResponseResultImpl responseResult = new ResponseResultImpl();
-		return responseResult;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Controller createController() {
-		ControllerImpl controller = new ControllerImpl();
-		return controller;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Dto createDto() {
-		DtoImpl dto = new DtoImpl();
-		return dto;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public RestInterface createRestInterface() {
-		RestInterfaceImpl restInterface = new RestInterfaceImpl();
-		return restInterface;
 	}
 
 	/**
@@ -244,6 +180,50 @@ public class HyldesignerFactoryImpl extends EFactoryImpl implements HyldesignerF
 	 * @generated
 	 */
 	@Override
+	public DomainEntity createDomainEntity() {
+		DomainEntityImpl domainEntity = new DomainEntityImpl();
+		return domainEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Controller createController() {
+		ControllerImpl controller = new ControllerImpl();
+		return controller;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RestInterface createRestInterface() {
+		RestInterfaceImpl restInterface = new RestInterfaceImpl();
+		return restInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Dto createDto() {
+		DtoImpl dto = new DtoImpl();
+		return dto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Service createService() {
 		ServiceImpl service = new ServiceImpl();
 		return service;
@@ -269,6 +249,39 @@ public class HyldesignerFactoryImpl extends EFactoryImpl implements HyldesignerF
 	public BaseService createBaseService() {
 		BaseServiceImpl baseService = new BaseServiceImpl();
 		return baseService;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public RequestPayload createRequestPayload() {
+		RequestPayloadImpl requestPayload = new RequestPayloadImpl();
+		return requestPayload;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public DbEntity createDbEntity() {
+		DbEntityImpl dbEntity = new DbEntityImpl();
+		return dbEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResponseResult createResponseResult() {
+		ResponseResultImpl responseResult = new ResponseResultImpl();
+		return responseResult;
 	}
 
 	/**

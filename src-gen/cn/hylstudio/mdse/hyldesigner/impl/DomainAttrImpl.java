@@ -6,7 +6,9 @@ import cn.hylstudio.mdse.hyldesigner.DomainAttr;
 import cn.hylstudio.mdse.hyldesigner.HyldesignerPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -18,8 +20,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl#isIsBizKey <em>Is Biz Key</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl#isOptional <em>Optional</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl#isPersistent <em>Persistent</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl#isIsOptional <em>Is Optional</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl#isNeedPersistent <em>Need Persistent</em>}</li>
  * </ul>
  *
  * @generated
@@ -34,6 +36,7 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 	 * @ordered
 	 */
 	protected static final boolean IS_BIZ_KEY_EDEFAULT = false;
+
 	/**
 	 * The cached value of the '{@link #isIsBizKey() <em>Is Biz Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -45,42 +48,44 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 	protected boolean isBizKey = IS_BIZ_KEY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isOptional() <em>Optional</em>}' attribute.
+	 * The default value of the '{@link #isIsOptional() <em>Is Optional</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isOptional()
+	 * @see #isIsOptional()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean OPTIONAL_EDEFAULT = false;
-	/**
-	 * The cached value of the '{@link #isOptional() <em>Optional</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOptional()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean optional = OPTIONAL_EDEFAULT;
+	protected static final boolean IS_OPTIONAL_EDEFAULT = false;
 
 	/**
-	 * The default value of the '{@link #isPersistent() <em>Persistent</em>}' attribute.
+	 * The cached value of the '{@link #isIsOptional() <em>Is Optional</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isPersistent()
+	 * @see #isIsOptional()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean PERSISTENT_EDEFAULT = false;
+	protected boolean isOptional = IS_OPTIONAL_EDEFAULT;
+
 	/**
-	 * The cached value of the '{@link #isPersistent() <em>Persistent</em>}' attribute.
+	 * The default value of the '{@link #isNeedPersistent() <em>Need Persistent</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isPersistent()
+	 * @see #isNeedPersistent()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean persistent = PERSISTENT_EDEFAULT;
+	protected static final boolean NEED_PERSISTENT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNeedPersistent() <em>Need Persistent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNeedPersistent()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean needPersistent = NEED_PERSISTENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,8 +136,8 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 	 * @generated
 	 */
 	@Override
-	public boolean isOptional() {
-		return optional;
+	public boolean isIsOptional() {
+		return isOptional;
 	}
 
 	/**
@@ -141,12 +146,12 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 	 * @generated
 	 */
 	@Override
-	public void setOptional(boolean newOptional) {
-		boolean oldOptional = optional;
-		optional = newOptional;
+	public void setIsOptional(boolean newIsOptional) {
+		boolean oldIsOptional = isOptional;
+		isOptional = newIsOptional;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.DOMAIN_ATTR__OPTIONAL, oldOptional,
-					optional));
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.DOMAIN_ATTR__IS_OPTIONAL,
+					oldIsOptional, isOptional));
 	}
 
 	/**
@@ -155,8 +160,8 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 	 * @generated
 	 */
 	@Override
-	public boolean isPersistent() {
-		return persistent;
+	public boolean isNeedPersistent() {
+		return needPersistent;
 	}
 
 	/**
@@ -165,12 +170,12 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 	 * @generated
 	 */
 	@Override
-	public void setPersistent(boolean newPersistent) {
-		boolean oldPersistent = persistent;
-		persistent = newPersistent;
+	public void setNeedPersistent(boolean newNeedPersistent) {
+		boolean oldNeedPersistent = needPersistent;
+		needPersistent = newNeedPersistent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.DOMAIN_ATTR__PERSISTENT,
-					oldPersistent, persistent));
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.DOMAIN_ATTR__NEED_PERSISTENT,
+					oldNeedPersistent, needPersistent));
 	}
 
 	/**
@@ -183,10 +188,10 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 		switch (featureID) {
 		case HyldesignerPackage.DOMAIN_ATTR__IS_BIZ_KEY:
 			return isIsBizKey();
-		case HyldesignerPackage.DOMAIN_ATTR__OPTIONAL:
-			return isOptional();
-		case HyldesignerPackage.DOMAIN_ATTR__PERSISTENT:
-			return isPersistent();
+		case HyldesignerPackage.DOMAIN_ATTR__IS_OPTIONAL:
+			return isIsOptional();
+		case HyldesignerPackage.DOMAIN_ATTR__NEED_PERSISTENT:
+			return isNeedPersistent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,11 +207,11 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 		case HyldesignerPackage.DOMAIN_ATTR__IS_BIZ_KEY:
 			setIsBizKey((Boolean) newValue);
 			return;
-		case HyldesignerPackage.DOMAIN_ATTR__OPTIONAL:
-			setOptional((Boolean) newValue);
+		case HyldesignerPackage.DOMAIN_ATTR__IS_OPTIONAL:
+			setIsOptional((Boolean) newValue);
 			return;
-		case HyldesignerPackage.DOMAIN_ATTR__PERSISTENT:
-			setPersistent((Boolean) newValue);
+		case HyldesignerPackage.DOMAIN_ATTR__NEED_PERSISTENT:
+			setNeedPersistent((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -223,11 +228,11 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 		case HyldesignerPackage.DOMAIN_ATTR__IS_BIZ_KEY:
 			setIsBizKey(IS_BIZ_KEY_EDEFAULT);
 			return;
-		case HyldesignerPackage.DOMAIN_ATTR__OPTIONAL:
-			setOptional(OPTIONAL_EDEFAULT);
+		case HyldesignerPackage.DOMAIN_ATTR__IS_OPTIONAL:
+			setIsOptional(IS_OPTIONAL_EDEFAULT);
 			return;
-		case HyldesignerPackage.DOMAIN_ATTR__PERSISTENT:
-			setPersistent(PERSISTENT_EDEFAULT);
+		case HyldesignerPackage.DOMAIN_ATTR__NEED_PERSISTENT:
+			setNeedPersistent(NEED_PERSISTENT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -243,10 +248,10 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 		switch (featureID) {
 		case HyldesignerPackage.DOMAIN_ATTR__IS_BIZ_KEY:
 			return isBizKey != IS_BIZ_KEY_EDEFAULT;
-		case HyldesignerPackage.DOMAIN_ATTR__OPTIONAL:
-			return optional != OPTIONAL_EDEFAULT;
-		case HyldesignerPackage.DOMAIN_ATTR__PERSISTENT:
-			return persistent != PERSISTENT_EDEFAULT;
+		case HyldesignerPackage.DOMAIN_ATTR__IS_OPTIONAL:
+			return isOptional != IS_OPTIONAL_EDEFAULT;
+		case HyldesignerPackage.DOMAIN_ATTR__NEED_PERSISTENT:
+			return needPersistent != NEED_PERSISTENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,10 +269,10 @@ public class DomainAttrImpl extends AttrImpl implements DomainAttr {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (isBizKey: ");
 		result.append(isBizKey);
-		result.append(", optional: ");
-		result.append(optional);
-		result.append(", persistent: ");
-		result.append(persistent);
+		result.append(", isOptional: ");
+		result.append(isOptional);
+		result.append(", needPersistent: ");
+		result.append(needPersistent);
 		result.append(')');
 		return result.toString();
 	}

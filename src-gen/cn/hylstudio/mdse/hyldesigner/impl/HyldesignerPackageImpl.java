@@ -14,15 +14,16 @@ import cn.hylstudio.mdse.hyldesigner.Dto;
 import cn.hylstudio.mdse.hyldesigner.DtoAttr;
 import cn.hylstudio.mdse.hyldesigner.HyldesignerFactory;
 import cn.hylstudio.mdse.hyldesigner.HyldesignerPackage;
+import cn.hylstudio.mdse.hyldesigner.PackageDefine;
 import cn.hylstudio.mdse.hyldesigner.Project;
 import cn.hylstudio.mdse.hyldesigner.Repo;
 import cn.hylstudio.mdse.hyldesigner.RequestAttr;
 import cn.hylstudio.mdse.hyldesigner.RequestPayload;
-
 import cn.hylstudio.mdse.hyldesigner.ResponseAttr;
 import cn.hylstudio.mdse.hyldesigner.ResponseResult;
 import cn.hylstudio.mdse.hyldesigner.RestInterface;
 import cn.hylstudio.mdse.hyldesigner.Service;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -42,20 +43,6 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass domainEntityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass requestPayloadEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass projectEClass = null;
 
 	/**
@@ -63,7 +50,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dbEntityEClass = null;
+	private EClass packageDefineEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,42 +64,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass attrEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass dbAttrEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass responseResultEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass controllerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dtoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass restInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,6 +92,41 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass attrEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass domainEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass controllerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass restInterfaceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dtoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass serviceEClass = null;
 
 	/**
@@ -155,6 +142,27 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	private EClass baseServiceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass requestPayloadEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dbEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass responseResultEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -233,96 +241,6 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EClass getDomainEntity() {
-		return domainEntityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getDomainEntity_Id() {
-		return (EAttribute) domainEntityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDomainEntity_Generate() {
-		return (EReference) domainEntityEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDomainEntity_Domainattr() {
-		return (EReference) domainEntityEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDomainEntity_Dto() {
-		return (EReference) domainEntityEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDomainEntity_Dbentity() {
-		return (EReference) domainEntityEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getRequestPayload() {
-		return requestPayloadEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRequestPayload_GeneratedBy() {
-		return (EReference) requestPayloadEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRequestPayload_Requestattr() {
-		return (EReference) requestPayloadEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getProject() {
 		return projectEClass;
 	}
@@ -343,8 +261,8 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getProject_BasePackage() {
-		return (EAttribute) projectEClass.getEStructuralFeatures().get(1);
+	public EReference getProject_DomainEntities() {
+		return (EReference) projectEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -353,7 +271,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_ContainsDomain() {
+	public EReference getProject_DbEntities() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -363,7 +281,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_ContainsPayload() {
+	public EReference getProject_ReqPayloads() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -373,7 +291,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_Dbentity() {
+	public EReference getProject_RespResults() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -383,7 +301,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_Responseresult() {
+	public EReference getProject_Controllers() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -393,7 +311,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getProject_Controller() {
+	public EReference getProject_BasePackage() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -403,8 +321,8 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EClass getDbEntity() {
-		return dbEntityEClass;
+	public EReference getProject_SubPackages() {
+		return (EReference) projectEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -413,8 +331,8 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getDbEntity_Dbattr() {
-		return (EReference) dbEntityEClass.getEStructuralFeatures().get(0);
+	public EClass getPackageDefine() {
+		return packageDefineEClass;
 	}
 
 	/**
@@ -423,8 +341,38 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getDbEntity_Domainentity() {
-		return (EReference) dbEntityEClass.getEStructuralFeatures().get(1);
+	public EAttribute getPackageDefine_Name() {
+		return (EAttribute) packageDefineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPackageDefine_Type() {
+		return (EAttribute) packageDefineEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPackageDefine_Parent() {
+		return (EReference) packageDefineEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPackageDefine_Child() {
+		return (EReference) packageDefineEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -453,7 +401,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainAttr_Optional() {
+	public EAttribute getDomainAttr_IsOptional() {
 		return (EAttribute) domainAttrEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -463,48 +411,8 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getDomainAttr_Persistent() {
+	public EAttribute getDomainAttr_NeedPersistent() {
 		return (EAttribute) domainAttrEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getAttr() {
-		return attrEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttr_Key() {
-		return (EAttribute) attrEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttr_Type() {
-		return (EAttribute) attrEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getAttr_Desc() {
-		return (EAttribute) attrEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -515,166 +423,6 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	@Override
 	public EClass getDbAttr() {
 		return dbAttrEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getResponseResult() {
-		return responseResultEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getResponseResult_Responseattr() {
-		return (EReference) responseResultEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getController() {
-		return controllerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getController_Name() {
-		return (EAttribute) controllerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getController_Restinterface() {
-		return (EReference) controllerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getDto() {
-		return dtoEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDto_Dto() {
-		return (EReference) dtoEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getDto_Dtoattr() {
-		return (EReference) dtoEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getRestInterface() {
-		return restInterfaceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRestInterface_Requestpayload() {
-		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRestInterface_Responseresult() {
-		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getRestInterface_RestApiUri() {
-		return (EAttribute) restInterfaceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getRestInterface_Name() {
-		return (EAttribute) restInterfaceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getRestInterface_ApiDesc() {
-		return (EAttribute) restInterfaceEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRestInterface_Bizservice() {
-		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRestInterface_Access() {
-		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -733,6 +481,266 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
+	public EClass getAttr() {
+		return attrEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAttr_Key() {
+		return (EAttribute) attrEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAttr_Type() {
+		return (EAttribute) attrEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getAttr_Desc() {
+		return (EAttribute) attrEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDomainEntity() {
+		return domainEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDomainEntity_Id() {
+		return (EAttribute) domainEntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDomainEntity_Attr() {
+		return (EReference) domainEntityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDomainEntity_GeneratedPayload() {
+		return (EReference) domainEntityEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDomainEntity_GeneratedDto() {
+		return (EReference) domainEntityEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDomainEntity_GeneratedDbEntity() {
+		return (EReference) domainEntityEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDomainEntity_BelongTo() {
+		return (EReference) domainEntityEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getController() {
+		return controllerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getController_Name() {
+		return (EAttribute) controllerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getController_RestInterface() {
+		return (EReference) controllerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRestInterface() {
+		return restInterfaceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRestInterface_Payload() {
+		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRestInterface_Result() {
+		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRestInterface_Mapping() {
+		return (EAttribute) restInterfaceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRestInterface_Name() {
+		return (EAttribute) restInterfaceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRestInterface_Desc() {
+		return (EAttribute) restInterfaceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRestInterface_InvokeBizServices() {
+		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRestInterface_Access() {
+		return (EReference) restInterfaceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDto() {
+		return dtoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDto_GeneratedBy() {
+		return (EReference) dtoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDto_Generated() {
+		return (EReference) dtoEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDto_Attr() {
+		return (EReference) dtoEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getService() {
 		return serviceEClass;
 	}
@@ -763,7 +771,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getBizService_Baseservice() {
+	public EReference getBizService_InvokeBase() {
 		return (EReference) bizServiceEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -783,8 +791,88 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getBaseService_Repo() {
+	public EReference getBaseService_AccessRepo() {
 		return (EReference) baseServiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getRequestPayload() {
+		return requestPayloadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRequestPayload_GeneratedBy() {
+		return (EReference) requestPayloadEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getRequestPayload_ContainsAttr() {
+		return (EReference) requestPayloadEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getDbEntity() {
+		return dbEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDbEntity_Attr() {
+		return (EReference) dbEntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getDbEntity_GeneratedBy() {
+		return (EReference) dbEntityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getResponseResult() {
+		return responseResultEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getResponseResult_Attr() {
+		return (EReference) responseResultEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -813,7 +901,7 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 	 * @generated
 	 */
 	@Override
-	public EReference getRepo_Dbentity() {
+	public EReference getRepo_StoreEntity() {
 		return (EReference) repoEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -849,17 +937,24 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		// Create classes and their features
 		projectEClass = createEClass(PROJECT);
 		createEAttribute(projectEClass, PROJECT__NAME);
-		createEAttribute(projectEClass, PROJECT__BASE_PACKAGE);
-		createEReference(projectEClass, PROJECT__CONTAINS_DOMAIN);
-		createEReference(projectEClass, PROJECT__CONTAINS_PAYLOAD);
-		createEReference(projectEClass, PROJECT__DBENTITY);
-		createEReference(projectEClass, PROJECT__RESPONSERESULT);
-		createEReference(projectEClass, PROJECT__CONTROLLER);
+		createEReference(projectEClass, PROJECT__DOMAIN_ENTITIES);
+		createEReference(projectEClass, PROJECT__DB_ENTITIES);
+		createEReference(projectEClass, PROJECT__REQ_PAYLOADS);
+		createEReference(projectEClass, PROJECT__RESP_RESULTS);
+		createEReference(projectEClass, PROJECT__CONTROLLERS);
+		createEReference(projectEClass, PROJECT__BASE_PACKAGE);
+		createEReference(projectEClass, PROJECT__SUB_PACKAGES);
+
+		packageDefineEClass = createEClass(PACKAGE_DEFINE);
+		createEAttribute(packageDefineEClass, PACKAGE_DEFINE__NAME);
+		createEAttribute(packageDefineEClass, PACKAGE_DEFINE__TYPE);
+		createEReference(packageDefineEClass, PACKAGE_DEFINE__PARENT);
+		createEReference(packageDefineEClass, PACKAGE_DEFINE__CHILD);
 
 		domainAttrEClass = createEClass(DOMAIN_ATTR);
 		createEAttribute(domainAttrEClass, DOMAIN_ATTR__IS_BIZ_KEY);
-		createEAttribute(domainAttrEClass, DOMAIN_ATTR__OPTIONAL);
-		createEAttribute(domainAttrEClass, DOMAIN_ATTR__PERSISTENT);
+		createEAttribute(domainAttrEClass, DOMAIN_ATTR__IS_OPTIONAL);
+		createEAttribute(domainAttrEClass, DOMAIN_ATTR__NEED_PERSISTENT);
 
 		dbAttrEClass = createEClass(DB_ATTR);
 
@@ -878,51 +973,53 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 
 		domainEntityEClass = createEClass(DOMAIN_ENTITY);
 		createEAttribute(domainEntityEClass, DOMAIN_ENTITY__ID);
-		createEReference(domainEntityEClass, DOMAIN_ENTITY__DOMAINATTR);
-		createEReference(domainEntityEClass, DOMAIN_ENTITY__GENERATE);
-		createEReference(domainEntityEClass, DOMAIN_ENTITY__DTO);
-		createEReference(domainEntityEClass, DOMAIN_ENTITY__DBENTITY);
+		createEReference(domainEntityEClass, DOMAIN_ENTITY__ATTR);
+		createEReference(domainEntityEClass, DOMAIN_ENTITY__GENERATED_PAYLOAD);
+		createEReference(domainEntityEClass, DOMAIN_ENTITY__GENERATED_DTO);
+		createEReference(domainEntityEClass, DOMAIN_ENTITY__GENERATED_DB_ENTITY);
+		createEReference(domainEntityEClass, DOMAIN_ENTITY__BELONG_TO);
 
 		controllerEClass = createEClass(CONTROLLER);
 		createEAttribute(controllerEClass, CONTROLLER__NAME);
-		createEReference(controllerEClass, CONTROLLER__RESTINTERFACE);
+		createEReference(controllerEClass, CONTROLLER__REST_INTERFACE);
 
 		restInterfaceEClass = createEClass(REST_INTERFACE);
-		createEReference(restInterfaceEClass, REST_INTERFACE__REQUESTPAYLOAD);
-		createEReference(restInterfaceEClass, REST_INTERFACE__RESPONSERESULT);
-		createEAttribute(restInterfaceEClass, REST_INTERFACE__REST_API_URI);
+		createEReference(restInterfaceEClass, REST_INTERFACE__PAYLOAD);
+		createEReference(restInterfaceEClass, REST_INTERFACE__RESULT);
+		createEAttribute(restInterfaceEClass, REST_INTERFACE__MAPPING);
 		createEAttribute(restInterfaceEClass, REST_INTERFACE__NAME);
-		createEAttribute(restInterfaceEClass, REST_INTERFACE__API_DESC);
-		createEReference(restInterfaceEClass, REST_INTERFACE__BIZSERVICE);
+		createEAttribute(restInterfaceEClass, REST_INTERFACE__DESC);
+		createEReference(restInterfaceEClass, REST_INTERFACE__INVOKE_BIZ_SERVICES);
 		createEReference(restInterfaceEClass, REST_INTERFACE__ACCESS);
 
 		dtoEClass = createEClass(DTO);
-		createEReference(dtoEClass, DTO__DTO);
-		createEReference(dtoEClass, DTO__DTOATTR);
+		createEReference(dtoEClass, DTO__GENERATED_BY);
+		createEReference(dtoEClass, DTO__GENERATED);
+		createEReference(dtoEClass, DTO__ATTR);
 
 		serviceEClass = createEClass(SERVICE);
 		createEAttribute(serviceEClass, SERVICE__NAME);
 
 		bizServiceEClass = createEClass(BIZ_SERVICE);
-		createEReference(bizServiceEClass, BIZ_SERVICE__BASESERVICE);
+		createEReference(bizServiceEClass, BIZ_SERVICE__INVOKE_BASE);
 
 		baseServiceEClass = createEClass(BASE_SERVICE);
-		createEReference(baseServiceEClass, BASE_SERVICE__REPO);
+		createEReference(baseServiceEClass, BASE_SERVICE__ACCESS_REPO);
 
 		requestPayloadEClass = createEClass(REQUEST_PAYLOAD);
 		createEReference(requestPayloadEClass, REQUEST_PAYLOAD__GENERATED_BY);
-		createEReference(requestPayloadEClass, REQUEST_PAYLOAD__REQUESTATTR);
+		createEReference(requestPayloadEClass, REQUEST_PAYLOAD__CONTAINS_ATTR);
 
 		dbEntityEClass = createEClass(DB_ENTITY);
-		createEReference(dbEntityEClass, DB_ENTITY__DBATTR);
-		createEReference(dbEntityEClass, DB_ENTITY__DOMAINENTITY);
+		createEReference(dbEntityEClass, DB_ENTITY__ATTR);
+		createEReference(dbEntityEClass, DB_ENTITY__GENERATED_BY);
 
 		responseResultEClass = createEClass(RESPONSE_RESULT);
-		createEReference(responseResultEClass, RESPONSE_RESULT__RESPONSEATTR);
+		createEReference(responseResultEClass, RESPONSE_RESULT__ATTR);
 
 		repoEClass = createEClass(REPO);
 		createEAttribute(repoEClass, REPO__NAME);
-		createEReference(repoEClass, REPO__DBENTITY);
+		createEReference(repoEClass, REPO__STORE_ENTITY);
 	}
 
 	/**
@@ -966,32 +1063,49 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProject_Name(), ecorePackage.getEString(), "name", null, 0, 1, Project.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProject_BasePackage(), ecorePackage.getEString(), "basePackage", null, 0, 1, Project.class,
+		initEReference(getProject_DomainEntities(), this.getDomainEntity(), null, "domainEntities", null, 0, -1,
+				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_DbEntities(), this.getDbEntity(), null, "dbEntities", null, 0, -1, Project.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_ReqPayloads(), this.getRequestPayload(), null, "reqPayloads", null, 0, -1,
+				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_RespResults(), this.getResponseResult(), null, "respResults", null, 0, -1,
+				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_Controllers(), this.getController(), null, "controllers", null, 0, -1, Project.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_BasePackage(), this.getPackageDefine(), null, "basePackage", null, 1, 1,
+				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProject_SubPackages(), this.getPackageDefine(), null, "subPackages", null, 0, -1,
+				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(packageDefineEClass, PackageDefine.class, "PackageDefine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPackageDefine_Name(), ecorePackage.getEString(), "name", null, 0, 1, PackageDefine.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_ContainsDomain(), this.getDomainEntity(), null, "containsDomain", null, 0, -1,
-				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEAttribute(getPackageDefine_Type(), ecorePackage.getEString(), "type", null, 0, 1, PackageDefine.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPackageDefine_Parent(), this.getPackageDefine(), null, "parent", null, 0, 1,
+				PackageDefine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_ContainsPayload(), this.getRequestPayload(), null, "containsPayload", null, 0, -1,
-				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getPackageDefine_Child(), this.getPackageDefine(), null, "child", null, 0, -1,
+				PackageDefine.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Dbentity(), this.getDbEntity(), null, "dbentity", null, 0, -1, Project.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Responseresult(), this.getResponseResult(), null, "responseresult", null, 0, -1,
-				Project.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProject_Controller(), this.getController(), null, "controller", null, 0, -1, Project.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainAttrEClass, DomainAttr.class, "DomainAttr", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDomainAttr_IsBizKey(), ecorePackage.getEBoolean(), "isBizKey", null, 0, 1, DomainAttr.class,
+		initEAttribute(getDomainAttr_IsBizKey(), ecorePackage.getEBoolean(), "isBizKey", null, 1, 1, DomainAttr.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomainAttr_Optional(), ecorePackage.getEBoolean(), "optional", "false", 0, 1,
+		initEAttribute(getDomainAttr_IsOptional(), ecorePackage.getEBoolean(), "isOptional", "false", 1, 1,
 				DomainAttr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomainAttr_Persistent(), ecorePackage.getEBoolean(), "persistent", null, 0, 1,
+		initEAttribute(getDomainAttr_NeedPersistent(), ecorePackage.getEBoolean(), "needPersistent", null, 1, 1,
 				DomainAttr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -1023,16 +1137,19 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainEntity_Id(), ecorePackage.getEString(), "id", null, 0, 1, DomainEntity.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainEntity_Domainattr(), this.getDomainAttr(), null, "domainattr", null, 0, -1,
-				DomainEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainEntity_Generate(), this.getRequestPayload(), null, "generate", null, 0, -1,
-				DomainEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainEntity_Dto(), this.getDto(), null, "dto", null, 0, -1, DomainEntity.class,
+		initEReference(getDomainEntity_Attr(), this.getDomainAttr(), null, "attr", null, 0, -1, DomainEntity.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainEntity_Dbentity(), this.getDbEntity(), null, "dbentity", null, 0, -1,
+		initEReference(getDomainEntity_GeneratedPayload(), this.getRequestPayload(), null, "generatedPayload", null, 0,
+				-1, DomainEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainEntity_GeneratedDto(), this.getDto(), null, "generatedDto", null, 0, -1,
+				DomainEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainEntity_GeneratedDbEntity(), this.getDbEntity(), null, "generatedDbEntity", null, 0, -1,
+				DomainEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainEntity_BelongTo(), this.getPackageDefine(), null, "belongTo", null, 1, 1,
 				DomainEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1040,37 +1157,40 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getController_Name(), ecorePackage.getEString(), "name", null, 0, 1, Controller.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getController_Restinterface(), this.getRestInterface(), null, "restinterface", null, 0, -1,
+		initEReference(getController_RestInterface(), this.getRestInterface(), null, "restInterface", null, 0, -1,
 				Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(restInterfaceEClass, RestInterface.class, "RestInterface", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRestInterface_Requestpayload(), this.getRequestPayload(), null, "requestpayload", null, 0, 1,
+		initEReference(getRestInterface_Payload(), this.getRequestPayload(), null, "payload", null, 0, 1,
 				RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRestInterface_Responseresult(), this.getResponseResult(), null, "responseresult", null, 0, 1,
+		initEReference(getRestInterface_Result(), this.getResponseResult(), null, "result", null, 0, 1,
 				RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRestInterface_RestApiUri(), ecorePackage.getEString(), "restApiUri", null, 0, 1,
+		initEAttribute(getRestInterface_Mapping(), ecorePackage.getEString(), "mapping", null, 0, 1,
 				RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRestInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, RestInterface.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRestInterface_ApiDesc(), ecorePackage.getEString(), "apiDesc", null, 0, 1,
-				RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getRestInterface_Bizservice(), this.getBizService(), null, "bizservice", null, 0, -1,
-				RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEAttribute(getRestInterface_Desc(), ecorePackage.getEString(), "desc", null, 0, 1, RestInterface.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRestInterface_InvokeBizServices(), this.getBizService(), null, "invokeBizServices", null, 0,
+				-1, RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRestInterface_Access(), this.getDomainEntity(), null, "access", null, 0, -1,
 				RestInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dtoEClass, Dto.class, "Dto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDto_Dto(), this.getDto(), null, "dto", null, 0, -1, Dto.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDto_Dtoattr(), this.getDtoAttr(), null, "dtoattr", null, 0, -1, Dto.class, !IS_TRANSIENT,
+		initEReference(getDto_GeneratedBy(), this.getDto(), null, "generatedBy", null, 1, -1, Dto.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getDto_Generated(), this.getDto(), null, "generated", null, 0, -1, Dto.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getDto_Attr(), this.getDtoAttr(), null, "attr", null, 0, -1, Dto.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -1080,13 +1200,13 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 
 		initEClass(bizServiceEClass, BizService.class, "BizService", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBizService_Baseservice(), this.getBaseService(), null, "baseservice", null, 0, -1,
+		initEReference(getBizService_InvokeBase(), this.getBaseService(), null, "invokeBase", null, 0, -1,
 				BizService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(baseServiceEClass, BaseService.class, "BaseService", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBaseService_Repo(), this.getRepo(), null, "repo", null, 0, -1, BaseService.class,
+		initEReference(getBaseService_AccessRepo(), this.getRepo(), null, "accessRepo", null, 0, -1, BaseService.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1095,53 +1215,34 @@ public class HyldesignerPackageImpl extends EPackageImpl implements HyldesignerP
 		initEReference(getRequestPayload_GeneratedBy(), this.getDomainEntity(), null, "generatedBy", null, 1, 1,
 				RequestPayload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequestPayload_Requestattr(), this.getRequestAttr(), null, "requestattr", null, 0, -1,
+		initEReference(getRequestPayload_ContainsAttr(), this.getRequestAttr(), null, "containsAttr", null, 0, -1,
 				RequestPayload.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dbEntityEClass, DbEntity.class, "DbEntity", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDbEntity_Dbattr(), this.getDbAttr(), null, "dbattr", null, 1, -1, DbEntity.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDbEntity_Domainentity(), this.getDomainEntity(), null, "domainentity", null, 0, -1,
+		initEReference(getDbEntity_Attr(), this.getDbAttr(), null, "attr", null, 1, -1, DbEntity.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getDbEntity_GeneratedBy(), this.getDomainEntity(), null, "generatedBy", null, 0, -1,
 				DbEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(responseResultEClass, ResponseResult.class, "ResponseResult", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResponseResult_Responseattr(), this.getResponseAttr(), null, "responseattr", null, 0, -1,
+		initEReference(getResponseResult_Attr(), this.getResponseAttr(), null, "attr", null, 0, -1,
 				ResponseResult.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(repoEClass, Repo.class, "Repo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRepo_Name(), ecorePackage.getEString(), "name", null, 0, 1, Repo.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRepo_Dbentity(), this.getDbEntity(), null, "dbentity", null, 1, 1, Repo.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEReference(getRepo_StoreEntity(), this.getDbEntity(), null, "storeEntity", null, 1, 1, Repo.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
-
-		// Create annotations
-		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
-		createExtendedMetaDataAnnotations();
-	}
-
-	/**
-	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
-		addAnnotation(getDomainAttr_IsBizKey(), source,
-				new String[] { "desc", "\u662f\u5426\u4e1a\u52a1\u4e3b\u952e" });
-		addAnnotation(getDomainAttr_Optional(), source,
-				new String[] { "desc", "\u662f\u5426\u4e1a\u52a1\u4e3b\u952e" });
-		addAnnotation(dbAttrEClass, source, new String[] { "desc", "\u662f\u5426\u4e1a\u52a1\u4e3b\u952e" });
 	}
 
 } //HyldesignerPackageImpl

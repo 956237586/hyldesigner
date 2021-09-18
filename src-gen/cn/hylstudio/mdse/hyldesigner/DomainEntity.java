@@ -16,10 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getId <em>Id</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getDomainattr <em>Domainattr</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getGenerate <em>Generate</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getDto <em>Dto</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getDbentity <em>Dbentity</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getAttr <em>Attr</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedPayload <em>Generated Payload</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedDto <em>Generated Dto</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedDbEntity <em>Generated Db Entity</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getBelongTo <em>Belong To</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity()
@@ -50,51 +51,73 @@ public interface DomainEntity extends EObject {
 	void setId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Generate</b></em>' containment reference list.
-	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.RequestPayload}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generate</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_Generate()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<RequestPayload> getGenerate();
-
-	/**
-	 * Returns the value of the '<em><b>Domainattr</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Attr</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.DomainAttr}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Domainattr</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_Domainattr()
+	 * @return the value of the '<em>Attr</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_Attr()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DomainAttr> getDomainattr();
+	EList<DomainAttr> getAttr();
 
 	/**
-	 * Returns the value of the '<em><b>Dto</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Generated Payload</b></em>' containment reference list.
+	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.RequestPayload}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Generated Payload</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_GeneratedPayload()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<RequestPayload> getGeneratedPayload();
+
+	/**
+	 * Returns the value of the '<em><b>Generated Dto</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.Dto}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dto</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_Dto()
+	 * @return the value of the '<em>Generated Dto</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_GeneratedDto()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Dto> getDto();
+	EList<Dto> getGeneratedDto();
 
 	/**
-	 * Returns the value of the '<em><b>Dbentity</b></em>' reference list.
+	 * Returns the value of the '<em><b>Generated Db Entity</b></em>' reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.DbEntity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dbentity</em>' reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_Dbentity()
+	 * @return the value of the '<em>Generated Db Entity</em>' reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_GeneratedDbEntity()
 	 * @model
 	 * @generated
 	 */
-	EList<DbEntity> getDbentity();
+	EList<DbEntity> getGeneratedDbEntity();
+
+	/**
+	 * Returns the value of the '<em><b>Belong To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Belong To</em>' reference.
+	 * @see #setBelongTo(PackageDefine)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getDomainEntity_BelongTo()
+	 * @model required="true"
+	 * @generated
+	 */
+	PackageDefine getBelongTo();
+
+	/**
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getBelongTo <em>Belong To</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Belong To</em>' reference.
+	 * @see #getBelongTo()
+	 * @generated
+	 */
+	void setBelongTo(PackageDefine value);
 
 } // DomainEntity

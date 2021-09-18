@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.ResponseResult#getResponseattr <em>Responseattr</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.ResponseResult#getAttr <em>Attr</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getResponseResult()
@@ -24,15 +24,15 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ResponseResult extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Responseattr</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Attr</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.ResponseAttr}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Responseattr</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getResponseResult_Responseattr()
+	 * @return the value of the '<em>Attr</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getResponseResult_Attr()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ResponseAttr> getResponseattr();
+	EList<ResponseAttr> getAttr();
 
 } // ResponseResult

@@ -72,6 +72,11 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter casePackageDefine(PackageDefine object) {
+			return createPackageDefineAdapter();
+		}
+
+		@Override
 		public Adapter caseDomainAttr(DomainAttr object) {
 			return createDomainAttrAdapter();
 		}
@@ -176,34 +181,6 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity <em>Domain Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity
-	 * @generated
-	 */
-	public Adapter createDomainEntityAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.RequestPayload <em>Request Payload</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cn.hylstudio.mdse.hyldesigner.RequestPayload
-	 * @generated
-	 */
-	public Adapter createRequestPayloadAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.Project <em>Project</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -218,16 +195,16 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.DbEntity <em>Db Entity</em>}'.
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.PackageDefine <em>Package Define</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see cn.hylstudio.mdse.hyldesigner.DbEntity
+	 * @see cn.hylstudio.mdse.hyldesigner.PackageDefine
 	 * @generated
 	 */
-	public Adapter createDbEntityAdapter() {
+	public Adapter createPackageDefineAdapter() {
 		return null;
 	}
 
@@ -246,20 +223,6 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.Attr <em>Attr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cn.hylstudio.mdse.hyldesigner.Attr
-	 * @generated
-	 */
-	public Adapter createAttrAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.DbAttr <em>Db Attr</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -270,62 +233,6 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDbAttrAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.ResponseResult <em>Response Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cn.hylstudio.mdse.hyldesigner.ResponseResult
-	 * @generated
-	 */
-	public Adapter createResponseResultAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.Controller <em>Controller</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cn.hylstudio.mdse.hyldesigner.Controller
-	 * @generated
-	 */
-	public Adapter createControllerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.Dto <em>Dto</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cn.hylstudio.mdse.hyldesigner.Dto
-	 * @generated
-	 */
-	public Adapter createDtoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.RestInterface <em>Rest Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface
-	 * @generated
-	 */
-	public Adapter createRestInterfaceAdapter() {
 		return null;
 	}
 
@@ -372,6 +279,76 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.Attr <em>Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cn.hylstudio.mdse.hyldesigner.Attr
+	 * @generated
+	 */
+	public Adapter createAttrAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity <em>Domain Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity
+	 * @generated
+	 */
+	public Adapter createDomainEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.Controller <em>Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cn.hylstudio.mdse.hyldesigner.Controller
+	 * @generated
+	 */
+	public Adapter createControllerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.RestInterface <em>Rest Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface
+	 * @generated
+	 */
+	public Adapter createRestInterfaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.Dto <em>Dto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cn.hylstudio.mdse.hyldesigner.Dto
+	 * @generated
+	 */
+	public Adapter createDtoAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.Service <em>Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -410,6 +387,48 @@ public class HyldesignerAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBaseServiceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.RequestPayload <em>Request Payload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cn.hylstudio.mdse.hyldesigner.RequestPayload
+	 * @generated
+	 */
+	public Adapter createRequestPayloadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.DbEntity <em>Db Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cn.hylstudio.mdse.hyldesigner.DbEntity
+	 * @generated
+	 */
+	public Adapter createDbEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cn.hylstudio.mdse.hyldesigner.ResponseResult <em>Response Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cn.hylstudio.mdse.hyldesigner.ResponseResult
+	 * @generated
+	 */
+	public Adapter createResponseResultAdapter() {
 		return null;
 	}
 

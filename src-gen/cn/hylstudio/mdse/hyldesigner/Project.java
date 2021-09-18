@@ -16,12 +16,13 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getName <em>Name</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getDomainEntities <em>Domain Entities</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getDbEntities <em>Db Entities</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getReqPayloads <em>Req Payloads</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getRespResults <em>Resp Results</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getControllers <em>Controllers</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getBasePackage <em>Base Package</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getContainsDomain <em>Contains Domain</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getContainsPayload <em>Contains Payload</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getDbentity <em>Dbentity</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getResponseresult <em>Responseresult</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getController <em>Controller</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.Project#getSubPackages <em>Sub Packages</em>}</li>
  * </ul>
  *
  * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject()
@@ -52,85 +53,97 @@ public interface Project extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Base Package</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base Package</em>' attribute.
-	 * @see #setBasePackage(String)
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_BasePackage()
-	 * @model
-	 * @generated
-	 */
-	String getBasePackage();
-
-	/**
-	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.Project#getBasePackage <em>Base Package</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base Package</em>' attribute.
-	 * @see #getBasePackage()
-	 * @generated
-	 */
-	void setBasePackage(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Contains Domain</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Domain Entities</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.DomainEntity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains Domain</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_ContainsDomain()
+	 * @return the value of the '<em>Domain Entities</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_DomainEntities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DomainEntity> getContainsDomain();
+	EList<DomainEntity> getDomainEntities();
 
 	/**
-	 * Returns the value of the '<em><b>Contains Payload</b></em>' containment reference list.
-	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.RequestPayload}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains Payload</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_ContainsPayload()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<RequestPayload> getContainsPayload();
-
-	/**
-	 * Returns the value of the '<em><b>Dbentity</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Db Entities</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.DbEntity}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dbentity</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_Dbentity()
+	 * @return the value of the '<em>Db Entities</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_DbEntities()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DbEntity> getDbentity();
+	EList<DbEntity> getDbEntities();
 
 	/**
-	 * Returns the value of the '<em><b>Responseresult</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Req Payloads</b></em>' containment reference list.
+	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.RequestPayload}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Req Payloads</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_ReqPayloads()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<RequestPayload> getReqPayloads();
+
+	/**
+	 * Returns the value of the '<em><b>Resp Results</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.ResponseResult}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Responseresult</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_Responseresult()
+	 * @return the value of the '<em>Resp Results</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_RespResults()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ResponseResult> getResponseresult();
+	EList<ResponseResult> getRespResults();
 
 	/**
-	 * Returns the value of the '<em><b>Controller</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Controllers</b></em>' containment reference list.
 	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.Controller}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Controller</em>' containment reference list.
-	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_Controller()
+	 * @return the value of the '<em>Controllers</em>' containment reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_Controllers()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Controller> getController();
+	EList<Controller> getControllers();
+
+	/**
+	 * Returns the value of the '<em><b>Base Package</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base Package</em>' reference.
+	 * @see #setBasePackage(PackageDefine)
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_BasePackage()
+	 * @model required="true"
+	 * @generated
+	 */
+	PackageDefine getBasePackage();
+
+	/**
+	 * Sets the value of the '{@link cn.hylstudio.mdse.hyldesigner.Project#getBasePackage <em>Base Package</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Base Package</em>' reference.
+	 * @see #getBasePackage()
+	 * @generated
+	 */
+	void setBasePackage(PackageDefine value);
+
+	/**
+	 * Returns the value of the '<em><b>Sub Packages</b></em>' reference list.
+	 * The list contents are of type {@link cn.hylstudio.mdse.hyldesigner.PackageDefine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sub Packages</em>' reference list.
+	 * @see cn.hylstudio.mdse.hyldesigner.HyldesignerPackage#getProject_SubPackages()
+	 * @model
+	 * @generated
+	 */
+	EList<PackageDefine> getSubPackages();
 
 } // Project

@@ -34,12 +34,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getRequestpayload <em>Requestpayload</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getResponseresult <em>Responseresult</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getRestApiUri <em>Rest Api Uri</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getPayload <em>Payload</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getResult <em>Result</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getMapping <em>Mapping</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getName <em>Name</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getApiDesc <em>Api Desc</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getBizservice <em>Bizservice</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getDesc <em>Desc</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getInvokeBizServices <em>Invoke Biz Services</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl#getAccess <em>Access</em>}</li>
  * </ul>
  *
@@ -47,44 +47,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements RestInterface {
 	/**
-	 * The cached value of the '{@link #getRequestpayload() <em>Requestpayload</em>}' reference.
+	 * The cached value of the '{@link #getPayload() <em>Payload</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRequestpayload()
+	 * @see #getPayload()
 	 * @generated
 	 * @ordered
 	 */
-	protected RequestPayload requestpayload;
+	protected RequestPayload payload;
 
 	/**
-	 * The cached value of the '{@link #getResponseresult() <em>Responseresult</em>}' reference.
+	 * The cached value of the '{@link #getResult() <em>Result</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getResponseresult()
+	 * @see #getResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected ResponseResult responseresult;
+	protected ResponseResult result;
 
 	/**
-	 * The default value of the '{@link #getRestApiUri() <em>Rest Api Uri</em>}' attribute.
+	 * The default value of the '{@link #getMapping() <em>Mapping</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRestApiUri()
+	 * @see #getMapping()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REST_API_URI_EDEFAULT = null;
+	protected static final String MAPPING_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getRestApiUri() <em>Rest Api Uri</em>}' attribute.
+	 * The cached value of the '{@link #getMapping() <em>Mapping</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRestApiUri()
+	 * @see #getMapping()
 	 * @generated
 	 * @ordered
 	 */
-	protected String restApiUri = REST_API_URI_EDEFAULT;
+	protected String mapping = MAPPING_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -107,34 +107,34 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getApiDesc() <em>Api Desc</em>}' attribute.
+	 * The default value of the '{@link #getDesc() <em>Desc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getApiDesc()
+	 * @see #getDesc()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String API_DESC_EDEFAULT = null;
+	protected static final String DESC_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getApiDesc() <em>Api Desc</em>}' attribute.
+	 * The cached value of the '{@link #getDesc() <em>Desc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getApiDesc()
+	 * @see #getDesc()
 	 * @generated
 	 * @ordered
 	 */
-	protected String apiDesc = API_DESC_EDEFAULT;
+	protected String desc = DESC_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBizservice() <em>Bizservice</em>}' containment reference list.
+	 * The cached value of the '{@link #getInvokeBizServices() <em>Invoke Biz Services</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBizservice()
+	 * @see #getInvokeBizServices()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<BizService> bizservice;
+	protected EList<BizService> invokeBizServices;
 
 	/**
 	 * The cached value of the '{@link #getAccess() <em>Access</em>}' reference list.
@@ -171,17 +171,17 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public RequestPayload getRequestpayload() {
-		if (requestpayload != null && requestpayload.eIsProxy()) {
-			InternalEObject oldRequestpayload = (InternalEObject) requestpayload;
-			requestpayload = (RequestPayload) eResolveProxy(oldRequestpayload);
-			if (requestpayload != oldRequestpayload) {
+	public RequestPayload getPayload() {
+		if (payload != null && payload.eIsProxy()) {
+			InternalEObject oldPayload = (InternalEObject) payload;
+			payload = (RequestPayload) eResolveProxy(oldPayload);
+			if (payload != oldPayload) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							HyldesignerPackage.REST_INTERFACE__REQUESTPAYLOAD, oldRequestpayload, requestpayload));
+							HyldesignerPackage.REST_INTERFACE__PAYLOAD, oldPayload, payload));
 			}
 		}
-		return requestpayload;
+		return payload;
 	}
 
 	/**
@@ -189,8 +189,8 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RequestPayload basicGetRequestpayload() {
-		return requestpayload;
+	public RequestPayload basicGetPayload() {
+		return payload;
 	}
 
 	/**
@@ -199,12 +199,12 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public void setRequestpayload(RequestPayload newRequestpayload) {
-		RequestPayload oldRequestpayload = requestpayload;
-		requestpayload = newRequestpayload;
+	public void setPayload(RequestPayload newPayload) {
+		RequestPayload oldPayload = payload;
+		payload = newPayload;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REST_INTERFACE__REQUESTPAYLOAD,
-					oldRequestpayload, requestpayload));
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REST_INTERFACE__PAYLOAD,
+					oldPayload, payload));
 	}
 
 	/**
@@ -213,17 +213,17 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public ResponseResult getResponseresult() {
-		if (responseresult != null && responseresult.eIsProxy()) {
-			InternalEObject oldResponseresult = (InternalEObject) responseresult;
-			responseresult = (ResponseResult) eResolveProxy(oldResponseresult);
-			if (responseresult != oldResponseresult) {
+	public ResponseResult getResult() {
+		if (result != null && result.eIsProxy()) {
+			InternalEObject oldResult = (InternalEObject) result;
+			result = (ResponseResult) eResolveProxy(oldResult);
+			if (result != oldResult) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							HyldesignerPackage.REST_INTERFACE__RESPONSERESULT, oldResponseresult, responseresult));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HyldesignerPackage.REST_INTERFACE__RESULT,
+							oldResult, result));
 			}
 		}
-		return responseresult;
+		return result;
 	}
 
 	/**
@@ -231,8 +231,8 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResponseResult basicGetResponseresult() {
-		return responseresult;
+	public ResponseResult basicGetResult() {
+		return result;
 	}
 
 	/**
@@ -241,12 +241,12 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public void setResponseresult(ResponseResult newResponseresult) {
-		ResponseResult oldResponseresult = responseresult;
-		responseresult = newResponseresult;
+	public void setResult(ResponseResult newResult) {
+		ResponseResult oldResult = result;
+		result = newResult;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REST_INTERFACE__RESPONSERESULT,
-					oldResponseresult, responseresult));
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REST_INTERFACE__RESULT, oldResult,
+					result));
 	}
 
 	/**
@@ -255,8 +255,8 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public String getRestApiUri() {
-		return restApiUri;
+	public String getMapping() {
+		return mapping;
 	}
 
 	/**
@@ -265,12 +265,12 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public void setRestApiUri(String newRestApiUri) {
-		String oldRestApiUri = restApiUri;
-		restApiUri = newRestApiUri;
+	public void setMapping(String newMapping) {
+		String oldMapping = mapping;
+		mapping = newMapping;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REST_INTERFACE__REST_API_URI,
-					oldRestApiUri, restApiUri));
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REST_INTERFACE__MAPPING,
+					oldMapping, mapping));
 	}
 
 	/**
@@ -303,8 +303,8 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public String getApiDesc() {
-		return apiDesc;
+	public String getDesc() {
+		return desc;
 	}
 
 	/**
@@ -313,12 +313,12 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public void setApiDesc(String newApiDesc) {
-		String oldApiDesc = apiDesc;
-		apiDesc = newApiDesc;
+	public void setDesc(String newDesc) {
+		String oldDesc = desc;
+		desc = newDesc;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REST_INTERFACE__API_DESC,
-					oldApiDesc, apiDesc));
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REST_INTERFACE__DESC, oldDesc,
+					desc));
 	}
 
 	/**
@@ -327,12 +327,12 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public EList<BizService> getBizservice() {
-		if (bizservice == null) {
-			bizservice = new EObjectContainmentEList<BizService>(BizService.class, this,
-					HyldesignerPackage.REST_INTERFACE__BIZSERVICE);
+	public EList<BizService> getInvokeBizServices() {
+		if (invokeBizServices == null) {
+			invokeBizServices = new EObjectContainmentEList<BizService>(BizService.class, this,
+					HyldesignerPackage.REST_INTERFACE__INVOKE_BIZ_SERVICES);
 		}
-		return bizservice;
+		return invokeBizServices;
 	}
 
 	/**
@@ -357,8 +357,8 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
-			return ((InternalEList<?>) getBizservice()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.REST_INTERFACE__INVOKE_BIZ_SERVICES:
+			return ((InternalEList<?>) getInvokeBizServices()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -371,22 +371,22 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case HyldesignerPackage.REST_INTERFACE__REQUESTPAYLOAD:
+		case HyldesignerPackage.REST_INTERFACE__PAYLOAD:
 			if (resolve)
-				return getRequestpayload();
-			return basicGetRequestpayload();
-		case HyldesignerPackage.REST_INTERFACE__RESPONSERESULT:
+				return getPayload();
+			return basicGetPayload();
+		case HyldesignerPackage.REST_INTERFACE__RESULT:
 			if (resolve)
-				return getResponseresult();
-			return basicGetResponseresult();
-		case HyldesignerPackage.REST_INTERFACE__REST_API_URI:
-			return getRestApiUri();
+				return getResult();
+			return basicGetResult();
+		case HyldesignerPackage.REST_INTERFACE__MAPPING:
+			return getMapping();
 		case HyldesignerPackage.REST_INTERFACE__NAME:
 			return getName();
-		case HyldesignerPackage.REST_INTERFACE__API_DESC:
-			return getApiDesc();
-		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
-			return getBizservice();
+		case HyldesignerPackage.REST_INTERFACE__DESC:
+			return getDesc();
+		case HyldesignerPackage.REST_INTERFACE__INVOKE_BIZ_SERVICES:
+			return getInvokeBizServices();
 		case HyldesignerPackage.REST_INTERFACE__ACCESS:
 			return getAccess();
 		}
@@ -402,24 +402,24 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case HyldesignerPackage.REST_INTERFACE__REQUESTPAYLOAD:
-			setRequestpayload((RequestPayload) newValue);
+		case HyldesignerPackage.REST_INTERFACE__PAYLOAD:
+			setPayload((RequestPayload) newValue);
 			return;
-		case HyldesignerPackage.REST_INTERFACE__RESPONSERESULT:
-			setResponseresult((ResponseResult) newValue);
+		case HyldesignerPackage.REST_INTERFACE__RESULT:
+			setResult((ResponseResult) newValue);
 			return;
-		case HyldesignerPackage.REST_INTERFACE__REST_API_URI:
-			setRestApiUri((String) newValue);
+		case HyldesignerPackage.REST_INTERFACE__MAPPING:
+			setMapping((String) newValue);
 			return;
 		case HyldesignerPackage.REST_INTERFACE__NAME:
 			setName((String) newValue);
 			return;
-		case HyldesignerPackage.REST_INTERFACE__API_DESC:
-			setApiDesc((String) newValue);
+		case HyldesignerPackage.REST_INTERFACE__DESC:
+			setDesc((String) newValue);
 			return;
-		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
-			getBizservice().clear();
-			getBizservice().addAll((Collection<? extends BizService>) newValue);
+		case HyldesignerPackage.REST_INTERFACE__INVOKE_BIZ_SERVICES:
+			getInvokeBizServices().clear();
+			getInvokeBizServices().addAll((Collection<? extends BizService>) newValue);
 			return;
 		case HyldesignerPackage.REST_INTERFACE__ACCESS:
 			getAccess().clear();
@@ -437,23 +437,23 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case HyldesignerPackage.REST_INTERFACE__REQUESTPAYLOAD:
-			setRequestpayload((RequestPayload) null);
+		case HyldesignerPackage.REST_INTERFACE__PAYLOAD:
+			setPayload((RequestPayload) null);
 			return;
-		case HyldesignerPackage.REST_INTERFACE__RESPONSERESULT:
-			setResponseresult((ResponseResult) null);
+		case HyldesignerPackage.REST_INTERFACE__RESULT:
+			setResult((ResponseResult) null);
 			return;
-		case HyldesignerPackage.REST_INTERFACE__REST_API_URI:
-			setRestApiUri(REST_API_URI_EDEFAULT);
+		case HyldesignerPackage.REST_INTERFACE__MAPPING:
+			setMapping(MAPPING_EDEFAULT);
 			return;
 		case HyldesignerPackage.REST_INTERFACE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case HyldesignerPackage.REST_INTERFACE__API_DESC:
-			setApiDesc(API_DESC_EDEFAULT);
+		case HyldesignerPackage.REST_INTERFACE__DESC:
+			setDesc(DESC_EDEFAULT);
 			return;
-		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
-			getBizservice().clear();
+		case HyldesignerPackage.REST_INTERFACE__INVOKE_BIZ_SERVICES:
+			getInvokeBizServices().clear();
 			return;
 		case HyldesignerPackage.REST_INTERFACE__ACCESS:
 			getAccess().clear();
@@ -470,18 +470,18 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case HyldesignerPackage.REST_INTERFACE__REQUESTPAYLOAD:
-			return requestpayload != null;
-		case HyldesignerPackage.REST_INTERFACE__RESPONSERESULT:
-			return responseresult != null;
-		case HyldesignerPackage.REST_INTERFACE__REST_API_URI:
-			return REST_API_URI_EDEFAULT == null ? restApiUri != null : !REST_API_URI_EDEFAULT.equals(restApiUri);
+		case HyldesignerPackage.REST_INTERFACE__PAYLOAD:
+			return payload != null;
+		case HyldesignerPackage.REST_INTERFACE__RESULT:
+			return result != null;
+		case HyldesignerPackage.REST_INTERFACE__MAPPING:
+			return MAPPING_EDEFAULT == null ? mapping != null : !MAPPING_EDEFAULT.equals(mapping);
 		case HyldesignerPackage.REST_INTERFACE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case HyldesignerPackage.REST_INTERFACE__API_DESC:
-			return API_DESC_EDEFAULT == null ? apiDesc != null : !API_DESC_EDEFAULT.equals(apiDesc);
-		case HyldesignerPackage.REST_INTERFACE__BIZSERVICE:
-			return bizservice != null && !bizservice.isEmpty();
+		case HyldesignerPackage.REST_INTERFACE__DESC:
+			return DESC_EDEFAULT == null ? desc != null : !DESC_EDEFAULT.equals(desc);
+		case HyldesignerPackage.REST_INTERFACE__INVOKE_BIZ_SERVICES:
+			return invokeBizServices != null && !invokeBizServices.isEmpty();
 		case HyldesignerPackage.REST_INTERFACE__ACCESS:
 			return access != null && !access.isEmpty();
 		}
@@ -499,12 +499,12 @@ public class RestInterfaceImpl extends MinimalEObjectImpl.Container implements R
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (restApiUri: ");
-		result.append(restApiUri);
+		result.append(" (mapping: ");
+		result.append(mapping);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", apiDesc: ");
-		result.append(apiDesc);
+		result.append(", desc: ");
+		result.append(desc);
 		result.append(')');
 		return result.toString();
 	}

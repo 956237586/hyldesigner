@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RepoImpl#getName <em>Name</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RepoImpl#getDbentity <em>Dbentity</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.RepoImpl#getStoreEntity <em>Store Entity</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,14 +50,14 @@ public class RepoImpl extends MinimalEObjectImpl.Container implements Repo {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDbentity() <em>Dbentity</em>}' reference.
+	 * The cached value of the '{@link #getStoreEntity() <em>Store Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDbentity()
+	 * @see #getStoreEntity()
 	 * @generated
 	 * @ordered
 	 */
-	protected DbEntity dbentity;
+	protected DbEntity storeEntity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,17 +107,17 @@ public class RepoImpl extends MinimalEObjectImpl.Container implements Repo {
 	 * @generated
 	 */
 	@Override
-	public DbEntity getDbentity() {
-		if (dbentity != null && dbentity.eIsProxy()) {
-			InternalEObject oldDbentity = (InternalEObject) dbentity;
-			dbentity = (DbEntity) eResolveProxy(oldDbentity);
-			if (dbentity != oldDbentity) {
+	public DbEntity getStoreEntity() {
+		if (storeEntity != null && storeEntity.eIsProxy()) {
+			InternalEObject oldStoreEntity = (InternalEObject) storeEntity;
+			storeEntity = (DbEntity) eResolveProxy(oldStoreEntity);
+			if (storeEntity != oldStoreEntity) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HyldesignerPackage.REPO__DBENTITY,
-							oldDbentity, dbentity));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HyldesignerPackage.REPO__STORE_ENTITY,
+							oldStoreEntity, storeEntity));
 			}
 		}
-		return dbentity;
+		return storeEntity;
 	}
 
 	/**
@@ -125,8 +125,8 @@ public class RepoImpl extends MinimalEObjectImpl.Container implements Repo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DbEntity basicGetDbentity() {
-		return dbentity;
+	public DbEntity basicGetStoreEntity() {
+		return storeEntity;
 	}
 
 	/**
@@ -135,12 +135,12 @@ public class RepoImpl extends MinimalEObjectImpl.Container implements Repo {
 	 * @generated
 	 */
 	@Override
-	public void setDbentity(DbEntity newDbentity) {
-		DbEntity oldDbentity = dbentity;
-		dbentity = newDbentity;
+	public void setStoreEntity(DbEntity newStoreEntity) {
+		DbEntity oldStoreEntity = storeEntity;
+		storeEntity = newStoreEntity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REPO__DBENTITY, oldDbentity,
-					dbentity));
+			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.REPO__STORE_ENTITY, oldStoreEntity,
+					storeEntity));
 	}
 
 	/**
@@ -153,10 +153,10 @@ public class RepoImpl extends MinimalEObjectImpl.Container implements Repo {
 		switch (featureID) {
 		case HyldesignerPackage.REPO__NAME:
 			return getName();
-		case HyldesignerPackage.REPO__DBENTITY:
+		case HyldesignerPackage.REPO__STORE_ENTITY:
 			if (resolve)
-				return getDbentity();
-			return basicGetDbentity();
+				return getStoreEntity();
+			return basicGetStoreEntity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -172,8 +172,8 @@ public class RepoImpl extends MinimalEObjectImpl.Container implements Repo {
 		case HyldesignerPackage.REPO__NAME:
 			setName((String) newValue);
 			return;
-		case HyldesignerPackage.REPO__DBENTITY:
-			setDbentity((DbEntity) newValue);
+		case HyldesignerPackage.REPO__STORE_ENTITY:
+			setStoreEntity((DbEntity) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -190,8 +190,8 @@ public class RepoImpl extends MinimalEObjectImpl.Container implements Repo {
 		case HyldesignerPackage.REPO__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case HyldesignerPackage.REPO__DBENTITY:
-			setDbentity((DbEntity) null);
+		case HyldesignerPackage.REPO__STORE_ENTITY:
+			setStoreEntity((DbEntity) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -207,8 +207,8 @@ public class RepoImpl extends MinimalEObjectImpl.Container implements Repo {
 		switch (featureID) {
 		case HyldesignerPackage.REPO__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case HyldesignerPackage.REPO__DBENTITY:
-			return dbentity != null;
+		case HyldesignerPackage.REPO__STORE_ENTITY:
+			return storeEntity != null;
 		}
 		return super.eIsSet(featureID);
 	}

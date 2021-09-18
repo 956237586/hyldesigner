@@ -57,26 +57,6 @@ public interface HyldesignerPackage extends EPackage {
 	HyldesignerPackage eINSTANCE = cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl <em>Domain Entity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDomainEntity()
-	 * @generated
-	 */
-	int DOMAIN_ENTITY = 7;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RequestPayloadImpl <em>Request Payload</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.RequestPayloadImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRequestPayload()
-	 * @generated
-	 */
-	int REQUEST_PAYLOAD = 14;
-
-	/**
 	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl <em>Project</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,116 +65,6 @@ public interface HyldesignerPackage extends EPackage {
 	 * @generated
 	 */
 	int PROJECT = 0;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DbEntityImpl <em>Db Entity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.DbEntityImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDbEntity()
-	 * @generated
-	 */
-	int DB_ENTITY = 15;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.AttrImpl <em>Attr</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.AttrImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getAttr()
-	 * @generated
-	 */
-	int ATTR = 6;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl <em>Domain Attr</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDomainAttr()
-	 * @generated
-	 */
-	int DOMAIN_ATTR = 1;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DbAttrImpl <em>Db Attr</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.DbAttrImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDbAttr()
-	 * @generated
-	 */
-	int DB_ATTR = 2;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl <em>Response Result</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getResponseResult()
-	 * @generated
-	 */
-	int RESPONSE_RESULT = 16;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl <em>Controller</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getController()
-	 * @generated
-	 */
-	int CONTROLLER = 8;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DtoImpl <em>Dto</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.DtoImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDto()
-	 * @generated
-	 */
-	int DTO = 10;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl <em>Rest Interface</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRestInterface()
-	 * @generated
-	 */
-	int REST_INTERFACE = 9;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RequestAttrImpl <em>Request Attr</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.RequestAttrImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRequestAttr()
-	 * @generated
-	 */
-	int REQUEST_ATTR = 3;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ResponseAttrImpl <em>Response Attr</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.ResponseAttrImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getResponseAttr()
-	 * @generated
-	 */
-	int RESPONSE_ATTR = 4;
-
-	/**
-	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DtoAttrImpl <em>Dto Attr</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.DtoAttrImpl
-	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDtoAttr()
-	 * @generated
-	 */
-	int DTO_ATTR = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -206,58 +76,67 @@ public interface HyldesignerPackage extends EPackage {
 	int PROJECT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Base Package</b></em>' attribute.
+	 * The feature id for the '<em><b>Domain Entities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__BASE_PACKAGE = 1;
+	int PROJECT__DOMAIN_ENTITIES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Contains Domain</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Db Entities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__CONTAINS_DOMAIN = 2;
+	int PROJECT__DB_ENTITIES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Contains Payload</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Req Payloads</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__CONTAINS_PAYLOAD = 3;
+	int PROJECT__REQ_PAYLOADS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Dbentity</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Resp Results</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__DBENTITY = 4;
+	int PROJECT__RESP_RESULTS = 4;
 
 	/**
-	 * The feature id for the '<em><b>Responseresult</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Controllers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__RESPONSERESULT = 5;
+	int PROJECT__CONTROLLERS = 5;
 
 	/**
-	 * The feature id for the '<em><b>Controller</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Base Package</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT__CONTROLLER = 6;
+	int PROJECT__BASE_PACKAGE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Sub Packages</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROJECT__SUB_PACKAGES = 7;
 
 	/**
 	 * The number of structural features of the '<em>Project</em>' class.
@@ -266,7 +145,7 @@ public interface HyldesignerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROJECT_FEATURE_COUNT = 7;
+	int PROJECT_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Project</em>' class.
@@ -276,6 +155,80 @@ public interface HyldesignerPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROJECT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.PackageDefineImpl <em>Package Define</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.PackageDefineImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getPackageDefine()
+	 * @generated
+	 */
+	int PACKAGE_DEFINE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DEFINE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DEFINE__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DEFINE__PARENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Child</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DEFINE__CHILD = 3;
+
+	/**
+	 * The number of structural features of the '<em>Package Define</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DEFINE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Package Define</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PACKAGE_DEFINE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.AttrImpl <em>Attr</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.AttrImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getAttr()
+	 * @generated
+	 */
+	int ATTR = 7;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -323,6 +276,16 @@ public interface HyldesignerPackage extends EPackage {
 	int ATTR_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl <em>Domain Attr</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDomainAttr()
+	 * @generated
+	 */
+	int DOMAIN_ATTR = 2;
+
+	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -359,22 +322,22 @@ public interface HyldesignerPackage extends EPackage {
 	int DOMAIN_ATTR__IS_BIZ_KEY = ATTR_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * The feature id for the '<em><b>Is Optional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ATTR__OPTIONAL = ATTR_FEATURE_COUNT + 1;
+	int DOMAIN_ATTR__IS_OPTIONAL = ATTR_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Persistent</b></em>' attribute.
+	 * The feature id for the '<em><b>Need Persistent</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ATTR__PERSISTENT = ATTR_FEATURE_COUNT + 2;
+	int DOMAIN_ATTR__NEED_PERSISTENT = ATTR_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Domain Attr</em>' class.
@@ -393,6 +356,16 @@ public interface HyldesignerPackage extends EPackage {
 	 * @ordered
 	 */
 	int DOMAIN_ATTR_OPERATION_COUNT = ATTR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DbAttrImpl <em>Db Attr</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.DbAttrImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDbAttr()
+	 * @generated
+	 */
+	int DB_ATTR = 3;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -438,6 +411,16 @@ public interface HyldesignerPackage extends EPackage {
 	 * @ordered
 	 */
 	int DB_ATTR_OPERATION_COUNT = ATTR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RequestAttrImpl <em>Request Attr</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.RequestAttrImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRequestAttr()
+	 * @generated
+	 */
+	int REQUEST_ATTR = 4;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -494,6 +477,16 @@ public interface HyldesignerPackage extends EPackage {
 	int REQUEST_ATTR_OPERATION_COUNT = ATTR_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ResponseAttrImpl <em>Response Attr</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.ResponseAttrImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getResponseAttr()
+	 * @generated
+	 */
+	int RESPONSE_ATTR = 5;
+
+	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -548,6 +541,16 @@ public interface HyldesignerPackage extends EPackage {
 	int RESPONSE_ATTR_OPERATION_COUNT = ATTR_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DtoAttrImpl <em>Dto Attr</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.DtoAttrImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDtoAttr()
+	 * @generated
+	 */
+	int DTO_ATTR = 6;
+
+	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -593,6 +596,16 @@ public interface HyldesignerPackage extends EPackage {
 	int DTO_ATTR_OPERATION_COUNT = ATTR_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl <em>Domain Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDomainEntity()
+	 * @generated
+	 */
+	int DOMAIN_ENTITY = 8;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -602,40 +615,49 @@ public interface HyldesignerPackage extends EPackage {
 	int DOMAIN_ENTITY__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Domainattr</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attr</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ENTITY__DOMAINATTR = 1;
+	int DOMAIN_ENTITY__ATTR = 1;
 
 	/**
-	 * The feature id for the '<em><b>Generate</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Generated Payload</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ENTITY__GENERATE = 2;
+	int DOMAIN_ENTITY__GENERATED_PAYLOAD = 2;
 
 	/**
-	 * The feature id for the '<em><b>Dto</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Generated Dto</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ENTITY__DTO = 3;
+	int DOMAIN_ENTITY__GENERATED_DTO = 3;
 
 	/**
-	 * The feature id for the '<em><b>Dbentity</b></em>' reference list.
+	 * The feature id for the '<em><b>Generated Db Entity</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ENTITY__DBENTITY = 4;
+	int DOMAIN_ENTITY__GENERATED_DB_ENTITY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Belong To</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_ENTITY__BELONG_TO = 5;
 
 	/**
 	 * The number of structural features of the '<em>Domain Entity</em>' class.
@@ -644,7 +666,7 @@ public interface HyldesignerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_ENTITY_FEATURE_COUNT = 5;
+	int DOMAIN_ENTITY_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Domain Entity</em>' class.
@@ -656,6 +678,16 @@ public interface HyldesignerPackage extends EPackage {
 	int DOMAIN_ENTITY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl <em>Controller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getController()
+	 * @generated
+	 */
+	int CONTROLLER = 9;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -665,13 +697,13 @@ public interface HyldesignerPackage extends EPackage {
 	int CONTROLLER__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Restinterface</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Rest Interface</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__RESTINTERFACE = 1;
+	int CONTROLLER__REST_INTERFACE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Controller</em>' class.
@@ -692,31 +724,41 @@ public interface HyldesignerPackage extends EPackage {
 	int CONTROLLER_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Requestpayload</b></em>' reference.
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl <em>Rest Interface</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRestInterface()
 	 * @generated
-	 * @ordered
 	 */
-	int REST_INTERFACE__REQUESTPAYLOAD = 0;
+	int REST_INTERFACE = 10;
 
 	/**
-	 * The feature id for the '<em><b>Responseresult</b></em>' reference.
+	 * The feature id for the '<em><b>Payload</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST_INTERFACE__RESPONSERESULT = 1;
+	int REST_INTERFACE__PAYLOAD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Rest Api Uri</b></em>' attribute.
+	 * The feature id for the '<em><b>Result</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST_INTERFACE__REST_API_URI = 2;
+	int REST_INTERFACE__RESULT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Mapping</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REST_INTERFACE__MAPPING = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -728,22 +770,22 @@ public interface HyldesignerPackage extends EPackage {
 	int REST_INTERFACE__NAME = 3;
 
 	/**
-	 * The feature id for the '<em><b>Api Desc</b></em>' attribute.
+	 * The feature id for the '<em><b>Desc</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST_INTERFACE__API_DESC = 4;
+	int REST_INTERFACE__DESC = 4;
 
 	/**
-	 * The feature id for the '<em><b>Bizservice</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Invoke Biz Services</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REST_INTERFACE__BIZSERVICE = 5;
+	int REST_INTERFACE__INVOKE_BIZ_SERVICES = 5;
 
 	/**
 	 * The feature id for the '<em><b>Access</b></em>' reference list.
@@ -773,22 +815,41 @@ public interface HyldesignerPackage extends EPackage {
 	int REST_INTERFACE_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Dto</b></em>' reference list.
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DtoImpl <em>Dto</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.DtoImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDto()
 	 * @generated
-	 * @ordered
 	 */
-	int DTO__DTO = 0;
+	int DTO = 11;
 
 	/**
-	 * The feature id for the '<em><b>Dtoattr</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Generated By</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DTO__DTOATTR = 1;
+	int DTO__GENERATED_BY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Generated</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTO__GENERATED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Attr</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DTO__ATTR = 2;
 
 	/**
 	 * The number of structural features of the '<em>Dto</em>' class.
@@ -797,7 +858,7 @@ public interface HyldesignerPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DTO_FEATURE_COUNT = 2;
+	int DTO_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Dto</em>' class.
@@ -816,7 +877,7 @@ public interface HyldesignerPackage extends EPackage {
 	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 11;
+	int SERVICE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -853,7 +914,7 @@ public interface HyldesignerPackage extends EPackage {
 	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getBizService()
 	 * @generated
 	 */
-	int BIZ_SERVICE = 12;
+	int BIZ_SERVICE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -865,13 +926,13 @@ public interface HyldesignerPackage extends EPackage {
 	int BIZ_SERVICE__NAME = SERVICE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Baseservice</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Invoke Base</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIZ_SERVICE__BASESERVICE = SERVICE_FEATURE_COUNT + 0;
+	int BIZ_SERVICE__INVOKE_BASE = SERVICE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Biz Service</em>' class.
@@ -899,7 +960,7 @@ public interface HyldesignerPackage extends EPackage {
 	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getBaseService()
 	 * @generated
 	 */
-	int BASE_SERVICE = 13;
+	int BASE_SERVICE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -911,13 +972,13 @@ public interface HyldesignerPackage extends EPackage {
 	int BASE_SERVICE__NAME = SERVICE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Repo</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Access Repo</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BASE_SERVICE__REPO = SERVICE_FEATURE_COUNT + 0;
+	int BASE_SERVICE__ACCESS_REPO = SERVICE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Base Service</em>' class.
@@ -938,6 +999,16 @@ public interface HyldesignerPackage extends EPackage {
 	int BASE_SERVICE_OPERATION_COUNT = SERVICE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RequestPayloadImpl <em>Request Payload</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.RequestPayloadImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRequestPayload()
+	 * @generated
+	 */
+	int REQUEST_PAYLOAD = 15;
+
+	/**
 	 * The feature id for the '<em><b>Generated By</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -947,13 +1018,13 @@ public interface HyldesignerPackage extends EPackage {
 	int REQUEST_PAYLOAD__GENERATED_BY = 0;
 
 	/**
-	 * The feature id for the '<em><b>Requestattr</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Contains Attr</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUEST_PAYLOAD__REQUESTATTR = 1;
+	int REQUEST_PAYLOAD__CONTAINS_ATTR = 1;
 
 	/**
 	 * The number of structural features of the '<em>Request Payload</em>' class.
@@ -974,22 +1045,32 @@ public interface HyldesignerPackage extends EPackage {
 	int REQUEST_PAYLOAD_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Dbattr</b></em>' containment reference list.
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DbEntityImpl <em>Db Entity</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.DbEntityImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDbEntity()
 	 * @generated
-	 * @ordered
 	 */
-	int DB_ENTITY__DBATTR = 0;
+	int DB_ENTITY = 16;
 
 	/**
-	 * The feature id for the '<em><b>Domainentity</b></em>' reference list.
+	 * The feature id for the '<em><b>Attr</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DB_ENTITY__DOMAINENTITY = 1;
+	int DB_ENTITY__ATTR = 0;
+
+	/**
+	 * The feature id for the '<em><b>Generated By</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DB_ENTITY__GENERATED_BY = 1;
 
 	/**
 	 * The number of structural features of the '<em>Db Entity</em>' class.
@@ -1010,13 +1091,23 @@ public interface HyldesignerPackage extends EPackage {
 	int DB_ENTITY_OPERATION_COUNT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Responseattr</b></em>' containment reference list.
+	 * The meta object id for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl <em>Response Result</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl
+	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getResponseResult()
+	 * @generated
+	 */
+	int RESPONSE_RESULT = 17;
+
+	/**
+	 * The feature id for the '<em><b>Attr</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESPONSE_RESULT__RESPONSEATTR = 0;
+	int RESPONSE_RESULT__ATTR = 0;
 
 	/**
 	 * The number of structural features of the '<em>Response Result</em>' class.
@@ -1044,7 +1135,7 @@ public interface HyldesignerPackage extends EPackage {
 	 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRepo()
 	 * @generated
 	 */
-	int REPO = 17;
+	int REPO = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1056,13 +1147,13 @@ public interface HyldesignerPackage extends EPackage {
 	int REPO__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Dbentity</b></em>' reference.
+	 * The feature id for the '<em><b>Store Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPO__DBENTITY = 1;
+	int REPO__STORE_ENTITY = 1;
 
 	/**
 	 * The number of structural features of the '<em>Repo</em>' class.
@@ -1081,103 +1172,6 @@ public interface HyldesignerPackage extends EPackage {
 	 * @ordered
 	 */
 	int REPO_OPERATION_COUNT = 0;
-
-	/**
-	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity <em>Domain Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Domain Entity</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity
-	 * @generated
-	 */
-	EClass getDomainEntity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getId()
-	 * @see #getDomainEntity()
-	 * @generated
-	 */
-	EAttribute getDomainEntity_Id();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getGenerate <em>Generate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Generate</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getGenerate()
-	 * @see #getDomainEntity()
-	 * @generated
-	 */
-	EReference getDomainEntity_Generate();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getDomainattr <em>Domainattr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Domainattr</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getDomainattr()
-	 * @see #getDomainEntity()
-	 * @generated
-	 */
-	EReference getDomainEntity_Domainattr();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getDto <em>Dto</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Dto</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getDto()
-	 * @see #getDomainEntity()
-	 * @generated
-	 */
-	EReference getDomainEntity_Dto();
-
-	/**
-	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getDbentity <em>Dbentity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Dbentity</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getDbentity()
-	 * @see #getDomainEntity()
-	 * @generated
-	 */
-	EReference getDomainEntity_Dbentity();
-
-	/**
-	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.RequestPayload <em>Request Payload</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Request Payload</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RequestPayload
-	 * @generated
-	 */
-	EClass getRequestPayload();
-
-	/**
-	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.RequestPayload#getGeneratedBy <em>Generated By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Generated By</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RequestPayload#getGeneratedBy()
-	 * @see #getRequestPayload()
-	 * @generated
-	 */
-	EReference getRequestPayload_GeneratedBy();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.RequestPayload#getRequestattr <em>Requestattr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Requestattr</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RequestPayload#getRequestattr()
-	 * @see #getRequestPayload()
-	 * @generated
-	 */
-	EReference getRequestPayload_Requestattr();
 
 	/**
 	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Project <em>Project</em>}'.
@@ -1201,102 +1195,135 @@ public interface HyldesignerPackage extends EPackage {
 	EAttribute getProject_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Project#getBasePackage <em>Base Package</em>}'.
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getDomainEntities <em>Domain Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Base Package</em>'.
+	 * @return the meta object for the containment reference list '<em>Domain Entities</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Project#getDomainEntities()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EReference getProject_DomainEntities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getDbEntities <em>Db Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Db Entities</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Project#getDbEntities()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EReference getProject_DbEntities();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getReqPayloads <em>Req Payloads</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Req Payloads</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Project#getReqPayloads()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EReference getProject_ReqPayloads();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getRespResults <em>Resp Results</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Resp Results</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Project#getRespResults()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EReference getProject_RespResults();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getControllers <em>Controllers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Controllers</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Project#getControllers()
+	 * @see #getProject()
+	 * @generated
+	 */
+	EReference getProject_Controllers();
+
+	/**
+	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.Project#getBasePackage <em>Base Package</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Package</em>'.
 	 * @see cn.hylstudio.mdse.hyldesigner.Project#getBasePackage()
 	 * @see #getProject()
 	 * @generated
 	 */
-	EAttribute getProject_BasePackage();
+	EReference getProject_BasePackage();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getContainsDomain <em>Contains Domain</em>}'.
+	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getSubPackages <em>Sub Packages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contains Domain</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Project#getContainsDomain()
+	 * @return the meta object for the reference list '<em>Sub Packages</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Project#getSubPackages()
 	 * @see #getProject()
 	 * @generated
 	 */
-	EReference getProject_ContainsDomain();
+	EReference getProject_SubPackages();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getContainsPayload <em>Contains Payload</em>}'.
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.PackageDefine <em>Package Define</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contains Payload</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Project#getContainsPayload()
-	 * @see #getProject()
+	 * @return the meta object for class '<em>Package Define</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.PackageDefine
 	 * @generated
 	 */
-	EReference getProject_ContainsPayload();
+	EClass getPackageDefine();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getDbentity <em>Dbentity</em>}'.
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.PackageDefine#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Dbentity</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Project#getDbentity()
-	 * @see #getProject()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.PackageDefine#getName()
+	 * @see #getPackageDefine()
 	 * @generated
 	 */
-	EReference getProject_Dbentity();
+	EAttribute getPackageDefine_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getResponseresult <em>Responseresult</em>}'.
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.PackageDefine#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Responseresult</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Project#getResponseresult()
-	 * @see #getProject()
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.PackageDefine#getType()
+	 * @see #getPackageDefine()
 	 * @generated
 	 */
-	EReference getProject_Responseresult();
+	EAttribute getPackageDefine_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Project#getController <em>Controller</em>}'.
+	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.PackageDefine#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Controller</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Project#getController()
-	 * @see #getProject()
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.PackageDefine#getParent()
+	 * @see #getPackageDefine()
 	 * @generated
 	 */
-	EReference getProject_Controller();
+	EReference getPackageDefine_Parent();
 
 	/**
-	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.DbEntity <em>Db Entity</em>}'.
+	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.PackageDefine#getChild <em>Child</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Db Entity</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DbEntity
+	 * @return the meta object for the reference list '<em>Child</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.PackageDefine#getChild()
+	 * @see #getPackageDefine()
 	 * @generated
 	 */
-	EClass getDbEntity();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.DbEntity#getDbattr <em>Dbattr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Dbattr</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DbEntity#getDbattr()
-	 * @see #getDbEntity()
-	 * @generated
-	 */
-	EReference getDbEntity_Dbattr();
-
-	/**
-	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.DbEntity#getDomainentity <em>Domainentity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Domainentity</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DbEntity#getDomainentity()
-	 * @see #getDbEntity()
-	 * @generated
-	 */
-	EReference getDbEntity_Domainentity();
+	EReference getPackageDefine_Child();
 
 	/**
 	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr <em>Domain Attr</em>}'.
@@ -1320,69 +1347,26 @@ public interface HyldesignerPackage extends EPackage {
 	EAttribute getDomainAttr_IsBizKey();
 
 	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isOptional <em>Optional</em>}'.
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isIsOptional <em>Is Optional</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Optional</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainAttr#isOptional()
+	 * @return the meta object for the attribute '<em>Is Optional</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainAttr#isIsOptional()
 	 * @see #getDomainAttr()
 	 * @generated
 	 */
-	EAttribute getDomainAttr_Optional();
+	EAttribute getDomainAttr_IsOptional();
 
 	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isPersistent <em>Persistent</em>}'.
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.DomainAttr#isNeedPersistent <em>Need Persistent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Persistent</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.DomainAttr#isPersistent()
+	 * @return the meta object for the attribute '<em>Need Persistent</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainAttr#isNeedPersistent()
 	 * @see #getDomainAttr()
 	 * @generated
 	 */
-	EAttribute getDomainAttr_Persistent();
-
-	/**
-	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Attr <em>Attr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Attr</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Attr
-	 * @generated
-	 */
-	EClass getAttr();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Attr#getKey <em>Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Key</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Attr#getKey()
-	 * @see #getAttr()
-	 * @generated
-	 */
-	EAttribute getAttr_Key();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Attr#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Attr#getType()
-	 * @see #getAttr()
-	 * @generated
-	 */
-	EAttribute getAttr_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Attr#getDesc <em>Desc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Desc</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Attr#getDesc()
-	 * @see #getAttr()
-	 * @generated
-	 */
-	EAttribute getAttr_Desc();
+	EAttribute getDomainAttr_NeedPersistent();
 
 	/**
 	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.DbAttr <em>Db Attr</em>}'.
@@ -1393,178 +1377,6 @@ public interface HyldesignerPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDbAttr();
-
-	/**
-	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.ResponseResult <em>Response Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Response Result</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.ResponseResult
-	 * @generated
-	 */
-	EClass getResponseResult();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.ResponseResult#getResponseattr <em>Responseattr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Responseattr</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.ResponseResult#getResponseattr()
-	 * @see #getResponseResult()
-	 * @generated
-	 */
-	EReference getResponseResult_Responseattr();
-
-	/**
-	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Controller <em>Controller</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Controller</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Controller
-	 * @generated
-	 */
-	EClass getController();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Controller#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Controller#getName()
-	 * @see #getController()
-	 * @generated
-	 */
-	EAttribute getController_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Controller#getRestinterface <em>Restinterface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Restinterface</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Controller#getRestinterface()
-	 * @see #getController()
-	 * @generated
-	 */
-	EReference getController_Restinterface();
-
-	/**
-	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Dto <em>Dto</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dto</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Dto
-	 * @generated
-	 */
-	EClass getDto();
-
-	/**
-	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.Dto#getDto <em>Dto</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Dto</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Dto#getDto()
-	 * @see #getDto()
-	 * @generated
-	 */
-	EReference getDto_Dto();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Dto#getDtoattr <em>Dtoattr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Dtoattr</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Dto#getDtoattr()
-	 * @see #getDto()
-	 * @generated
-	 */
-	EReference getDto_Dtoattr();
-
-	/**
-	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.RestInterface <em>Rest Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rest Interface</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface
-	 * @generated
-	 */
-	EClass getRestInterface();
-
-	/**
-	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getRequestpayload <em>Requestpayload</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Requestpayload</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getRequestpayload()
-	 * @see #getRestInterface()
-	 * @generated
-	 */
-	EReference getRestInterface_Requestpayload();
-
-	/**
-	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getResponseresult <em>Responseresult</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Responseresult</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getResponseresult()
-	 * @see #getRestInterface()
-	 * @generated
-	 */
-	EReference getRestInterface_Responseresult();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getRestApiUri <em>Rest Api Uri</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rest Api Uri</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getRestApiUri()
-	 * @see #getRestInterface()
-	 * @generated
-	 */
-	EAttribute getRestInterface_RestApiUri();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getName()
-	 * @see #getRestInterface()
-	 * @generated
-	 */
-	EAttribute getRestInterface_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getApiDesc <em>Api Desc</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Api Desc</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getApiDesc()
-	 * @see #getRestInterface()
-	 * @generated
-	 */
-	EAttribute getRestInterface_ApiDesc();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getBizservice <em>Bizservice</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bizservice</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getBizservice()
-	 * @see #getRestInterface()
-	 * @generated
-	 */
-	EReference getRestInterface_Bizservice();
-
-	/**
-	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getAccess <em>Access</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Access</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getAccess()
-	 * @see #getRestInterface()
-	 * @generated
-	 */
-	EReference getRestInterface_Access();
 
 	/**
 	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.RequestAttr <em>Request Attr</em>}'.
@@ -1619,6 +1431,287 @@ public interface HyldesignerPackage extends EPackage {
 	EClass getDtoAttr();
 
 	/**
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Attr <em>Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attr</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Attr
+	 * @generated
+	 */
+	EClass getAttr();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Attr#getKey <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Attr#getKey()
+	 * @see #getAttr()
+	 * @generated
+	 */
+	EAttribute getAttr_Key();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Attr#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Attr#getType()
+	 * @see #getAttr()
+	 * @generated
+	 */
+	EAttribute getAttr_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Attr#getDesc <em>Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Desc</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Attr#getDesc()
+	 * @see #getAttr()
+	 * @generated
+	 */
+	EAttribute getAttr_Desc();
+
+	/**
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity <em>Domain Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Domain Entity</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity
+	 * @generated
+	 */
+	EClass getDomainEntity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getId()
+	 * @see #getDomainEntity()
+	 * @generated
+	 */
+	EAttribute getDomainEntity_Id();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getAttr <em>Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attr</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getAttr()
+	 * @see #getDomainEntity()
+	 * @generated
+	 */
+	EReference getDomainEntity_Attr();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedPayload <em>Generated Payload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Generated Payload</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedPayload()
+	 * @see #getDomainEntity()
+	 * @generated
+	 */
+	EReference getDomainEntity_GeneratedPayload();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedDto <em>Generated Dto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Generated Dto</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedDto()
+	 * @see #getDomainEntity()
+	 * @generated
+	 */
+	EReference getDomainEntity_GeneratedDto();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedDbEntity <em>Generated Db Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Generated Db Entity</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getGeneratedDbEntity()
+	 * @see #getDomainEntity()
+	 * @generated
+	 */
+	EReference getDomainEntity_GeneratedDbEntity();
+
+	/**
+	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.DomainEntity#getBelongTo <em>Belong To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Belong To</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DomainEntity#getBelongTo()
+	 * @see #getDomainEntity()
+	 * @generated
+	 */
+	EReference getDomainEntity_BelongTo();
+
+	/**
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Controller <em>Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Controller</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Controller
+	 * @generated
+	 */
+	EClass getController();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.Controller#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Controller#getName()
+	 * @see #getController()
+	 * @generated
+	 */
+	EAttribute getController_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Controller#getRestInterface <em>Rest Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Rest Interface</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Controller#getRestInterface()
+	 * @see #getController()
+	 * @generated
+	 */
+	EReference getController_RestInterface();
+
+	/**
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.RestInterface <em>Rest Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Rest Interface</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface
+	 * @generated
+	 */
+	EClass getRestInterface();
+
+	/**
+	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getPayload <em>Payload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Payload</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getPayload()
+	 * @see #getRestInterface()
+	 * @generated
+	 */
+	EReference getRestInterface_Payload();
+
+	/**
+	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getResult <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Result</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getResult()
+	 * @see #getRestInterface()
+	 * @generated
+	 */
+	EReference getRestInterface_Result();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getMapping <em>Mapping</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mapping</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getMapping()
+	 * @see #getRestInterface()
+	 * @generated
+	 */
+	EAttribute getRestInterface_Mapping();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getName()
+	 * @see #getRestInterface()
+	 * @generated
+	 */
+	EAttribute getRestInterface_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getDesc <em>Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Desc</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getDesc()
+	 * @see #getRestInterface()
+	 * @generated
+	 */
+	EAttribute getRestInterface_Desc();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getInvokeBizServices <em>Invoke Biz Services</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Invoke Biz Services</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getInvokeBizServices()
+	 * @see #getRestInterface()
+	 * @generated
+	 */
+	EReference getRestInterface_InvokeBizServices();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.RestInterface#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Access</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RestInterface#getAccess()
+	 * @see #getRestInterface()
+	 * @generated
+	 */
+	EReference getRestInterface_Access();
+
+	/**
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Dto <em>Dto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dto</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Dto
+	 * @generated
+	 */
+	EClass getDto();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.Dto#getGeneratedBy <em>Generated By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Generated By</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Dto#getGeneratedBy()
+	 * @see #getDto()
+	 * @generated
+	 */
+	EReference getDto_GeneratedBy();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.Dto#getGenerated <em>Generated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Generated</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Dto#getGenerated()
+	 * @see #getDto()
+	 * @generated
+	 */
+	EReference getDto_Generated();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.Dto#getAttr <em>Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attr</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Dto#getAttr()
+	 * @see #getDto()
+	 * @generated
+	 */
+	EReference getDto_Attr();
+
+	/**
 	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Service <em>Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1650,15 +1743,15 @@ public interface HyldesignerPackage extends EPackage {
 	EClass getBizService();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.BizService#getBaseservice <em>Baseservice</em>}'.
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.BizService#getInvokeBase <em>Invoke Base</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Baseservice</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.BizService#getBaseservice()
+	 * @return the meta object for the containment reference list '<em>Invoke Base</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.BizService#getInvokeBase()
 	 * @see #getBizService()
 	 * @generated
 	 */
-	EReference getBizService_Baseservice();
+	EReference getBizService_InvokeBase();
 
 	/**
 	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.BaseService <em>Base Service</em>}'.
@@ -1671,15 +1764,100 @@ public interface HyldesignerPackage extends EPackage {
 	EClass getBaseService();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.BaseService#getRepo <em>Repo</em>}'.
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.BaseService#getAccessRepo <em>Access Repo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Repo</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.BaseService#getRepo()
+	 * @return the meta object for the containment reference list '<em>Access Repo</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.BaseService#getAccessRepo()
 	 * @see #getBaseService()
 	 * @generated
 	 */
-	EReference getBaseService_Repo();
+	EReference getBaseService_AccessRepo();
+
+	/**
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.RequestPayload <em>Request Payload</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Request Payload</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RequestPayload
+	 * @generated
+	 */
+	EClass getRequestPayload();
+
+	/**
+	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.RequestPayload#getGeneratedBy <em>Generated By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Generated By</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RequestPayload#getGeneratedBy()
+	 * @see #getRequestPayload()
+	 * @generated
+	 */
+	EReference getRequestPayload_GeneratedBy();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.RequestPayload#getContainsAttr <em>Contains Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contains Attr</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.RequestPayload#getContainsAttr()
+	 * @see #getRequestPayload()
+	 * @generated
+	 */
+	EReference getRequestPayload_ContainsAttr();
+
+	/**
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.DbEntity <em>Db Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Db Entity</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DbEntity
+	 * @generated
+	 */
+	EClass getDbEntity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.DbEntity#getAttr <em>Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attr</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DbEntity#getAttr()
+	 * @see #getDbEntity()
+	 * @generated
+	 */
+	EReference getDbEntity_Attr();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cn.hylstudio.mdse.hyldesigner.DbEntity#getGeneratedBy <em>Generated By</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Generated By</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.DbEntity#getGeneratedBy()
+	 * @see #getDbEntity()
+	 * @generated
+	 */
+	EReference getDbEntity_GeneratedBy();
+
+	/**
+	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.ResponseResult <em>Response Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Response Result</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.ResponseResult
+	 * @generated
+	 */
+	EClass getResponseResult();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cn.hylstudio.mdse.hyldesigner.ResponseResult#getAttr <em>Attr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attr</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.ResponseResult#getAttr()
+	 * @see #getResponseResult()
+	 * @generated
+	 */
+	EReference getResponseResult_Attr();
 
 	/**
 	 * Returns the meta object for class '{@link cn.hylstudio.mdse.hyldesigner.Repo <em>Repo</em>}'.
@@ -1703,15 +1881,15 @@ public interface HyldesignerPackage extends EPackage {
 	EAttribute getRepo_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.Repo#getDbentity <em>Dbentity</em>}'.
+	 * Returns the meta object for the reference '{@link cn.hylstudio.mdse.hyldesigner.Repo#getStoreEntity <em>Store Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Dbentity</em>'.
-	 * @see cn.hylstudio.mdse.hyldesigner.Repo#getDbentity()
+	 * @return the meta object for the reference '<em>Store Entity</em>'.
+	 * @see cn.hylstudio.mdse.hyldesigner.Repo#getStoreEntity()
 	 * @see #getRepo()
 	 * @generated
 	 */
-	EReference getRepo_Dbentity();
+	EReference getRepo_StoreEntity();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1737,82 +1915,6 @@ public interface HyldesignerPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl <em>Domain Entity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDomainEntity()
-		 * @generated
-		 */
-		EClass DOMAIN_ENTITY = eINSTANCE.getDomainEntity();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DOMAIN_ENTITY__ID = eINSTANCE.getDomainEntity_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Generate</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN_ENTITY__GENERATE = eINSTANCE.getDomainEntity_Generate();
-
-		/**
-		 * The meta object literal for the '<em><b>Domainattr</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN_ENTITY__DOMAINATTR = eINSTANCE.getDomainEntity_Domainattr();
-
-		/**
-		 * The meta object literal for the '<em><b>Dto</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN_ENTITY__DTO = eINSTANCE.getDomainEntity_Dto();
-
-		/**
-		 * The meta object literal for the '<em><b>Dbentity</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN_ENTITY__DBENTITY = eINSTANCE.getDomainEntity_Dbentity();
-
-		/**
-		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RequestPayloadImpl <em>Request Payload</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.RequestPayloadImpl
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRequestPayload()
-		 * @generated
-		 */
-		EClass REQUEST_PAYLOAD = eINSTANCE.getRequestPayload();
-
-		/**
-		 * The meta object literal for the '<em><b>Generated By</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REQUEST_PAYLOAD__GENERATED_BY = eINSTANCE.getRequestPayload_GeneratedBy();
-
-		/**
-		 * The meta object literal for the '<em><b>Requestattr</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REQUEST_PAYLOAD__REQUESTATTR = eINSTANCE.getRequestPayload_Requestattr();
-
-		/**
 		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl <em>Project</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1831,78 +1933,102 @@ public interface HyldesignerPackage extends EPackage {
 		EAttribute PROJECT__NAME = eINSTANCE.getProject_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Package</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Domain Entities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROJECT__BASE_PACKAGE = eINSTANCE.getProject_BasePackage();
+		EReference PROJECT__DOMAIN_ENTITIES = eINSTANCE.getProject_DomainEntities();
 
 		/**
-		 * The meta object literal for the '<em><b>Contains Domain</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Db Entities</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROJECT__CONTAINS_DOMAIN = eINSTANCE.getProject_ContainsDomain();
+		EReference PROJECT__DB_ENTITIES = eINSTANCE.getProject_DbEntities();
 
 		/**
-		 * The meta object literal for the '<em><b>Contains Payload</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Req Payloads</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROJECT__CONTAINS_PAYLOAD = eINSTANCE.getProject_ContainsPayload();
+		EReference PROJECT__REQ_PAYLOADS = eINSTANCE.getProject_ReqPayloads();
 
 		/**
-		 * The meta object literal for the '<em><b>Dbentity</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Resp Results</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROJECT__DBENTITY = eINSTANCE.getProject_Dbentity();
+		EReference PROJECT__RESP_RESULTS = eINSTANCE.getProject_RespResults();
 
 		/**
-		 * The meta object literal for the '<em><b>Responseresult</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Controllers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROJECT__RESPONSERESULT = eINSTANCE.getProject_Responseresult();
+		EReference PROJECT__CONTROLLERS = eINSTANCE.getProject_Controllers();
 
 		/**
-		 * The meta object literal for the '<em><b>Controller</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Base Package</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROJECT__CONTROLLER = eINSTANCE.getProject_Controller();
+		EReference PROJECT__BASE_PACKAGE = eINSTANCE.getProject_BasePackage();
 
 		/**
-		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DbEntityImpl <em>Db Entity</em>}' class.
+		 * The meta object literal for the '<em><b>Sub Packages</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.DbEntityImpl
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDbEntity()
 		 * @generated
 		 */
-		EClass DB_ENTITY = eINSTANCE.getDbEntity();
+		EReference PROJECT__SUB_PACKAGES = eINSTANCE.getProject_SubPackages();
 
 		/**
-		 * The meta object literal for the '<em><b>Dbattr</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.PackageDefineImpl <em>Package Define</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.PackageDefineImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getPackageDefine()
 		 * @generated
 		 */
-		EReference DB_ENTITY__DBATTR = eINSTANCE.getDbEntity_Dbattr();
+		EClass PACKAGE_DEFINE = eINSTANCE.getPackageDefine();
 
 		/**
-		 * The meta object literal for the '<em><b>Domainentity</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DB_ENTITY__DOMAINENTITY = eINSTANCE.getDbEntity_Domainentity();
+		EAttribute PACKAGE_DEFINE__NAME = eINSTANCE.getPackageDefine_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PACKAGE_DEFINE__TYPE = eINSTANCE.getPackageDefine_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE_DEFINE__PARENT = eINSTANCE.getPackageDefine_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Child</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PACKAGE_DEFINE__CHILD = eINSTANCE.getPackageDefine_Child();
 
 		/**
 		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DomainAttrImpl <em>Domain Attr</em>}' class.
@@ -1923,54 +2049,20 @@ public interface HyldesignerPackage extends EPackage {
 		EAttribute DOMAIN_ATTR__IS_BIZ_KEY = eINSTANCE.getDomainAttr_IsBizKey();
 
 		/**
-		 * The meta object literal for the '<em><b>Optional</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Is Optional</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DOMAIN_ATTR__OPTIONAL = eINSTANCE.getDomainAttr_Optional();
+		EAttribute DOMAIN_ATTR__IS_OPTIONAL = eINSTANCE.getDomainAttr_IsOptional();
 
 		/**
-		 * The meta object literal for the '<em><b>Persistent</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Need Persistent</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DOMAIN_ATTR__PERSISTENT = eINSTANCE.getDomainAttr_Persistent();
-
-		/**
-		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.AttrImpl <em>Attr</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.AttrImpl
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getAttr()
-		 * @generated
-		 */
-		EClass ATTR = eINSTANCE.getAttr();
-
-		/**
-		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTR__KEY = eINSTANCE.getAttr_Key();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTR__TYPE = eINSTANCE.getAttr_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTR__DESC = eINSTANCE.getAttr_Desc();
+		EAttribute DOMAIN_ATTR__NEED_PERSISTENT = eINSTANCE.getDomainAttr_NeedPersistent();
 
 		/**
 		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DbAttrImpl <em>Db Attr</em>}' class.
@@ -1981,142 +2073,6 @@ public interface HyldesignerPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DB_ATTR = eINSTANCE.getDbAttr();
-
-		/**
-		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl <em>Response Result</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getResponseResult()
-		 * @generated
-		 */
-		EClass RESPONSE_RESULT = eINSTANCE.getResponseResult();
-
-		/**
-		 * The meta object literal for the '<em><b>Responseattr</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RESPONSE_RESULT__RESPONSEATTR = eINSTANCE.getResponseResult_Responseattr();
-
-		/**
-		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl <em>Controller</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getController()
-		 * @generated
-		 */
-		EClass CONTROLLER = eINSTANCE.getController();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTROLLER__NAME = eINSTANCE.getController_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Restinterface</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTROLLER__RESTINTERFACE = eINSTANCE.getController_Restinterface();
-
-		/**
-		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DtoImpl <em>Dto</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.DtoImpl
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDto()
-		 * @generated
-		 */
-		EClass DTO = eINSTANCE.getDto();
-
-		/**
-		 * The meta object literal for the '<em><b>Dto</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DTO__DTO = eINSTANCE.getDto_Dto();
-
-		/**
-		 * The meta object literal for the '<em><b>Dtoattr</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DTO__DTOATTR = eINSTANCE.getDto_Dtoattr();
-
-		/**
-		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl <em>Rest Interface</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl
-		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRestInterface()
-		 * @generated
-		 */
-		EClass REST_INTERFACE = eINSTANCE.getRestInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Requestpayload</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REST_INTERFACE__REQUESTPAYLOAD = eINSTANCE.getRestInterface_Requestpayload();
-
-		/**
-		 * The meta object literal for the '<em><b>Responseresult</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REST_INTERFACE__RESPONSERESULT = eINSTANCE.getRestInterface_Responseresult();
-
-		/**
-		 * The meta object literal for the '<em><b>Rest Api Uri</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REST_INTERFACE__REST_API_URI = eINSTANCE.getRestInterface_RestApiUri();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REST_INTERFACE__NAME = eINSTANCE.getRestInterface_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Api Desc</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REST_INTERFACE__API_DESC = eINSTANCE.getRestInterface_ApiDesc();
-
-		/**
-		 * The meta object literal for the '<em><b>Bizservice</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REST_INTERFACE__BIZSERVICE = eINSTANCE.getRestInterface_Bizservice();
-
-		/**
-		 * The meta object literal for the '<em><b>Access</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REST_INTERFACE__ACCESS = eINSTANCE.getRestInterface_Access();
 
 		/**
 		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RequestAttrImpl <em>Request Attr</em>}' class.
@@ -2165,6 +2121,224 @@ public interface HyldesignerPackage extends EPackage {
 		EClass DTO_ATTR = eINSTANCE.getDtoAttr();
 
 		/**
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.AttrImpl <em>Attr</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.AttrImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getAttr()
+		 * @generated
+		 */
+		EClass ATTR = eINSTANCE.getAttr();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTR__KEY = eINSTANCE.getAttr_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTR__TYPE = eINSTANCE.getAttr_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ATTR__DESC = eINSTANCE.getAttr_Desc();
+
+		/**
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl <em>Domain Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.DomainEntityImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDomainEntity()
+		 * @generated
+		 */
+		EClass DOMAIN_ENTITY = eINSTANCE.getDomainEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAIN_ENTITY__ID = eINSTANCE.getDomainEntity_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Attr</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_ENTITY__ATTR = eINSTANCE.getDomainEntity_Attr();
+
+		/**
+		 * The meta object literal for the '<em><b>Generated Payload</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_ENTITY__GENERATED_PAYLOAD = eINSTANCE.getDomainEntity_GeneratedPayload();
+
+		/**
+		 * The meta object literal for the '<em><b>Generated Dto</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_ENTITY__GENERATED_DTO = eINSTANCE.getDomainEntity_GeneratedDto();
+
+		/**
+		 * The meta object literal for the '<em><b>Generated Db Entity</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_ENTITY__GENERATED_DB_ENTITY = eINSTANCE.getDomainEntity_GeneratedDbEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Belong To</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_ENTITY__BELONG_TO = eINSTANCE.getDomainEntity_BelongTo();
+
+		/**
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl <em>Controller</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getController()
+		 * @generated
+		 */
+		EClass CONTROLLER = eINSTANCE.getController();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTROLLER__NAME = eINSTANCE.getController_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Rest Interface</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTROLLER__REST_INTERFACE = eINSTANCE.getController_RestInterface();
+
+		/**
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl <em>Rest Interface</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.RestInterfaceImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRestInterface()
+		 * @generated
+		 */
+		EClass REST_INTERFACE = eINSTANCE.getRestInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Payload</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REST_INTERFACE__PAYLOAD = eINSTANCE.getRestInterface_Payload();
+
+		/**
+		 * The meta object literal for the '<em><b>Result</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REST_INTERFACE__RESULT = eINSTANCE.getRestInterface_Result();
+
+		/**
+		 * The meta object literal for the '<em><b>Mapping</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_INTERFACE__MAPPING = eINSTANCE.getRestInterface_Mapping();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_INTERFACE__NAME = eINSTANCE.getRestInterface_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REST_INTERFACE__DESC = eINSTANCE.getRestInterface_Desc();
+
+		/**
+		 * The meta object literal for the '<em><b>Invoke Biz Services</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REST_INTERFACE__INVOKE_BIZ_SERVICES = eINSTANCE.getRestInterface_InvokeBizServices();
+
+		/**
+		 * The meta object literal for the '<em><b>Access</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REST_INTERFACE__ACCESS = eINSTANCE.getRestInterface_Access();
+
+		/**
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DtoImpl <em>Dto</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.DtoImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDto()
+		 * @generated
+		 */
+		EClass DTO = eINSTANCE.getDto();
+
+		/**
+		 * The meta object literal for the '<em><b>Generated By</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DTO__GENERATED_BY = eINSTANCE.getDto_GeneratedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Generated</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DTO__GENERATED = eINSTANCE.getDto_Generated();
+
+		/**
+		 * The meta object literal for the '<em><b>Attr</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DTO__ATTR = eINSTANCE.getDto_Attr();
+
+		/**
 		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ServiceImpl <em>Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2193,12 +2367,12 @@ public interface HyldesignerPackage extends EPackage {
 		EClass BIZ_SERVICE = eINSTANCE.getBizService();
 
 		/**
-		 * The meta object literal for the '<em><b>Baseservice</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Invoke Base</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BIZ_SERVICE__BASESERVICE = eINSTANCE.getBizService_Baseservice();
+		EReference BIZ_SERVICE__INVOKE_BASE = eINSTANCE.getBizService_InvokeBase();
 
 		/**
 		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.BaseServiceImpl <em>Base Service</em>}' class.
@@ -2211,12 +2385,82 @@ public interface HyldesignerPackage extends EPackage {
 		EClass BASE_SERVICE = eINSTANCE.getBaseService();
 
 		/**
-		 * The meta object literal for the '<em><b>Repo</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Access Repo</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference BASE_SERVICE__REPO = eINSTANCE.getBaseService_Repo();
+		EReference BASE_SERVICE__ACCESS_REPO = eINSTANCE.getBaseService_AccessRepo();
+
+		/**
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RequestPayloadImpl <em>Request Payload</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.RequestPayloadImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getRequestPayload()
+		 * @generated
+		 */
+		EClass REQUEST_PAYLOAD = eINSTANCE.getRequestPayload();
+
+		/**
+		 * The meta object literal for the '<em><b>Generated By</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST_PAYLOAD__GENERATED_BY = eINSTANCE.getRequestPayload_GeneratedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Contains Attr</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUEST_PAYLOAD__CONTAINS_ATTR = eINSTANCE.getRequestPayload_ContainsAttr();
+
+		/**
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.DbEntityImpl <em>Db Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.DbEntityImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getDbEntity()
+		 * @generated
+		 */
+		EClass DB_ENTITY = eINSTANCE.getDbEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Attr</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DB_ENTITY__ATTR = eINSTANCE.getDbEntity_Attr();
+
+		/**
+		 * The meta object literal for the '<em><b>Generated By</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DB_ENTITY__GENERATED_BY = eINSTANCE.getDbEntity_GeneratedBy();
+
+		/**
+		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl <em>Response Result</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.ResponseResultImpl
+		 * @see cn.hylstudio.mdse.hyldesigner.impl.HyldesignerPackageImpl#getResponseResult()
+		 * @generated
+		 */
+		EClass RESPONSE_RESULT = eINSTANCE.getResponseResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Attr</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESPONSE_RESULT__ATTR = eINSTANCE.getResponseResult_Attr();
 
 		/**
 		 * The meta object literal for the '{@link cn.hylstudio.mdse.hyldesigner.impl.RepoImpl <em>Repo</em>}' class.
@@ -2237,12 +2481,12 @@ public interface HyldesignerPackage extends EPackage {
 		EAttribute REPO__NAME = eINSTANCE.getRepo_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Dbentity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Store Entity</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference REPO__DBENTITY = eINSTANCE.getRepo_Dbentity();
+		EReference REPO__STORE_ENTITY = eINSTANCE.getRepo_StoreEntity();
 
 	}
 

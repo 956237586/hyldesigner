@@ -6,10 +6,11 @@ import cn.hylstudio.mdse.hyldesigner.Controller;
 import cn.hylstudio.mdse.hyldesigner.DbEntity;
 import cn.hylstudio.mdse.hyldesigner.DomainEntity;
 import cn.hylstudio.mdse.hyldesigner.HyldesignerPackage;
+import cn.hylstudio.mdse.hyldesigner.PackageDefine;
 import cn.hylstudio.mdse.hyldesigner.Project;
-
 import cn.hylstudio.mdse.hyldesigner.RequestPayload;
 import cn.hylstudio.mdse.hyldesigner.ResponseResult;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -35,12 +37,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getDomainEntities <em>Domain Entities</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getDbEntities <em>Db Entities</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getReqPayloads <em>Req Payloads</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getRespResults <em>Resp Results</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getControllers <em>Controllers</em>}</li>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getBasePackage <em>Base Package</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getContainsDomain <em>Contains Domain</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getContainsPayload <em>Contains Payload</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getDbentity <em>Dbentity</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getResponseresult <em>Responseresult</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getController <em>Controller</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ProjectImpl#getSubPackages <em>Sub Packages</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,74 +70,74 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getBasePackage() <em>Base Package</em>}' attribute.
+	 * The cached value of the '{@link #getDomainEntities() <em>Domain Entities</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDomainEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DomainEntity> domainEntities;
+
+	/**
+	 * The cached value of the '{@link #getDbEntities() <em>Db Entities</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDbEntities()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DbEntity> dbEntities;
+
+	/**
+	 * The cached value of the '{@link #getReqPayloads() <em>Req Payloads</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReqPayloads()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RequestPayload> reqPayloads;
+
+	/**
+	 * The cached value of the '{@link #getRespResults() <em>Resp Results</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRespResults()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ResponseResult> respResults;
+
+	/**
+	 * The cached value of the '{@link #getControllers() <em>Controllers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getControllers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Controller> controllers;
+
+	/**
+	 * The cached value of the '{@link #getBasePackage() <em>Base Package</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBasePackage()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String BASE_PACKAGE_EDEFAULT = null;
+	protected PackageDefine basePackage;
 
 	/**
-	 * The cached value of the '{@link #getBasePackage() <em>Base Package</em>}' attribute.
+	 * The cached value of the '{@link #getSubPackages() <em>Sub Packages</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBasePackage()
+	 * @see #getSubPackages()
 	 * @generated
 	 * @ordered
 	 */
-	protected String basePackage = BASE_PACKAGE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getContainsDomain() <em>Contains Domain</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainsDomain()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DomainEntity> containsDomain;
-
-	/**
-	 * The cached value of the '{@link #getContainsPayload() <em>Contains Payload</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainsPayload()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<RequestPayload> containsPayload;
-
-	/**
-	 * The cached value of the '{@link #getDbentity() <em>Dbentity</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDbentity()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DbEntity> dbentity;
-
-	/**
-	 * The cached value of the '{@link #getResponseresult() <em>Responseresult</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResponseresult()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ResponseResult> responseresult;
-
-	/**
-	 * The cached value of the '{@link #getController() <em>Controller</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getController()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Controller> controller;
+	protected EList<PackageDefine> subPackages;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,7 +187,95 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	 * @generated
 	 */
 	@Override
-	public String getBasePackage() {
+	public EList<DomainEntity> getDomainEntities() {
+		if (domainEntities == null) {
+			domainEntities = new EObjectContainmentEList<DomainEntity>(DomainEntity.class, this,
+					HyldesignerPackage.PROJECT__DOMAIN_ENTITIES);
+		}
+		return domainEntities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<DbEntity> getDbEntities() {
+		if (dbEntities == null) {
+			dbEntities = new EObjectContainmentEList<DbEntity>(DbEntity.class, this,
+					HyldesignerPackage.PROJECT__DB_ENTITIES);
+		}
+		return dbEntities;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<RequestPayload> getReqPayloads() {
+		if (reqPayloads == null) {
+			reqPayloads = new EObjectContainmentEList<RequestPayload>(RequestPayload.class, this,
+					HyldesignerPackage.PROJECT__REQ_PAYLOADS);
+		}
+		return reqPayloads;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ResponseResult> getRespResults() {
+		if (respResults == null) {
+			respResults = new EObjectContainmentEList<ResponseResult>(ResponseResult.class, this,
+					HyldesignerPackage.PROJECT__RESP_RESULTS);
+		}
+		return respResults;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<Controller> getControllers() {
+		if (controllers == null) {
+			controllers = new EObjectContainmentEList<Controller>(Controller.class, this,
+					HyldesignerPackage.PROJECT__CONTROLLERS);
+		}
+		return controllers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public PackageDefine getBasePackage() {
+		if (basePackage != null && basePackage.eIsProxy()) {
+			InternalEObject oldBasePackage = (InternalEObject) basePackage;
+			basePackage = (PackageDefine) eResolveProxy(oldBasePackage);
+			if (basePackage != oldBasePackage) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HyldesignerPackage.PROJECT__BASE_PACKAGE,
+							oldBasePackage, basePackage));
+			}
+		}
+		return basePackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PackageDefine basicGetBasePackage() {
 		return basePackage;
 	}
 
@@ -194,8 +285,8 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	 * @generated
 	 */
 	@Override
-	public void setBasePackage(String newBasePackage) {
-		String oldBasePackage = basePackage;
+	public void setBasePackage(PackageDefine newBasePackage) {
+		PackageDefine oldBasePackage = basePackage;
 		basePackage = newBasePackage;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, HyldesignerPackage.PROJECT__BASE_PACKAGE,
@@ -208,68 +299,12 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	 * @generated
 	 */
 	@Override
-	public EList<DomainEntity> getContainsDomain() {
-		if (containsDomain == null) {
-			containsDomain = new EObjectContainmentEList<DomainEntity>(DomainEntity.class, this,
-					HyldesignerPackage.PROJECT__CONTAINS_DOMAIN);
+	public EList<PackageDefine> getSubPackages() {
+		if (subPackages == null) {
+			subPackages = new EObjectResolvingEList<PackageDefine>(PackageDefine.class, this,
+					HyldesignerPackage.PROJECT__SUB_PACKAGES);
 		}
-		return containsDomain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<RequestPayload> getContainsPayload() {
-		if (containsPayload == null) {
-			containsPayload = new EObjectContainmentEList<RequestPayload>(RequestPayload.class, this,
-					HyldesignerPackage.PROJECT__CONTAINS_PAYLOAD);
-		}
-		return containsPayload;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<DbEntity> getDbentity() {
-		if (dbentity == null) {
-			dbentity = new EObjectContainmentEList<DbEntity>(DbEntity.class, this,
-					HyldesignerPackage.PROJECT__DBENTITY);
-		}
-		return dbentity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<ResponseResult> getResponseresult() {
-		if (responseresult == null) {
-			responseresult = new EObjectContainmentEList<ResponseResult>(ResponseResult.class, this,
-					HyldesignerPackage.PROJECT__RESPONSERESULT);
-		}
-		return responseresult;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<Controller> getController() {
-		if (controller == null) {
-			controller = new EObjectContainmentEList<Controller>(Controller.class, this,
-					HyldesignerPackage.PROJECT__CONTROLLER);
-		}
-		return controller;
+		return subPackages;
 	}
 
 	/**
@@ -280,16 +315,16 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
-			return ((InternalEList<?>) getContainsDomain()).basicRemove(otherEnd, msgs);
-		case HyldesignerPackage.PROJECT__CONTAINS_PAYLOAD:
-			return ((InternalEList<?>) getContainsPayload()).basicRemove(otherEnd, msgs);
-		case HyldesignerPackage.PROJECT__DBENTITY:
-			return ((InternalEList<?>) getDbentity()).basicRemove(otherEnd, msgs);
-		case HyldesignerPackage.PROJECT__RESPONSERESULT:
-			return ((InternalEList<?>) getResponseresult()).basicRemove(otherEnd, msgs);
-		case HyldesignerPackage.PROJECT__CONTROLLER:
-			return ((InternalEList<?>) getController()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.PROJECT__DOMAIN_ENTITIES:
+			return ((InternalEList<?>) getDomainEntities()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.PROJECT__DB_ENTITIES:
+			return ((InternalEList<?>) getDbEntities()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.PROJECT__REQ_PAYLOADS:
+			return ((InternalEList<?>) getReqPayloads()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.PROJECT__RESP_RESULTS:
+			return ((InternalEList<?>) getRespResults()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.PROJECT__CONTROLLERS:
+			return ((InternalEList<?>) getControllers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -304,18 +339,22 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		switch (featureID) {
 		case HyldesignerPackage.PROJECT__NAME:
 			return getName();
+		case HyldesignerPackage.PROJECT__DOMAIN_ENTITIES:
+			return getDomainEntities();
+		case HyldesignerPackage.PROJECT__DB_ENTITIES:
+			return getDbEntities();
+		case HyldesignerPackage.PROJECT__REQ_PAYLOADS:
+			return getReqPayloads();
+		case HyldesignerPackage.PROJECT__RESP_RESULTS:
+			return getRespResults();
+		case HyldesignerPackage.PROJECT__CONTROLLERS:
+			return getControllers();
 		case HyldesignerPackage.PROJECT__BASE_PACKAGE:
-			return getBasePackage();
-		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
-			return getContainsDomain();
-		case HyldesignerPackage.PROJECT__CONTAINS_PAYLOAD:
-			return getContainsPayload();
-		case HyldesignerPackage.PROJECT__DBENTITY:
-			return getDbentity();
-		case HyldesignerPackage.PROJECT__RESPONSERESULT:
-			return getResponseresult();
-		case HyldesignerPackage.PROJECT__CONTROLLER:
-			return getController();
+			if (resolve)
+				return getBasePackage();
+			return basicGetBasePackage();
+		case HyldesignerPackage.PROJECT__SUB_PACKAGES:
+			return getSubPackages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -332,28 +371,32 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		case HyldesignerPackage.PROJECT__NAME:
 			setName((String) newValue);
 			return;
+		case HyldesignerPackage.PROJECT__DOMAIN_ENTITIES:
+			getDomainEntities().clear();
+			getDomainEntities().addAll((Collection<? extends DomainEntity>) newValue);
+			return;
+		case HyldesignerPackage.PROJECT__DB_ENTITIES:
+			getDbEntities().clear();
+			getDbEntities().addAll((Collection<? extends DbEntity>) newValue);
+			return;
+		case HyldesignerPackage.PROJECT__REQ_PAYLOADS:
+			getReqPayloads().clear();
+			getReqPayloads().addAll((Collection<? extends RequestPayload>) newValue);
+			return;
+		case HyldesignerPackage.PROJECT__RESP_RESULTS:
+			getRespResults().clear();
+			getRespResults().addAll((Collection<? extends ResponseResult>) newValue);
+			return;
+		case HyldesignerPackage.PROJECT__CONTROLLERS:
+			getControllers().clear();
+			getControllers().addAll((Collection<? extends Controller>) newValue);
+			return;
 		case HyldesignerPackage.PROJECT__BASE_PACKAGE:
-			setBasePackage((String) newValue);
+			setBasePackage((PackageDefine) newValue);
 			return;
-		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
-			getContainsDomain().clear();
-			getContainsDomain().addAll((Collection<? extends DomainEntity>) newValue);
-			return;
-		case HyldesignerPackage.PROJECT__CONTAINS_PAYLOAD:
-			getContainsPayload().clear();
-			getContainsPayload().addAll((Collection<? extends RequestPayload>) newValue);
-			return;
-		case HyldesignerPackage.PROJECT__DBENTITY:
-			getDbentity().clear();
-			getDbentity().addAll((Collection<? extends DbEntity>) newValue);
-			return;
-		case HyldesignerPackage.PROJECT__RESPONSERESULT:
-			getResponseresult().clear();
-			getResponseresult().addAll((Collection<? extends ResponseResult>) newValue);
-			return;
-		case HyldesignerPackage.PROJECT__CONTROLLER:
-			getController().clear();
-			getController().addAll((Collection<? extends Controller>) newValue);
+		case HyldesignerPackage.PROJECT__SUB_PACKAGES:
+			getSubPackages().clear();
+			getSubPackages().addAll((Collection<? extends PackageDefine>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -370,23 +413,26 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		case HyldesignerPackage.PROJECT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case HyldesignerPackage.PROJECT__DOMAIN_ENTITIES:
+			getDomainEntities().clear();
+			return;
+		case HyldesignerPackage.PROJECT__DB_ENTITIES:
+			getDbEntities().clear();
+			return;
+		case HyldesignerPackage.PROJECT__REQ_PAYLOADS:
+			getReqPayloads().clear();
+			return;
+		case HyldesignerPackage.PROJECT__RESP_RESULTS:
+			getRespResults().clear();
+			return;
+		case HyldesignerPackage.PROJECT__CONTROLLERS:
+			getControllers().clear();
+			return;
 		case HyldesignerPackage.PROJECT__BASE_PACKAGE:
-			setBasePackage(BASE_PACKAGE_EDEFAULT);
+			setBasePackage((PackageDefine) null);
 			return;
-		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
-			getContainsDomain().clear();
-			return;
-		case HyldesignerPackage.PROJECT__CONTAINS_PAYLOAD:
-			getContainsPayload().clear();
-			return;
-		case HyldesignerPackage.PROJECT__DBENTITY:
-			getDbentity().clear();
-			return;
-		case HyldesignerPackage.PROJECT__RESPONSERESULT:
-			getResponseresult().clear();
-			return;
-		case HyldesignerPackage.PROJECT__CONTROLLER:
-			getController().clear();
+		case HyldesignerPackage.PROJECT__SUB_PACKAGES:
+			getSubPackages().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -402,18 +448,20 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		switch (featureID) {
 		case HyldesignerPackage.PROJECT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case HyldesignerPackage.PROJECT__DOMAIN_ENTITIES:
+			return domainEntities != null && !domainEntities.isEmpty();
+		case HyldesignerPackage.PROJECT__DB_ENTITIES:
+			return dbEntities != null && !dbEntities.isEmpty();
+		case HyldesignerPackage.PROJECT__REQ_PAYLOADS:
+			return reqPayloads != null && !reqPayloads.isEmpty();
+		case HyldesignerPackage.PROJECT__RESP_RESULTS:
+			return respResults != null && !respResults.isEmpty();
+		case HyldesignerPackage.PROJECT__CONTROLLERS:
+			return controllers != null && !controllers.isEmpty();
 		case HyldesignerPackage.PROJECT__BASE_PACKAGE:
-			return BASE_PACKAGE_EDEFAULT == null ? basePackage != null : !BASE_PACKAGE_EDEFAULT.equals(basePackage);
-		case HyldesignerPackage.PROJECT__CONTAINS_DOMAIN:
-			return containsDomain != null && !containsDomain.isEmpty();
-		case HyldesignerPackage.PROJECT__CONTAINS_PAYLOAD:
-			return containsPayload != null && !containsPayload.isEmpty();
-		case HyldesignerPackage.PROJECT__DBENTITY:
-			return dbentity != null && !dbentity.isEmpty();
-		case HyldesignerPackage.PROJECT__RESPONSERESULT:
-			return responseresult != null && !responseresult.isEmpty();
-		case HyldesignerPackage.PROJECT__CONTROLLER:
-			return controller != null && !controller.isEmpty();
+			return basePackage != null;
+		case HyldesignerPackage.PROJECT__SUB_PACKAGES:
+			return subPackages != null && !subPackages.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -431,8 +479,6 @@ public class ProjectImpl extends MinimalEObjectImpl.Container implements Project
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", basePackage: ");
-		result.append(basePackage);
 		result.append(')');
 		return result.toString();
 	}

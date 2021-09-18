@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl#getName <em>Name</em>}</li>
- *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl#getRestinterface <em>Restinterface</em>}</li>
+ *   <li>{@link cn.hylstudio.mdse.hyldesigner.impl.ControllerImpl#getRestInterface <em>Rest Interface</em>}</li>
  * </ul>
  *
  * @generated
@@ -58,14 +58,14 @@ public class ControllerImpl extends MinimalEObjectImpl.Container implements Cont
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRestinterface() <em>Restinterface</em>}' containment reference list.
+	 * The cached value of the '{@link #getRestInterface() <em>Rest Interface</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRestinterface()
+	 * @see #getRestInterface()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RestInterface> restinterface;
+	protected EList<RestInterface> restInterface;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,12 +115,12 @@ public class ControllerImpl extends MinimalEObjectImpl.Container implements Cont
 	 * @generated
 	 */
 	@Override
-	public EList<RestInterface> getRestinterface() {
-		if (restinterface == null) {
-			restinterface = new EObjectContainmentEList<RestInterface>(RestInterface.class, this,
-					HyldesignerPackage.CONTROLLER__RESTINTERFACE);
+	public EList<RestInterface> getRestInterface() {
+		if (restInterface == null) {
+			restInterface = new EObjectContainmentEList<RestInterface>(RestInterface.class, this,
+					HyldesignerPackage.CONTROLLER__REST_INTERFACE);
 		}
-		return restinterface;
+		return restInterface;
 	}
 
 	/**
@@ -131,8 +131,8 @@ public class ControllerImpl extends MinimalEObjectImpl.Container implements Cont
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case HyldesignerPackage.CONTROLLER__RESTINTERFACE:
-			return ((InternalEList<?>) getRestinterface()).basicRemove(otherEnd, msgs);
+		case HyldesignerPackage.CONTROLLER__REST_INTERFACE:
+			return ((InternalEList<?>) getRestInterface()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -147,8 +147,8 @@ public class ControllerImpl extends MinimalEObjectImpl.Container implements Cont
 		switch (featureID) {
 		case HyldesignerPackage.CONTROLLER__NAME:
 			return getName();
-		case HyldesignerPackage.CONTROLLER__RESTINTERFACE:
-			return getRestinterface();
+		case HyldesignerPackage.CONTROLLER__REST_INTERFACE:
+			return getRestInterface();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,9 +165,9 @@ public class ControllerImpl extends MinimalEObjectImpl.Container implements Cont
 		case HyldesignerPackage.CONTROLLER__NAME:
 			setName((String) newValue);
 			return;
-		case HyldesignerPackage.CONTROLLER__RESTINTERFACE:
-			getRestinterface().clear();
-			getRestinterface().addAll((Collection<? extends RestInterface>) newValue);
+		case HyldesignerPackage.CONTROLLER__REST_INTERFACE:
+			getRestInterface().clear();
+			getRestInterface().addAll((Collection<? extends RestInterface>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -184,8 +184,8 @@ public class ControllerImpl extends MinimalEObjectImpl.Container implements Cont
 		case HyldesignerPackage.CONTROLLER__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case HyldesignerPackage.CONTROLLER__RESTINTERFACE:
-			getRestinterface().clear();
+		case HyldesignerPackage.CONTROLLER__REST_INTERFACE:
+			getRestInterface().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -201,8 +201,8 @@ public class ControllerImpl extends MinimalEObjectImpl.Container implements Cont
 		switch (featureID) {
 		case HyldesignerPackage.CONTROLLER__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case HyldesignerPackage.CONTROLLER__RESTINTERFACE:
-			return restinterface != null && !restinterface.isEmpty();
+		case HyldesignerPackage.CONTROLLER__REST_INTERFACE:
+			return restInterface != null && !restInterface.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
