@@ -3,6 +3,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="hyldesigner" nsURI="http://mdse.hylstudio.cn/hyldesigner" nsPrefix="hyldesigner">
   <eClassifiers xsi:type="ecore:EClass" name="Project">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packageRoot" lowerBound="1"
+        eType="#//PackageDefine" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainEntities" upperBound="-1"
         eType="#//DomainEntity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dbEntities" upperBound="-1"
@@ -13,17 +15,14 @@
         eType="#//ResponseResult" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="controllers" upperBound="-1"
         eType="#//Controller" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="basePackage" lowerBound="1"
-        eType="#//PackageDefine"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subPackages" upperBound="-1"
-        eType="#//PackageDefine"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PackageDefine">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//PackageDefine"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="child" upperBound="-1"
-        eType="#//PackageDefine"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="childs" upperBound="-1"
+        eType="#//PackageDefine" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainEntities" upperBound="-1"
+        eType="#//DomainEntity" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainAttr" eSuperTypes="#//Attr">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBizKey" lowerBound="1"
@@ -50,16 +49,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attr" upperBound="-1" eType="#//DomainAttr"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"
+        eType="#//DomainAttr" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedPayload" upperBound="-1"
         eType="#//RequestPayload" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedDto" upperBound="-1"
         eType="#//Dto" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedDbEntity" upperBound="-1"
         eType="#//DbEntity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="belongTo" lowerBound="1"
-        eType="#//PackageDefine"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Controller">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
