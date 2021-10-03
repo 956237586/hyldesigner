@@ -23,6 +23,21 @@
         eType="#//PackageDefine" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainEntities" upperBound="-1"
         eType="#//DomainEntity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controllers" upperBound="-1"
+        eType="#//Controller" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requestPayloads" upperBound="-1"
+        eType="#//RequestPayload" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responseResults" upperBound="-1"
+        eType="#//ResponseResult" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtos" upperBound="-1" eType="#//Dto"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attr" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objType" eType="#//Attr"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainAttr" eSuperTypes="#//Attr">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBizKey" lowerBound="1"
@@ -33,28 +48,17 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DbAttr" eSuperTypes="#//Attr"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RequestAttr" eSuperTypes="#//Attr">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dto" upperBound="-1" eType="#//Dto"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResponseAttr" eSuperTypes="#//Attr">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dto" upperBound="-1" eType="#//Dto"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestAttr" eSuperTypes="#//Attr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseAttr" eSuperTypes="#//Attr"/>
   <eClassifiers xsi:type="ecore:EClass" name="DtoAttr" eSuperTypes="#//Attr"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Attr" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"
         eType="#//DomainAttr" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedPayload" upperBound="-1"
-        eType="#//RequestPayload" containment="true"/>
+        eType="#//RequestPayload"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedDto" upperBound="-1"
-        eType="#//Dto" containment="true"/>
+        eType="#//Dto"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedDbEntity" upperBound="-1"
         eType="#//DbEntity"/>
   </eClassifiers>
@@ -74,13 +78,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="access" upperBound="-1"
         eType="#//DomainEntity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Dto">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generatedBy" lowerBound="1"
+  <eClassifiers xsi:type="ecore:EClass" name="Dto" eSuperTypes="#//Attr">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refer" eType="#//Dto"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"
+        eType="#//Attr" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatedByDto" lowerBound="1"
         upperBound="-1" eType="#//Dto"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generated" upperBound="-1"
-        eType="#//Dto"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attr" upperBound="-1" eType="#//DtoAttr"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatedByDomainEntity"
+        lowerBound="1" upperBound="-1" eType="#//DomainEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatedByDbEntity" lowerBound="1"
+        upperBound="-1" eType="#//DbEntity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Service">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -94,20 +102,24 @@
         eType="#//Repo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequestPayload">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedBy" lowerBound="1"
         eType="#//DomainEntity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="containsAttr" upperBound="-1"
-        eType="#//RequestAttr" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DbEntity">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attr" lowerBound="1" upperBound="-1"
-        eType="#//DbAttr" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generatedBy" upperBound="-1"
-        eType="#//DomainEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"
+        eType="#//Attr" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseResult">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attr" upperBound="-1" eType="#//ResponseAttr"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatedBy" lowerBound="1"
+        eType="#//DomainEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"
+        eType="#//Attr" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DbEntity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" lowerBound="1" upperBound="-1"
+        eType="#//Attr" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatedBy" upperBound="-1"
+        eType="#//DomainEntity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Repo">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
