@@ -64,19 +64,22 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Controller">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mappings" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="restInterface" upperBound="-1"
         eType="#//RestInterface" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RestInterface">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="payload" eType="#//RequestPayload"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//ResponseResult"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mapping" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="invokeBizServices" upperBound="-1"
-        eType="#//BizService" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="access" upperBound="-1"
-        eType="#//DomainEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methods" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mappings" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="payload" eType="#//RequestPayload"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//ResponseResult"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processBlock" lowerBound="1"
+        eType="#//ProcessBlock" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Dto" eSuperTypes="#//Attr">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -101,14 +104,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="accessRepo" upperBound="-1"
         eType="#//Repo" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RequestPayload">
+  <eClassifiers xsi:type="ecore:EClass" name="RequestPayload" eSuperTypes="#//Attr">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedBy" lowerBound="1"
         eType="#//DomainEntity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"
         eType="#//Attr" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResponseResult">
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseResult" eSuperTypes="#//Attr">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedBy" lowerBound="1"
         eType="#//DomainEntity"/>
@@ -125,5 +128,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="storeEntity" lowerBound="1"
         eType="#//DbEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessBlock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
+        eType="#//VarDeclaration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="response" upperBound="-1"
+        eType="#//TypeDeclaration" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarDeclaration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//TypeDeclaration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TypeDeclaration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objType" eType="#//Attr"/>
   </eClassifiers>
 </ecore:EPackage>
