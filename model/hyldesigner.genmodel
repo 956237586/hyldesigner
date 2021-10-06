@@ -18,6 +18,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Project/reqPayloads"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Project/respResults"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Project/controllers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Project/types"/>
     </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//PackageDefine">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//PackageDefine/name"/>
@@ -28,14 +29,20 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//PackageDefine/requestPayloads"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//PackageDefine/responseResults"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//PackageDefine/dtos"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//PackageDefine/types"/>
     </genClasses>
-    <genClasses ecoreClass="hyldesigner.ecore#//Attr">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Attr/key"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Attr/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Attr/isList"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Attr/desc"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Attr/objType"/>
+    <genClasses image="false" ecoreClass="hyldesigner.ecore#//Type"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//PrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//PrimitiveType/type"/>
     </genClasses>
+    <genClasses ecoreClass="hyldesigner.ecore#//ReferencedType"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//VarDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//VarDeclaration/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//VarDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//VarDeclaration/isList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//VarDeclaration/desc"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="hyldesigner.ecore#//Attr"/>
     <genClasses ecoreClass="hyldesigner.ecore#//DomainAttr">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//DomainAttr/isBizKey"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//DomainAttr/isOptional"/>
@@ -48,9 +55,27 @@
     <genClasses ecoreClass="hyldesigner.ecore#//DomainEntity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//DomainEntity/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/attrs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/generatedPayload"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/generatedDto"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/generatedDbEntity"/>
+    </genClasses>
+    <genClasses ecoreClass="hyldesigner.ecore#//DbEntity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DbEntity/attrs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DbEntity/generatedBy"/>
+    </genClasses>
+    <genClasses ecoreClass="hyldesigner.ecore#//RequestPayload">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//RequestPayload/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RequestPayload/attrs"/>
+    </genClasses>
+    <genClasses ecoreClass="hyldesigner.ecore#//ResponseResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//ResponseResult/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ResponseResult/attrs"/>
+    </genClasses>
+    <genClasses ecoreClass="hyldesigner.ecore#//Dto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Dto/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/attrs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/generatedByDto"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/generatedByDomainEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/generatedByDbEntity"/>
     </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//Controller">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Controller/name"/>
@@ -65,14 +90,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RestInterface/payload"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RestInterface/result"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RestInterface/processBlock"/>
-    </genClasses>
-    <genClasses ecoreClass="hyldesigner.ecore#//Dto">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Dto/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/refer"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/attrs"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/generatedByDto"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/generatedByDomainEntity"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Dto/generatedByDbEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RestInterface/invokeBiz"/>
     </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//Service">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Service/name"/>
@@ -83,20 +101,6 @@
     <genClasses ecoreClass="hyldesigner.ecore#//BaseService">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//BaseService/accessRepo"/>
     </genClasses>
-    <genClasses ecoreClass="hyldesigner.ecore#//RequestPayload">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//RequestPayload/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RequestPayload/generatedBy"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RequestPayload/attrs"/>
-    </genClasses>
-    <genClasses ecoreClass="hyldesigner.ecore#//ResponseResult">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//ResponseResult/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ResponseResult/generatedBy"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ResponseResult/attrs"/>
-    </genClasses>
-    <genClasses ecoreClass="hyldesigner.ecore#//DbEntity">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DbEntity/attrs"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DbEntity/generatedBy"/>
-    </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//Repo">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//Repo/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Repo/storeEntity"/>
@@ -105,15 +109,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//ProcessBlock/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ProcessBlock/params"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ProcessBlock/response"/>
-    </genClasses>
-    <genClasses ecoreClass="hyldesigner.ecore#//VarDeclaration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//VarDeclaration/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference hyldesigner.ecore#//VarDeclaration/type"/>
-    </genClasses>
-    <genClasses ecoreClass="hyldesigner.ecore#//TypeDeclaration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//TypeDeclaration/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//TypeDeclaration/type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//TypeDeclaration/objType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
