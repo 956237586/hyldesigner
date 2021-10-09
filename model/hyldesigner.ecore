@@ -35,19 +35,32 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
         eType="#//PrimitiveType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+        eType="#//Service" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReferencedType" eSuperTypes="#//Type"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VarDeclaration">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomType" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Attr" abstract="true" eSuperTypes="#//VarDeclaration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstracVar" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//Type"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true" eSuperTypes="#//VarDef"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attr" abstract="true" eSuperTypes="#//Field"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//VarDef"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VarDef" eSuperTypes="#//AbstracVar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VarRef">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" lowerBound="1" eType="#//VarDef"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainAttr" eSuperTypes="#//Attr">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBizKey" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -110,14 +123,15 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mappings" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="payload" eType="#//RequestPayload"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//ResponseResult"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="processBlock" lowerBound="1"
-        eType="#//ProcessBlock" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="invokeBiz" upperBound="-1"
-        eType="#//BizService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceMainFlow" eType="#//control/ControlFlow"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="response" eType="#//RestInterfaceResponse"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="#//ReferencedType">
+  <eClassifiers xsi:type="ecore:EClass" name="RestInterfaceResponse" eSuperTypes="#//VarRef"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Service" abstract="true" eSuperTypes="#//ReferencedType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BizService" eSuperTypes="#//Service">
@@ -136,8 +150,35 @@
   <eClassifiers xsi:type="ecore:EClass" name="ProcessBlock">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
-        eType="#//VarDeclaration" containment="true"/>
+        eType="#//Parameter" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="response" upperBound="-1"
-        eType="#//Type"/>
+        eType="#//Type" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mainFlow" eType="#//control/ControlFlow"
+        containment="true"/>
   </eClassifiers>
+  <eSubpackages name="control" nsURI="http://mdse.hylstudio.cn/hyldesigner/control"
+      nsPrefix="control">
+    <eClassifiers xsi:type="ecore:EClass" name="Operation" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="params" upperBound="-1"
+          eType="#//VarRef" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="response" eType="#//control/OperationResult"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OperationResult" eSuperTypes="#//VarDef"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InvokeService" eSuperTypes="#//control/Operation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="service" eType="#//Service"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ControlFlow" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="async" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
+          eType="#//control/ControlFlow" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SequenceFlow" eSuperTypes="#//control/ControlFlow">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="do" upperBound="-1" eType="#//control/Operation"
+          containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
 </ecore:EPackage>
