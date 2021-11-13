@@ -22,4 +22,12 @@
             genModel="model/hyldesigner.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated hyldesigner -->
+      <package
+            uri="http://mdse.hylstudio.cn/hyldesigner/check"
+            class="cn.hylstudio.mdse.hyldesigner.check.CheckPackage"
+            genModel="model/hyldesigner.genmodel"/>
+   </extension>
+
 </plugin>

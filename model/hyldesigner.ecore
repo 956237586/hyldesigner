@@ -42,7 +42,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReferencedType" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReferencedType" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refUserDefinedCheckRules"
+        upperBound="-1" eType="#//check/UserDefinedCheckRule" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CustomType" eSuperTypes="#//Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -54,7 +57,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true" eSuperTypes="#//VarDef"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Attr" abstract="true" eSuperTypes="#//Field"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attr" abstract="true" eSuperTypes="#//Field">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrDomainCheckRules" upperBound="-1"
+        eType="#//check/DomainEntityCheckRule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrReferencedCheckRules"
+        upperBound="-1" eType="#//check/ReferencedCheckRule" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//VarDef"/>
   <eClassifiers xsi:type="ecore:EClass" name="VarDef" eSuperTypes="#//AbstracVar"/>
   <eClassifiers xsi:type="ecore:EClass" name="VarRef">
@@ -70,7 +78,9 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DbAttr" eSuperTypes="#//Attr"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RequestAttr" eSuperTypes="#//Attr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestAttr" eSuperTypes="#//Attr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attrRef" eType="#//DomainAttr"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseAttr" eSuperTypes="#//Attr"/>
   <eClassifiers xsi:type="ecore:EClass" name="DtoAttr" eSuperTypes="#//Attr"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainEntity">
@@ -81,6 +91,10 @@
         eType="#//Dto"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generatedDbEntity" upperBound="-1"
         eType="#//DbEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainCheckRules" upperBound="-1"
+        eType="#//check/DomainEntityCheckRule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userDefinedCheckRules"
+        upperBound="-1" eType="#//check/UserDefinedCheckRule" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DbEntity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" lowerBound="1" upperBound="-1"
@@ -92,6 +106,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"
         eType="#//Attr" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="payloadRef" eType="#//DomainEntity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ResponseResult" eSuperTypes="#//ReferencedType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -180,5 +195,54 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="do" upperBound="-1" eType="#//control/Operation"
           containment="true"/>
     </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="check" nsURI="http://mdse.hylstudio.cn/hyldesigner/check" nsPrefix="check">
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractCheckRule" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DomainEntityCheckRule" abstract="true"
+        eSuperTypes="#//check/AbstractCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ReferencedCheckRule" abstract="true"
+        eSuperTypes="#//check/AbstractCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="UserDefinedCheckRule" abstract="true"
+        eSuperTypes="#//check/AbstractCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CustomCheckRule" abstract="true" eSuperTypes="#//check/UserDefinedCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PrimitiveTypeCheckRule" abstract="true"
+        eSuperTypes="#//check/DomainEntityCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ReferencedTypeCheckRule" abstract="true"
+        eSuperTypes="#//check/ReferencedCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="StringTypeCheckRule" abstract="true"
+        eSuperTypes="#//check/PrimitiveTypeCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NotEmptyCheckRule" eSuperTypes="#//check/StringTypeCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LengthCheckRule" eSuperTypes="#//check/StringTypeCheckRule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RegexCheckRule" eSuperTypes="#//check/StringTypeCheckRule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="regex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NumberTypeCheckRule" abstract="true"
+        eSuperTypes="#//check/PrimitiveTypeCheckRule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="regex" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="IntegerTypeCheckRule" abstract="true"
+        eSuperTypes="#//check/NumberTypeCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="LongTypeCheckRule" abstract="true"
+        eSuperTypes="#//check/NumberTypeCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IntegerRangeCheckRule" eSuperTypes="#//check/IntegerTypeCheckRule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LongRangeCheckRule" eSuperTypes="#//check/LongTypeCheckRule">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoolTypeCheckRule" abstract="true"
+        eSuperTypes="#//check/PrimitiveTypeCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TrueValueCheckRule" eSuperTypes="#//check/BoolTypeCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="FalseValueCheckRule" eSuperTypes="#//check/BoolTypeCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DtoTypeCheckRule" abstract="true"
+        eSuperTypes="#//check/ReferencedTypeCheckRule"/>
+    <eClassifiers xsi:type="ecore:EClass" name="HasValueRefCheckRule" eSuperTypes="#//check/ReferencedTypeCheckRule"/>
   </eSubpackages>
 </ecore:EPackage>

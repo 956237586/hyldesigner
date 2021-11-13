@@ -36,7 +36,9 @@
     <genClasses ecoreClass="hyldesigner.ecore#//PrimitiveType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//PrimitiveType/type"/>
     </genClasses>
-    <genClasses ecoreClass="hyldesigner.ecore#//ReferencedType"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//ReferencedType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ReferencedType/refUserDefinedCheckRules"/>
+    </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//CustomType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//CustomType/package"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//CustomType/className"/>
@@ -48,7 +50,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//AbstracVar/name"/>
     </genClasses>
     <genClasses image="false" ecoreClass="hyldesigner.ecore#//Field"/>
-    <genClasses image="false" ecoreClass="hyldesigner.ecore#//Attr"/>
+    <genClasses image="false" ecoreClass="hyldesigner.ecore#//Attr">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Attr/attrDomainCheckRules"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//Attr/attrReferencedCheckRules"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="hyldesigner.ecore#//Parameter"/>
     <genClasses ecoreClass="hyldesigner.ecore#//VarDef"/>
     <genClasses ecoreClass="hyldesigner.ecore#//VarRef">
@@ -61,7 +66,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//DomainAttr/needPersistent"/>
     </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//DbAttr"/>
-    <genClasses ecoreClass="hyldesigner.ecore#//RequestAttr"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//RequestAttr">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RequestAttr/attrRef"/>
+    </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//ResponseAttr"/>
     <genClasses ecoreClass="hyldesigner.ecore#//DtoAttr"/>
     <genClasses ecoreClass="hyldesigner.ecore#//DomainEntity">
@@ -69,6 +76,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/attrs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/generatedDto"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/generatedDbEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/domainCheckRules"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DomainEntity/userDefinedCheckRules"/>
     </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//DbEntity">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//DbEntity/attrs"/>
@@ -77,6 +86,7 @@
     <genClasses ecoreClass="hyldesigner.ecore#//RequestPayload">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//RequestPayload/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RequestPayload/attrs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//RequestPayload/payloadRef"/>
     </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//ResponseResult">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//ResponseResult/name"/>
@@ -146,6 +156,46 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference hyldesigner.ecore#//control/SequenceFlow/do"/>
       </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Check" disposableProviderFactory="true" ecorePackage="hyldesigner.ecore#//check">
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/AbstractCheckRule">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/AbstractCheckRule/desc"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/DomainEntityCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/ReferencedCheckRule"/>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/UserDefinedCheckRule"/>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/CustomCheckRule"/>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/PrimitiveTypeCheckRule"/>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/ReferencedTypeCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/MustNotNullCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/MustNullCheckRule"/>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/StringTypeCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/NotEmptyCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/LengthCheckRule">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/LengthCheckRule/min"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/LengthCheckRule/max"/>
+      </genClasses>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/RegexCheckRule">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/RegexCheckRule/regex"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/NumberTypeCheckRule">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/NumberTypeCheckRule/regex"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/IntegerTypeCheckRule"/>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/LongTypeCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/IntegerRangeCheckRule">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/IntegerRangeCheckRule/min"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/IntegerRangeCheckRule/max"/>
+      </genClasses>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/LongRangeCheckRule">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/LongRangeCheckRule/min"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/LongRangeCheckRule/max"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/BoolTypeCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/TrueValueCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/FalseValueCheckRule"/>
+      <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/DtoTypeCheckRule"/>
+      <genClasses ecoreClass="hyldesigner.ecore#//check/HasValueRefCheckRule"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>
