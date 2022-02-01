@@ -74,21 +74,14 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOptional" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="needPersistent" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DbAttr" eSuperTypes="#//Attr">
+  <eClassifiers xsi:type="ecore:EClass" name="ReferAttr" abstract="true" eSuperTypes="#//Attr">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrRef" eType="#//DomainAttr"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RequestAttr" eSuperTypes="#//Attr">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attrRef" eType="#//DomainAttr"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResponseAttr" eSuperTypes="#//Attr">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attrRef" eType="#//DomainAttr"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DtoAttr" eSuperTypes="#//Attr">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attrRef" eType="#//DomainAttr"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DbAttr" eSuperTypes="#//ReferAttr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestAttr" eSuperTypes="#//ReferAttr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponseAttr" eSuperTypes="#//ReferAttr"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DtoAttr" eSuperTypes="#//ReferAttr"/>
   <eClassifiers xsi:type="ecore:EClass" name="DomainEntity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"
