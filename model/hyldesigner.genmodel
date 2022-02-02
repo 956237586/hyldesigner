@@ -33,8 +33,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//PackageDefine/services"/>
     </genClasses>
     <genClasses image="false" ecoreClass="hyldesigner.ecore#//Type"/>
-    <genClasses ecoreClass="hyldesigner.ecore#//PrimitiveType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//PrimitiveType/type"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//PrimitiveType"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//Str"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//Bool"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//Number"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//Int"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//Long"/>
+    <genClasses ecoreClass="hyldesigner.ecore#//CustomPrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//CustomPrimitiveType/type"/>
     </genClasses>
     <genClasses ecoreClass="hyldesigner.ecore#//ReferencedType">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ReferencedType/refUserDefinedCheckRules"/>
@@ -133,7 +139,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ProcessBlock/response"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hyldesigner.ecore#//ProcessBlock/mainFlow"/>
     </genClasses>
-    <nestedGenPackages prefix="Control" disposableProviderFactory="true" ecorePackage="hyldesigner.ecore#//control">
+    <nestedGenPackages prefix="Control" basePackage="cn.hylstudio.mdse.hyldesigner"
+        disposableProviderFactory="true" ecorePackage="hyldesigner.ecore#//control">
       <genClasses image="false" ecoreClass="hyldesigner.ecore#//control/Operation">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//control/Operation/name"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -157,7 +164,8 @@
             ecoreFeature="ecore:EReference hyldesigner.ecore#//control/SequenceFlow/do"/>
       </genClasses>
     </nestedGenPackages>
-    <nestedGenPackages prefix="Check" disposableProviderFactory="true" ecorePackage="hyldesigner.ecore#//check">
+    <nestedGenPackages prefix="Check" basePackage="cn.hylstudio.mdse.hyldesigner"
+        disposableProviderFactory="true" ecorePackage="hyldesigner.ecore#//check">
       <genClasses image="false" ecoreClass="hyldesigner.ecore#//check/AbstractCheckRule">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hyldesigner.ecore#//check/AbstractCheckRule/desc"/>
       </genClasses>
